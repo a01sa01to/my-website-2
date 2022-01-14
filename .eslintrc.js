@@ -11,5 +11,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'arrow-spacing': [2, { before: true, after: true }],
+    'block-spacing': [2, 'always'],
+    'brace-style': [2, 'stroustrup', { allowSingleLine: true }]
+  }
 }

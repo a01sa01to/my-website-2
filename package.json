@@ -14,8 +14,8 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --cache",
-    "*.{css,scss,sass,html,vue}": "stylelint"
+    "*.{js,ts,vue}": "eslint --cache --fix",
+    "*.{css,scss,sass,html,vue}": "stylelint --fix"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^7.2.0",
