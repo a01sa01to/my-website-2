@@ -115,13 +115,13 @@ const PaginationFn = (
   const endCursor = generateCursor(data[data.length - 1])
   return {
     dataset: data,
+    last_update: lastUpdate,
     pageinfo: {
-      hasPreviousPage: hasPrevious,
+      endCursor,
       hasNextPage: hasNext,
-      startCursor,
-      endCursor
-    },
-    last_update: lastUpdate
+      hasPreviousPage: hasPrevious,
+      startCursor
+    }
   }
 }
 

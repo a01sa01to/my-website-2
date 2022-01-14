@@ -32,10 +32,10 @@ const api: ServerMiddleware = (_req, res, _next) => {
   }
 
   graphqlHTTP({
-    schema,
     graphiql: false,
+    pretty: true,
     rootValue: root,
-    pretty: true
+    schema
   })(req, res)
 }
 

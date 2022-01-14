@@ -1,3 +1,5 @@
+/* eslint-disable sort-keys */
+
 import fs from 'fs'
 import path from 'path'
 import csv2json from './functions/csv2json'

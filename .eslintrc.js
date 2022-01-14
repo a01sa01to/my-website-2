@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
     node: true
@@ -10,10 +9,12 @@ module.exports = {
   ],
   plugins: [
   ],
+  root: true,
   // add your custom rules here
   rules: {
-    'arrow-spacing': [2, { before: true, after: true }],
+    'arrow-spacing': [2, { after: true, before: true }],
     'block-spacing': [2, 'always'],
-    'brace-style': [2, 'stroustrup', { allowSingleLine: true }]
+    'brace-style': [2, 'stroustrup', { allowSingleLine: true }],
+    'sort-keys': [1, 'asc', { caseSensitive: true, minKeys: 2, natural: false }]
   }
 }
