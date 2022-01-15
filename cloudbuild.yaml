@@ -1,17 +1,17 @@
 steps:
-  - name: "gcr.io/cloud-builders/gcloud"
-    entrypoint: "/bin/bash"
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: '/bin/bash'
     args:
       [
-        "-c",
+        '-c',
         "gcloud app versions list --service=default | grep 0.00 | sort -rk 4,4 | awk '{print $2}' | tail -n +11 | xargs -l gcloud app versions delete {}",
       ]
   - name: node
     entrypoint: yarn
-    args: ["install"]
+    args: ['install']
   - name: node
     entrypoint: yarn
-    args: ["build"]
-  - name: "gcr.io/cloud-builders/gcloud"
-    args: ["app", "deploy", "app.yaml"]
-    timeout: "1600s"
+    args: ['build']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy', 'app.yaml']
+    timeout: '1600s'

@@ -45,10 +45,7 @@ const getData = () => {
     // call_center
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_call_center.csv'
-        )
+        path.resolve(opendataBasepath, '080004_ibaraki_covid19_call_center.csv')
       )
       .toString()
     const overridesMap = {
@@ -56,7 +53,7 @@ const getData = () => {
       全国地方公共団体コード: { header: 'government_code', type: 'string' },
       都道府県名: { header: 'prefecture', type: 'string' },
       市区町村名: { header: 'city', type: 'string' },
-      相談件数: { header: 'value', type: 'number' }
+      相談件数: { header: 'value', type: 'number' },
     }
 
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
@@ -105,7 +102,7 @@ const getData = () => {
       市区町村名: { header: 'city', type: 'string' },
       公表_年月日: { header: 'date', type: 'date' },
       年代: { header: 'age', type: 'string' },
-      性別: { header: 'gender', type: 'string' }
+      性別: { header: 'gender', type: 'string' },
     }
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
     ret.death_attributes = ({ before, after, first, last }: PaginationArg) =>
@@ -133,7 +130,7 @@ const getData = () => {
       全国地方公共団体コード: { header: 'government_code', type: 'string' },
       都道府県名: { header: 'prefecture', type: 'string' },
       市区町村名: { header: 'city', type: 'string' },
-      死亡者数: { header: 'value', type: 'number' }
+      死亡者数: { header: 'value', type: 'number' },
     }
 
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
@@ -191,19 +188,19 @@ const getData = () => {
         eighties: item['年代別']['80代'],
         nineties: item['年代別']['90代'],
         over_hundred: item['年代別']['100歳以上'],
-        unknown: item['年代別']['不明']
+        unknown: item['年代別']['不明'],
       },
       by_gender: {
         male: item['性別']['男性'],
         female: item['性別']['女性'],
-        unknown: item['性別']['不明']
-      }
+        unknown: item['性別']['不明'],
+      },
     }))
     ret.mutant_positive_number = ({
       before,
       after,
       first,
-      last
+      last,
     }: PaginationArg) =>
       PaginationFn(
         jsonData,
@@ -232,7 +229,7 @@ const getData = () => {
       市区町村名: { header: 'city', type: 'string' },
       検査実施_人数: { header: 'tested', type: 'number' },
       陽性者数: { header: 'positive', type: 'number' },
-      変異株名: { header: 'strain_name', type: 'string' }
+      変異株名: { header: 'strain_name', type: 'string' },
     }
 
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
@@ -268,11 +265,11 @@ const getData = () => {
       患者_症状: { header: 'symptoms', type: 'string' },
       患者_渡航歴の有無フラグ: {
         header: 'travel_abroad_history',
-        type: 'boolean'
+        type: 'boolean',
       },
       患者_濃厚接触者フラグ: { header: 'close_contact', type: 'boolean' },
       検査方法: { header: 'test_method', type: 'string' },
-      備考: { header: 'note', type: 'string' }
+      備考: { header: 'note', type: 'string' },
     }
 
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
@@ -302,7 +299,7 @@ const getData = () => {
       都道府県名: { header: 'prefecture', type: 'string' },
       市区町村名: { header: 'city', type: 'string' },
       陽性者数: { header: 'positive', type: 'number' },
-      うち濃厚接触者: { header: 'close_contact', type: 'number' }
+      うち濃厚接触者: { header: 'close_contact', type: 'number' },
     }
 
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
@@ -331,7 +328,7 @@ const getData = () => {
       全国地方公共団体コード: { header: 'government_code', type: 'string' },
       都道府県名: { header: 'prefecture', type: 'string' },
       市区町村名: { header: 'city', type: 'string' },
-      回復者数: { header: 'value', type: 'number' }
+      回復者数: { header: 'value', type: 'number' },
     }
 
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
@@ -368,17 +365,14 @@ const getData = () => {
       hotel: jsonData.children[0].children[0].children[4].value,
       recovered: jsonData.children[0].children[1].value,
       death: jsonData.children[0].children[2].value,
-      other: jsonData.children[0].children[3].value
+      other: jsonData.children[0].children[3].value,
     })
   }
   {
     // test_people
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_test_people.csv'
-        )
+        path.resolve(opendataBasepath, '080004_ibaraki_covid19_test_people.csv')
       )
       .toString()
     const overridesMap = {
@@ -386,7 +380,7 @@ const getData = () => {
       全国地方公共団体コード: { header: 'government_code', type: 'string' },
       都道府県名: { header: 'prefecture', type: 'string' },
       市区町村名: { header: 'city', type: 'string' },
-      検査実施_人数: { header: 'value', type: 'number' }
+      検査実施_人数: { header: 'value', type: 'number' },
     }
 
     const jsonData = JSON.parse(csv2json(filecontent, overridesMap))
@@ -424,7 +418,7 @@ const getData = () => {
         city: '',
         total: item.count,
         first: item.status_1,
-        second: item.status_2
+        second: item.status_2,
       })
     )
 

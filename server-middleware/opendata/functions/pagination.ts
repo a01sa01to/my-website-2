@@ -12,16 +12,20 @@ const applyCursorsToData = (
   if (after) {
     const afterData = JSON.parse(Buffer.from(after, 'base64').toString())
     const afterIndex = allData.findIndex(
-      item => JSON.stringify(item) === JSON.stringify(afterData)
+      (item) => JSON.stringify(item) === JSON.stringify(afterData)
     )
-    if (afterIndex >= 0) { data.splice(0, afterIndex + 1) }
+    if (afterIndex >= 0) {
+      data.splice(0, afterIndex + 1)
+    }
   }
   if (before) {
     const beforeData = JSON.parse(Buffer.from(before, 'base64').toString())
     const beforeIndex = allData.findIndex(
-      item => JSON.stringify(item) === JSON.stringify(beforeData)
+      (item) => JSON.stringify(item) === JSON.stringify(beforeData)
     )
-    if (beforeIndex >= 0) { data.splice(beforeIndex) }
+    if (beforeIndex >= 0) {
+      data.splice(beforeIndex)
+    }
   }
   return data
 }
@@ -35,20 +39,22 @@ const dataToReturn = (
 ) => {
   const data = applyCursorsToData(allData, before, after)
   if (first) {
-    if (first < 0) { throw new Error('first must be greater than 0') }
+    if (first < 0) {
+      throw new Error('first must be greater than 0')
+    }
     if (data.length < first) {
       // do nothing
-    }
-    else {
+    } else {
       data.splice(first)
     }
   }
   if (last) {
-    if (last < 0) { throw new Error('last must be greater than 0') }
+    if (last < 0) {
+      throw new Error('last must be greater than 0')
+    }
     if (data.length < last) {
       // do nothing
-    }
-    else {
+    } else {
       data.splice(0, data.length - last)
     }
   }
@@ -63,10 +69,15 @@ const hasPreviousPage = (
 ) => {
   if (last) {
     const data = applyCursorsToData(allData, before, after)
-    if (data.length > last) { return true }
-    else { return false }
+    if (data.length > last) {
+      return true
+    } else {
+      return false
+    }
   }
-  if (after) { return true }
+  if (after) {
+    return true
+  }
   return false
 }
 
@@ -78,10 +89,15 @@ const hasNextPage = (
 ) => {
   if (first) {
     const data = applyCursorsToData(allData, before, after)
-    if (data.length > first) { return true }
-    else { return false }
+    if (data.length > first) {
+      return true
+    } else {
+      return false
+    }
   }
-  if (before) { return true }
+  if (before) {
+    return true
+  }
   return false
 }
 
@@ -120,8 +136,8 @@ const PaginationFn = (
       endCursor,
       hasNextPage: hasNext,
       hasPreviousPage: hasPrevious,
-      startCursor
-    }
+      startCursor,
+    },
   }
 }
 

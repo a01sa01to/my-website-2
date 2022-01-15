@@ -7,7 +7,7 @@ import { buildSchema } from 'graphql'
 import Covid19Ibaraki from './cov19_ibaraki'
 
 const api: ServerMiddleware = (_req, res, _next) => {
-  const req = _req as (IncomingMessage & {url: string})
+  const req = _req as IncomingMessage & { url: string }
   req.url = '/opendata/api' + req.url
 
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -16,26 +16,25 @@ const api: ServerMiddleware = (_req, res, _next) => {
     'Access-Control-Allow-Headers',
     'Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization'
   )
-  if (req.method === 'OPTIONS') { res.statusCode = 200 }
+  if (req.method === 'OPTIONS') {
+    res.statusCode = 200
+  }
 
   const schema = buildSchema(
-    readFileSync(
-      join(__dirname, 'schema.graphql'),
-      'utf8'
-    ).toString()
+    readFileSync(join(__dirname, 'schema.graphql'), 'utf8').toString()
   )
 
   const root = {
     covid19_ibaraki: () => {
       return Covid19Ibaraki.getData()
-    }
+    },
   }
 
   graphqlHTTP({
     graphiql: false,
     pretty: true,
     rootValue: root,
-    schema
+    schema,
   })(req, res)
 }
 

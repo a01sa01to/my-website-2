@@ -1,6 +1,8 @@
 const str2date = (str: string): string | null => {
   const date = new Date(str)
-  if (isNaN(date.getTime())) { return null }
+  if (isNaN(date.getTime())) {
+    return null
+  }
   return (
     date.getFullYear() +
     '-' +

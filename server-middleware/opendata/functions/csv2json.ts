@@ -22,18 +22,18 @@ const csv2json = (
         }
         if (overrideMap.type === 'number') {
           jsonLine[overrideMap.header] = Number(data)
-        }
-        else if (overrideMap.type === 'date') {
+        } else if (overrideMap.type === 'date') {
           jsonLine[overrideMap.header] = str2date(data)
-        }
-        else if (overrideMap.type === 'boolean') {
+        } else if (overrideMap.type === 'boolean') {
           const falsy = ['false', '0', 'null', 'undefined', '', 'NaN', '-0']
           if (falsy.includes(data.toLowerCase())) {
             jsonLine[overrideMap.header] = false
+          } else {
+            jsonLine[overrideMap.header] = true
           }
-          else { jsonLine[overrideMap.header] = true }
+        } else {
+          jsonLine[overrideMap.header] = data || null
         }
-        else { jsonLine[overrideMap.header] = data || null }
       })
       return jsonLine
     })
