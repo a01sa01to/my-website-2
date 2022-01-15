@@ -11,7 +11,7 @@ type scrollBehaviorHandler = (
   savedPosition?: { x: number, y: number }
 ) => PositionDescriptor | Promise<PositionDescriptor>
 
-const scrollBehavior:scrollBehaviorHandler = (to, _from, savedPosition) => {
+const scrollBehavior: scrollBehaviorHandler = (to, _from, savedPosition) => {
   if (savedPosition) {
     return savedPosition
   }

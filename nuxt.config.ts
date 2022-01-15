@@ -1,7 +1,7 @@
 import { NuxtConfig } from '@nuxt/types'
 import '@nuxtjs/i18n'
 
-const config:NuxtConfig = {
+const config: NuxtConfig = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
