@@ -12,9 +12,9 @@ module.exports = {
   root: true,
   // add your custom rules here
   rules: {
+    '@typescript-eslint/type-annotation-spacing': [2],
     'arrow-spacing': [2, { after: true, before: true }],
     'block-spacing': [2, 'always'],
-    'brace-style': [2, 'stroustrup', { allowSingleLine: true }],
-    'sort-keys': [1, 'asc', { caseSensitive: true, minKeys: 2, natural: false }]
+    'brace-style': [2, 'stroustrup', { allowSingleLine: true }]
   }
 }
