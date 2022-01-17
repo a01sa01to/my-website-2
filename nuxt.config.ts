@@ -77,6 +77,7 @@ const config: NuxtConfig = {
 
   router: {
     trailingSlash: true,
+    middleware: ['trailingslash-redirect'],
   },
 
   serverMiddleware: [
