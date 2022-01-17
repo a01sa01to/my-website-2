@@ -1,5 +1,5 @@
 import { NuxtConfig } from '@nuxt/types'
-import '@nuxtjs/i18n'
+import 'cookie-universal-nuxt'
 
 const config: NuxtConfig = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -19,7 +19,6 @@ const config: NuxtConfig = {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    /* eslint-disable sort-keys */
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
@@ -28,17 +27,6 @@ const config: NuxtConfig = {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     titleTemplate: "%s - Asa's Website",
-    /* eslint-enable sort-keys */
-  },
-
-  i18n: {
-    defaultLocale: 'ja',
-    /* eslint-disable sort-keys */
-    locales: [
-      { code: 'ja', iso: 'ja-JP', file: 'locales/ja.json' },
-      { code: 'en', iso: 'en-US', file: 'locales/en.json' },
-    ],
-    /* eslint-enable sort-keys */
   },
 
   loading: {
@@ -58,11 +46,11 @@ const config: NuxtConfig = {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/i18n',
+    ['cookie-universal-nuxt', { parseJSON: false }],
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vue-i18n.ts'],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
