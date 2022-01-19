@@ -9,6 +9,18 @@ const config: NuxtConfig = {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Muli: true,
+          'Noto Sans JP': [300],
+          'Open Sans': true,
+          Quicksand: true,
+        },
+        display: 'swap',
+      },
+    ],
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -19,7 +31,13 @@ const config: NuxtConfig = {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+      },
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
