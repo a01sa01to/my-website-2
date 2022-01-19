@@ -1,7 +1,8 @@
 @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
   :root {
-    --background-color: #fafafa;
-    --text-color: #333;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --link-color: #007bff;
   }
   #darkmode-dummy {
     display: none;
@@ -10,8 +11,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #333;
-    --text-color: #fafafa;
+    --background-color: #343a40;
+    --text-color: #f8f9fa;
+    --link-color: #809fff;
   }
   #darkmode-dummy {
     position: fixed;
