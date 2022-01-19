@@ -26,8 +26,16 @@ const config: NuxtConfig = {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  content: {
+    markdown: {
+      prism: {
+        theme: '~/assets/styles/markdown-code-highlight.css',
+      },
+    },
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/scss/global.scss'],
+  css: ['@/assets/styles/global.scss'],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
