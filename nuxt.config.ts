@@ -47,6 +47,7 @@ const config: NuxtConfig = {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     ['cookie-universal-nuxt', { parseJSON: false }],
+    '@nuxt/content',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
