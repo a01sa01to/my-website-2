@@ -8,8 +8,14 @@
 </template>
 
 <style lang="scss" scoped>
+div {
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+}
 main {
-  margin-top: calc(64px + 1em);
+  flex: 1;
+  padding-top: calc(64px + 1rem);
 }
 </style>
 
@@ -22,6 +28,7 @@ export default Vue.extend({
     }
   },
   mounted() {
+    this.isDarkmode = window.matchMedia('(prefers-color-scheme: dark)').matches
     const darkmodeDOM = document.getElementById('darkmode-dummy')
     if (darkmodeDOM) {
       const observer = new IntersectionObserver(() => {
