@@ -1,6 +1,6 @@
 <template>
   <div :data-darkmode="String(isDarkmode)">
-    <SharedHeader />
+    <SharedHeader :isDarkmode="isDarkmode" />
     <main><Nuxt /></main>
     <SharedFooter />
     <div id="darkmode-dummy" />
