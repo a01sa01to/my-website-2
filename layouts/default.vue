@@ -1,6 +1,6 @@
 <template>
-  <div :data-darkmode="String(isDarkmode)">
-    <SharedHeader :isDarkmode="isDarkmode" />
+  <div>
+    <SharedHeader />
     <main><Nuxt /></main>
     <SharedFooter />
     <div id="darkmode-dummy" />
@@ -29,10 +29,12 @@ export default Vue.extend({
   },
   mounted() {
     this.isDarkmode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    this.$store.commit('setdarkmode', this.isDarkmode)
     const darkmodeDOM = document.getElementById('darkmode-dummy')
     if (darkmodeDOM) {
       const observer = new IntersectionObserver(() => {
         this.isDarkmode = getComputedStyle(darkmodeDOM).display === 'block'
+        this.$store.commit('setdarkmode', this.isDarkmode)
       })
       observer.observe(darkmodeDOM)
     }

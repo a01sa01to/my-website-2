@@ -34,10 +34,9 @@ import 'cookie-universal-nuxt'
 import Vue from 'vue'
 import 'vue-i18n'
 export default Vue.extend({
-  props: {
-    isDarkmode: {
-      type: Boolean,
-      default: false,
+  computed: {
+    isDarkmode() {
+      return this.$store.state.darkmode
     },
   },
   methods: {
