@@ -9,7 +9,19 @@
 <script lang="ts">
 import Vue from 'vue'
 import StatusCode from '~/assets/status-code.json'
+
+const _statusCode2Message = (statusCode: number) =>
+  (StatusCode as { [key: string]: string })[String(statusCode)] ||
+  'Unknown Error'
+
 export default Vue.extend({
+  head() {
+    return {
+      title: `${this.error.statusCode} ${_statusCode2Message(
+        this.error.statusCode as number
+      )}`,
+    }
+  },
   props: {
     error: {
       type: Object,
@@ -18,10 +30,7 @@ export default Vue.extend({
   },
   methods: {
     statuscode2message(statusCode: number) {
-      return (
-        (StatusCode as { [key: string]: string })[String(statusCode)] ||
-        'Unknown Error'
-      )
+      return _statusCode2Message(statusCode)
     },
   },
 })
