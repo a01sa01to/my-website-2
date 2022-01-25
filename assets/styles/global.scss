@@ -26,4 +26,12 @@ main {
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 1rem;
+  ol.breadcrumb {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  hr {
+    border-top-color: var(--border-color);
+    width: 100%;
+  }
 }
