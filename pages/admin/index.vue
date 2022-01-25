@@ -1,12 +1,7 @@
 <template>
   <div>
     <h1>Admin Tools</h1>
-    <b-breadcrumb>
-      <b-breadcrumb-item to="/">Home</b-breadcrumb-item>
-      <b-breadcrumb-item active>Admin Home</b-breadcrumb-item>
-    </b-breadcrumb>
-    <hr />
-
+    <breadcrumb :data="breadcrumb_data" />
     <b-list-group>
       <b-list-group-item
         :variant="$store.state.darkmode ? 'dark' : 'light'"
@@ -22,6 +17,14 @@ import Vue from 'vue'
 export default Vue.extend({
   head: {
     title: 'Admin Home',
+  },
+  data() {
+    return {
+      breadcrumb_data: [
+        { text: 'Home', to: '/' },
+        { text: 'Admin Home', to: '/admin/', active: true },
+      ],
+    }
   },
   middleware: 'auth',
 })
