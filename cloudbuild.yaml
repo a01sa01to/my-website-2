@@ -6,6 +6,11 @@ steps:
         '-c',
         "gcloud app versions list --service=beta | grep 0.00 | sort -rk 4,4 | awk '{print $2}' | tail -n +11 | xargs -l gcloud app versions delete {}",
       ]
+  - name: ubuntu
+    args: ['bash', './workflow_tools/builder/generate_env.sh']
+    env:
+      - 'GITHUB_CLI_ID=$_GITHUB_CLI_ID'
+      - 'GITHUB_CLI_SEC=$_GITHUB_CLI_SEC'
   - name: node:16
     entrypoint: yarn
     args: ['install']
