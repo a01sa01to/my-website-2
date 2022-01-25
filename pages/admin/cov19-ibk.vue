@@ -1,12 +1,7 @@
 <template>
   <div>
     <h1>Covid19 Ibaraki Updater</h1>
-    <b-breadcrumb>
-      <b-breadcrumb-item to="/">Home</b-breadcrumb-item>
-      <b-breadcrumb-item to="/admin/">Admin Home</b-breadcrumb-item>
-      <b-breadcrumb-item active>Covid19-ibk</b-breadcrumb-item>
-    </b-breadcrumb>
-    <hr />
+    <breadcrumb :data="breadcrumb_data" />
     <h2>Pref</h2>
     <b-row>
       <b-col>
@@ -17,11 +12,10 @@
             <th>New</th>
             <th>Close</th>
           </tr>
-          <tr v-for="(val, key) in Data_Pref.municipality">
+          <tr v-for="(val, key) in Data_Pref.municipality" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -30,7 +24,6 @@
             </td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -47,11 +40,10 @@
             <th>Gender</th>
             <th>Value</th>
           </tr>
-          <tr v-for="(val, key) in Data_Pref.gender">
+          <tr v-for="(val, key) in Data_Pref.gender" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -67,11 +59,10 @@
             <th>Age</th>
             <th>Value</th>
           </tr>
-          <tr v-for="(val, key) in Data_Pref.age">
+          <tr v-for="(val, key) in Data_Pref.age" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -87,11 +78,10 @@
             <th>Occupation</th>
             <th>Value</th>
           </tr>
-          <tr v-for="(val, key) in Data_Pref.occupation">
+          <tr v-for="(val, key) in Data_Pref.occupation" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -113,11 +103,10 @@
             <th>New</th>
             <th>Close</th>
           </tr>
-          <tr v-for="(val, key) in Data_Mito.municipality">
+          <tr v-for="(val, key) in Data_Mito.municipality" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -126,7 +115,6 @@
             </td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -143,11 +131,10 @@
             <th>Gender</th>
             <th>Value</th>
           </tr>
-          <tr v-for="(val, key) in Data_Mito.gender">
+          <tr v-for="(val, key) in Data_Mito.gender" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -163,11 +150,10 @@
             <th>Age</th>
             <th>Value</th>
           </tr>
-          <tr v-for="(val, key) in Data_Mito.age">
+          <tr v-for="(val, key) in Data_Mito.age" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -183,11 +169,10 @@
             <th>Occupation</th>
             <th>Value</th>
           </tr>
-          <tr v-for="(val, key) in Data_Mito.occupation">
+          <tr v-for="(val, key) in Data_Mito.occupation" v-bind:key="key">
             <td>{{ key }}</td>
             <td>
               <b-form-input
-                @change="output"
                 type="number"
                 size="sm"
                 number
@@ -200,7 +185,8 @@
     </b-row>
     <hr />
     <h2>Output</h2>
-    <b-form-textarea :value="output()" readonly />
+    <b-button @click="output()" variant="primary">Generate</b-button><br />
+    <b-form-textarea :value="outputData" readonly />
   </div>
 </template>
 
@@ -288,6 +274,16 @@ export default Vue.extend({
       isDarkmode: this.$store.state.darkmode,
       Data_Pref,
       Data_Mito,
+      breadcrumb_data: [
+        { to: '/', text: 'Home' },
+        { to: '/admin/', text: 'Admin Home' },
+        {
+          to: '/admin/cov19-ibk/',
+          text: 'Covid19 Ibaraki Updater',
+          active: true,
+        },
+      ],
+      outputData: '',
     }
   },
   methods: {
@@ -333,7 +329,7 @@ export default Vue.extend({
       delete occupation_mito['児童']
 
       // Pref
-      {
+      try {
         Object.keys(this.Data_Pref.municipality).forEach((key) => {
           const val = this.Data_Pref.municipality[key]
           for (let i = 0; i < val[0]; ++i) {
@@ -391,9 +387,17 @@ export default Vue.extend({
             ++idx
           }
         })
+      } catch (e) {
+        console.error(e)
+        this.$bvToast.toast('Pref Data Error', {
+          title: 'Error',
+          variant: 'danger',
+          solid: true,
+          autoHideDelay: 5000,
+        })
       }
       // Mito
-      {
+      try {
         Object.keys(this.Data_Mito.municipality).forEach((key) => {
           const val = this.Data_Mito.municipality[key]
           for (let i = 0; i < val[0]; ++i) {
@@ -451,8 +455,16 @@ export default Vue.extend({
             ++idx
           }
         })
+      } catch (e) {
+        console.error(e)
+        this.$bvToast.toast('Mito Data Error', {
+          title: 'Error',
+          variant: 'danger',
+          solid: true,
+          autoHideDelay: 5000,
+        })
       }
-      return data
+      this.outputData = data
         .concat(data_mito)
         .map((_) => _.join('\t'))
         .join('\n')
