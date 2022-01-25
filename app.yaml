@@ -15,6 +15,15 @@ runtime: nodejs16
 service: beta
 
 handlers:
+  - url: /_nuxt
+    static_dir: .nuxt/dist/client
+    secure: always
+
+  - url: /(.*\.(gif|png|jpg|ico|txt))$
+    static_files: static/\1
+    upload: static/.*\.(gif|png|jpg|ico|txt)$
+    secure: always
+
   - url: /.*
     secure: always
     script: auto
