@@ -1,7 +1,29 @@
 import { NuxtConfig } from '@nuxt/types'
-import 'cookie-universal-nuxt'
+import '@nuxtjs/auth-next'
 
 const config: NuxtConfig = {
+  auth: {
+    strategies: {
+      github: {
+        cliendId: process.env.GITHUB_CLI_ID,
+        clientSecret: process.env.GITHUB_CLI_SEC,
+      },
+    },
+    cookie: {
+      options: {
+        path: '/admin/',
+        maxAge: 60 * 60 * 24 * 7,
+      },
+    },
+    localStorage: false,
+    redirect: {
+      home: '/admin/',
+      callback: '/admin/callback/',
+      login: '/admin/login/',
+      logout: '/admin/login/',
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
@@ -74,10 +96,17 @@ const config: NuxtConfig = {
     '@nuxtjs/pwa',
     ['cookie-universal-nuxt', { parseJSON: false }],
     '@nuxt/content',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/vue-i18n.ts'],
+
+  privateRuntimeConfig: {
+    GITHUB_CLI_ID: process.env.GITHUB_CLI_ID,
+    GITHUB_CLI_SEC: process.env.GITHUB_CLI_SEC,
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
