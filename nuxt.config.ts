@@ -24,6 +24,10 @@ const config: NuxtConfig = {
     },
   },
 
+  bootstrapVue: {
+    icons: false,
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
@@ -43,6 +47,7 @@ const config: NuxtConfig = {
         display: 'swap',
       },
     ],
+    '@nuxtjs/google-analytics',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -75,6 +80,10 @@ const config: NuxtConfig = {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     titleTemplate: "%s - Asa's Website",
+  },
+
+  googleAnalytics: {
+    id: 'G-Z23EQDNLQY',
   },
 
   loading: {
