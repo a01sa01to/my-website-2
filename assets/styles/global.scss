@@ -19,7 +19,9 @@ a:active,
 a:focus,
 a:focus-within,
 a:focus-visible {
-  color: var(--link-color);
+  &:not(.btn) {
+    color: var(--link-color);
+  }
 }
 
 main {
