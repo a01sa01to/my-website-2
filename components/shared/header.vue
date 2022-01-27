@@ -3,8 +3,8 @@
     <b-navbar
       class="shadow"
       fixed="top"
-      :type="isDarkmode ? 'dark' : 'light'"
-      :variant="isDarkmode ? 'dark' : 'light'"
+      :type="navbarTheme"
+      :variant="navbarTheme"
       toggleable="lg"
     >
       <b-navbar-brand href="#">Asa's Website</b-navbar-brand>
@@ -35,8 +35,8 @@ import Vue from 'vue'
 import 'vue-i18n'
 export default Vue.extend({
   computed: {
-    isDarkmode() {
-      return this.$store.state.darkmode
+    navbarTheme() {
+      return this.$store.state.darkmode ? 'dark' : 'light'
     },
   },
   methods: {

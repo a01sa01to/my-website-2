@@ -11,7 +11,7 @@
       <scroll-next-animation />
     </b-container>
     <b-container>
-      <h1>About me</h1>
+      <h2>About me</h2>
       <p>
         {{
           $t('ただの{age}歳の埼玉大学{grade}年生。茨城県住み。', {
@@ -25,11 +25,11 @@
         {{ $t('プログラミングする。たまに趣味で動画制作する。') }}<br />
       </p>
       <p class="text-right">
-        <nuxt-link to="/about/me/">{{ $t('詳しくはこちら') }} &gt;</nuxt-link>
+        <nuxt-link to="/about/">{{ $t('詳しくはこちら') }} &gt;</nuxt-link>
       </p>
     </b-container>
     <b-container>
-      <h1>Works</h1>
+      <h2>Works</h2>
       <b-row>
         <b-col>
           <b-card
@@ -51,7 +51,7 @@
             </b-card-text>
             <b-button
               href="https://ibaraki.stopcovid19.jp"
-              variant="outline-primary"
+              :variant="btn_variant"
               target="_blank"
               pill
             >
@@ -60,7 +60,7 @@
             </b-button>
             <b-button
               href="https://github.com/a01sa01to/covid19-ibaraki"
-              variant="outline-primary"
+              :variant="btn_variant"
               target="_blank"
               pill
             >
@@ -69,7 +69,7 @@
             </b-button>
             <b-button
               href="https://twitter.com/covid19_ibaraki"
-              variant="outline-primary"
+              :variant="btn_variant"
               target="_blank"
               pill
             >
@@ -97,7 +97,7 @@
             </b-card-text>
             <b-button
               href="https://kss-bakakkoii.a01sa01to.com"
-              variant="outline-primary"
+              :variant="btn_variant"
               target="_blank"
               pill
             >
@@ -106,7 +106,7 @@
             </b-button>
             <b-button
               href="https://github.com/a01sa01to/kss-bakakkoii-website"
-              variant="outline-primary"
+              :variant="btn_variant"
               target="_blank"
               pill
             >
@@ -115,7 +115,7 @@
             </b-button>
             <b-button
               href="https://twitter.com/kss_bakakkoii"
-              variant="outline-primary"
+              :variant="btn_variant"
               target="_blank"
               pill
             >
@@ -130,7 +130,7 @@
       </p>
     </b-container>
     <b-container>
-      <h1>Services</h1>
+      <h2>Services</h2>
       <b-row>
         <b-col>
           <nuxt-link to="/blog/">
@@ -151,7 +151,7 @@
       </b-row>
     </b-container>
     <b-container>
-      <h1>Social</h1>
+      <h2>Social</h2>
       <b-row>
         <b-col>
           <a
@@ -216,6 +216,13 @@ export default Vue.extend({
     BIconServer,
     BIconTwitter,
     BIconInstagram,
+  },
+  computed: {
+    btn_variant() {
+      return this.$store.state.darkmode
+        ? 'outline-secondary'
+        : 'outline-primary'
+    },
   },
 })
 </script>
