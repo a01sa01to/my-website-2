@@ -11,9 +11,9 @@
     />
     <TableOfContents />
     <b-container>
-      <h2>{{ $t('使い方') }}</h2>
+      <h2 id="how-to-use">{{ $t('使い方') }}</h2>
       <b-container>
-        <h3>{{ $t('ページのタイトルを取得する') }}</h3>
+        <h3 id="getting-title">{{ $t('ページのタイトルを取得する') }}</h3>
         <b-img-lazy fluid src="/images/apps/title-url-picker/01.jpg" />
         <ol>
           <li>{{ $t('拡張機能を開きます。') }}</li>
@@ -22,7 +22,7 @@
         </ol>
       </b-container>
       <b-container>
-        <h3>{{ $t('ページのURLを取得') }}</h3>
+        <h3 id="getting-url">{{ $t('ページのURLを取得') }}</h3>
         <img src="/images/apps/title-url-picker/02.jpg" alt="URLを取得" />
         <ol>
           <li>{{ $t('拡張機能を開きます。') }}</li>
@@ -31,7 +31,9 @@
         </ol>
       </b-container>
       <b-container>
-        <h3>{{ $t('Markdown形式でページへのリンクを作成') }}</h3>
+        <h3 id="getting-markdown">
+          {{ $t('Markdown形式でページへのリンクを作成') }}
+        </h3>
         <img src="/images/apps/title-url-picker/03.jpg" alt="リンクを作成" />
         <ol>
           <li>{{ $t('拡張機能を開きます。') }}</li>
@@ -43,7 +45,7 @@
       </b-container>
     </b-container>
     <b-container>
-      <h2>{{ $t('導入方法') }}</h2>
+      <h2 id="how-to-install">{{ $t('導入方法') }}</h2>
       <p>
         <i18n path="{chromeWebstore}からインストールしてください。">
           <template #chromeWebstore>
@@ -53,7 +55,7 @@
       </p>
     </b-container>
     <b-container>
-      <h2>{{ $t('関係するリンク') }}</h2>
+      <h2 id="related-links">{{ $t('関係するリンク') }}</h2>
       <ul>
         <li>
           <external-link
@@ -71,7 +73,7 @@
       </ul>
     </b-container>
     <b-container>
-      <h2>{{ $t('更新情報') }}</h2>
+      <h2 id="updates">{{ $t('更新情報') }}</h2>
       <ul>
         <li>2021.05.06 - {{ $t('この紹介ページを公開') }}</li>
         <li>2019.03.16 - {{ $t('ソースコードを公開') }}</li>
