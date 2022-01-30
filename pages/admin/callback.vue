@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <b-container>
     <p>Please wait...</p>
-  </div>
+  </b-container>
 </template>
 <script lang="ts">
 import Vue from 'vue'

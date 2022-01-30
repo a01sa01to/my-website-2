@@ -2,191 +2,197 @@
   <div>
     <h1>Covid19 Ibaraki Updater</h1>
     <breadcrumb :data="breadcrumb_data" />
-    <h2>Pref</h2>
-    <b-row>
-      <b-col>
-        <h3>市町村別</h3>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>New</th>
-            <th>Close</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Pref.municipality" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Pref.municipality[key][0]"
-              />
-            </td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Pref.municipality[key][1]"
-              />
-            </td>
-          </tr>
-        </table>
-      </b-col>
-      <b-col>
-        <h3>男女別</h3>
-        <table>
-          <tr>
-            <th>Gender</th>
-            <th>Value</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Pref.gender" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Pref.gender[key]"
-              />
-            </td>
-          </tr>
-        </table>
-        <br />
-        <h3>年齢別</h3>
-        <table>
-          <tr>
-            <th>Age</th>
-            <th>Value</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Pref.age" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Pref.age[key]"
-              />
-            </td>
-          </tr>
-        </table>
-        <br />
-        <h3>職業別</h3>
-        <table>
-          <tr>
-            <th>Occupation</th>
-            <th>Value</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Pref.occupation" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Pref.occupation[key]"
-              />
-            </td>
-          </tr>
-        </table>
-      </b-col>
-    </b-row>
+    <b-container>
+      <h2>Pref</h2>
+      <b-row>
+        <b-col>
+          <h3>市町村別</h3>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>New</th>
+              <th>Close</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Pref.municipality" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Pref.municipality[key][0]"
+                />
+              </td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Pref.municipality[key][1]"
+                />
+              </td>
+            </tr>
+          </table>
+        </b-col>
+        <b-col>
+          <h3>男女別</h3>
+          <table>
+            <tr>
+              <th>Gender</th>
+              <th>Value</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Pref.gender" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Pref.gender[key]"
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <h3>年齢別</h3>
+          <table>
+            <tr>
+              <th>Age</th>
+              <th>Value</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Pref.age" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Pref.age[key]"
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <h3>職業別</h3>
+          <table>
+            <tr>
+              <th>Occupation</th>
+              <th>Value</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Pref.occupation" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Pref.occupation[key]"
+                />
+              </td>
+            </tr>
+          </table>
+        </b-col>
+      </b-row>
+    </b-container>
     <hr />
-    <h2>Mito</h2>
-    <b-row>
-      <b-col>
-        <h3>市町村別</h3>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>New</th>
-            <th>Close</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Mito.municipality" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Mito.municipality[key][0]"
-              />
-            </td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Mito.municipality[key][1]"
-              />
-            </td>
-          </tr>
-        </table>
-      </b-col>
-      <b-col>
-        <h3>男女別</h3>
-        <table>
-          <tr>
-            <th>Gender</th>
-            <th>Value</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Mito.gender" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Mito.gender[key]"
-              />
-            </td>
-          </tr>
-        </table>
-        <br />
-        <h3>年齢別</h3>
-        <table>
-          <tr>
-            <th>Age</th>
-            <th>Value</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Mito.age" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Mito.age[key]"
-              />
-            </td>
-          </tr>
-        </table>
-        <br />
-        <h3>職業別</h3>
-        <table>
-          <tr>
-            <th>Occupation</th>
-            <th>Value</th>
-          </tr>
-          <tr v-for="(val, key) in Data_Mito.occupation" v-bind:key="key">
-            <td>{{ key }}</td>
-            <td>
-              <b-form-input
-                type="number"
-                size="sm"
-                number
-                v-model="Data_Mito.occupation[key]"
-              />
-            </td>
-          </tr>
-        </table>
-      </b-col>
-    </b-row>
+    <b-container>
+      <h2>Mito</h2>
+      <b-row>
+        <b-col>
+          <h3>市町村別</h3>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>New</th>
+              <th>Close</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Mito.municipality" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Mito.municipality[key][0]"
+                />
+              </td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Mito.municipality[key][1]"
+                />
+              </td>
+            </tr>
+          </table>
+        </b-col>
+        <b-col>
+          <h3>男女別</h3>
+          <table>
+            <tr>
+              <th>Gender</th>
+              <th>Value</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Mito.gender" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Mito.gender[key]"
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <h3>年齢別</h3>
+          <table>
+            <tr>
+              <th>Age</th>
+              <th>Value</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Mito.age" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Mito.age[key]"
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <h3>職業別</h3>
+          <table>
+            <tr>
+              <th>Occupation</th>
+              <th>Value</th>
+            </tr>
+            <tr v-for="(val, key) in Data_Mito.occupation" v-bind:key="key">
+              <td>{{ key }}</td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Mito.occupation[key]"
+                />
+              </td>
+            </tr>
+          </table>
+        </b-col>
+      </b-row>
+    </b-container>
     <hr />
-    <h2>Output</h2>
-    <b-button @click="output()" variant="primary">Generate</b-button><br />
-    <b-form-textarea :value="outputData" readonly />
+    <b-container>
+      <h2>Output</h2>
+      <b-button @click="output()" variant="primary">Generate</b-button><br />
+      <b-form-textarea :value="outputData" readonly />
+    </b-container>
   </div>
 </template>
 

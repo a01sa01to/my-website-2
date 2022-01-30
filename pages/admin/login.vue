@@ -2,13 +2,15 @@
   <div>
     <h1>Admin Login</h1>
     <breadcrumb :data="breadcrumb_data" />
-    <p>
-      You cannot view this page without logging in.<br />
-      Of cource, you cannot view if you are not admin.
-    </p>
-    <b-button variant="primary" @click="$auth.login()">
-      Continue with GitHub
-    </b-button>
+    <b-container>
+      <p>
+        You cannot view this page without logging in.<br />
+        Of cource, you cannot view if you are not admin.
+      </p>
+      <b-button variant="primary" @click="$auth.login()">
+        Continue with GitHub
+      </b-button>
+    </b-container>
   </div>
 </template>
 

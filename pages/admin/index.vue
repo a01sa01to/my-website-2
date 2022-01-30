@@ -2,13 +2,22 @@
   <div>
     <h1>Admin Tools</h1>
     <breadcrumb :data="breadcrumb_data" />
-    <b-list-group>
-      <b-list-group-item
-        :variant="$store.state.darkmode ? 'dark' : 'light'"
-        to="./cov19-ibk"
-        >Covid19 Ibaraki Updater</b-list-group-item
-      >
-    </b-list-group>
+    <b-container>
+      <b-list-group>
+        <b-list-group-item
+          :variant="$store.state.darkmode ? 'dark' : 'light'"
+          to="./cov19-ibk/"
+        >
+          Covid19 Ibaraki Updater
+        </b-list-group-item>
+        <b-list-group-item
+          :variant="$store.state.darkmode ? 'dark' : 'light'"
+          to="./update-icon/"
+        >
+          Update Icon List
+        </b-list-group-item>
+      </b-list-group>
+    </b-container>
   </div>
 </template>
 
