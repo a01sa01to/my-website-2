@@ -59,7 +59,7 @@
         href="https://atcoder.jp/users/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #000; --text-color: #fff"
+        style="--bg-color: #000"
       >
         <b-icon-link-45deg />
         AtCoder
@@ -68,7 +68,7 @@
         href="https://codeforces.com/profile/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #1f8acb; --text-color: #fff"
+        style="--bg-color: #1f8acb"
       >
         <simpleicon-container :data="siCodeforces" />
         Codeforces
@@ -77,7 +77,7 @@
         href="https://facebook.com/asato.tsuchiya.77"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #1877f2; --text-color: #fff"
+        style="--bg-color: #1877f2"
       >
         <simpleicon-container :data="siFacebook" />
         Facebook
@@ -86,7 +86,7 @@
         href="https://github.com/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #181717; --text-color: #fff"
+        style="--bg-color: #181717"
       >
         <simpleicon-container :data="siGithub" />
         GitHub
@@ -95,7 +95,7 @@
         href="https://g.dev/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #4285f4; --text-color: #fff"
+        style="--bg-color: #4285f4"
       >
         <simpleicon-container :data="siGoogle" />
         Google Developers
@@ -104,7 +104,7 @@
         href="https://instagram.com/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #e4405f; --text-color: #fff"
+        style="--bg-color: #e4405f"
       >
         <simpleicon-container :data="siInstagram" />
         Instagram
@@ -113,7 +113,7 @@
         href="https://www.nicovideo.jp/user/46836937"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #231815; --text-color: #fff"
+        style="--bg-color: #231815"
       >
         <simpleicon-container :data="siNiconico" />
         niconico
@@ -122,7 +122,7 @@
         href="https://www.npmjs.com/~a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #c83837; --text-color: #fff"
+        style="--bg-color: #c83837"
       >
         <simpleicon-container :data="siNpm" />
         npm
@@ -131,7 +131,7 @@
         href="https://peing.net/ja/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #5eb9ba; --text-color: #fff"
+        style="--bg-color: #5eb9ba"
       >
         <b-icon-link-45deg />
         Peing {{ $t('（質問箱）') }}
@@ -140,7 +140,7 @@
         href="https://www.pixiv.net/users/21010304"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #0096fa; --text-color: #fff"
+        style="--bg-color: #0096fa"
       >
         <simpleicon-container :data="siPixiv" />
         Pixiv
@@ -149,7 +149,7 @@
         href="https://qiita.com/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #55c500; --text-color: #fff"
+        style="--bg-color: #55c500"
       >
         <simpleicon-container :data="siQiita" />
         Qiita
@@ -158,7 +158,7 @@
         href="https://steamcommunity.com/id/a01sa01to/"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #000; --text-color: #fff"
+        style="--bg-color: #000"
       >
         <simpleicon-container :data="siSteam" />
         Steam
@@ -167,7 +167,7 @@
         href="https://www.twitch.tv/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #9146ff; --text-color: #fff"
+        style="--bg-color: #9146ff"
       >
         <simpleicon-container :data="siTwitch" />
         Twitch
@@ -176,7 +176,7 @@
         href="https://twitter.com/a01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #1da1f2; --text-color: #fff"
+        style="--bg-color: #1da1f2"
       >
         <simpleicon-container :data="siTwitter" />
         Twitter
@@ -185,7 +185,7 @@
         href="https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:A01sa01to"
         target="_blank"
         class="btn-custom"
-        style="--bg-color: #000; --text-color: #fff"
+        style="--bg-color: #000"
       >
         <simpleicon-container :data="siWikipedia" />
         Wikipedia
