@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>About Me</h1>
-    <breadcrumb :data="breadcrumb_data" />
+    <SharedMainHeader title="About Me" :b_data="breadcrumb_data" />
     <b-container>
       <h2>{{ $t('自己紹介') }}</h2>
       <p>

@@ -10,7 +10,6 @@
         {{ d.text }}
       </b-breadcrumb-item>
     </b-breadcrumb>
-    <hr />
   </div>
 </template>
 <script lang="ts">

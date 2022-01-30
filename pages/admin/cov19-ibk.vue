@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1>Covid19 Ibaraki Updater</h1>
-    <breadcrumb :data="breadcrumb_data" />
+    <SharedMainHeader
+      title="Covid19 Ibaraki Updater"
+      :b_data="breadcrumb_data"
+    />
     <b-container>
       <h2>Pref</h2>
       <b-row>

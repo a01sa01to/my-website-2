@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Admin Login</h1>
-    <breadcrumb :data="breadcrumb_data" />
+    <SharedMainHeader title="Admin Login" :b_data="breadcrumb_data" />
     <b-container>
       <p>
         You cannot view this page without logging in.<br />
