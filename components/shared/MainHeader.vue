@@ -2,6 +2,7 @@
   <b-container>
     <h1>{{ title }}</h1>
     <breadcrumb :data="b_data" />
+    <p v-if="description">{{ description }}</p>
     <hr />
   </b-container>
 </template>
@@ -17,6 +18,11 @@ export default Vue.extend({
     b_data: {
       type: Array,
       required: true,
+    },
+    description: {
+      type: String,
+      required: false,
+      default: '',
     },
   },
 })
