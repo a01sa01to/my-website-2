@@ -183,7 +183,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <icon-with-text hovercolor="#000">
+            <icon-with-text hovercolor="#181717">
               <template #icon><b-icon-github /></template>
               <template #text>GitHub</template>
             </icon-with-text>
