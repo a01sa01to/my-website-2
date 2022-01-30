@@ -1,5 +1,5 @@
 @import 'darkmode-variables';
-
+@import 'bootstrap-button-custom';
 * {
   font-family: 'Quicksand', 'Muli', 'Open Sans', 'Noto Sans JP', sans-serif;
   outline: none;
@@ -38,5 +38,12 @@ main {
   }
   .container {
     margin: 1.5rem auto;
+    h2 {
+      margin: 1rem 0;
+    }
   }
+}
+
+.btn {
+  margin: 0.3rem;
 }

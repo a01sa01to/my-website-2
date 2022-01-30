@@ -1,0 +1,19 @@
+.btn-custom {
+  &,
+  &:hover {
+    background-color: var(--bg-color);
+    border-color: var(--bg-color);
+    color: var(--text-color);
+  }
+}
+
+.btn-outline-custom {
+  color: var(--bg-color);
+  border-color: var(--bg-color);
+  &:hover,
+  &:focus {
+    background-color: var(--bg-color);
+    border-color: var(--bg-color);
+    color: var(--text-color);
+  }
+}
