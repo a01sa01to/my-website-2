@@ -17,7 +17,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   head: {
-    title: 'Admin Login',
+    title: 'Login - Admin',
   },
   data() {
     return {

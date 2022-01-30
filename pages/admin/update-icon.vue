@@ -195,7 +195,7 @@ export default Vue.extend({
   components: { BIconLink45deg },
   middleware: 'auth',
   head: {
-    title: 'Update Icon List',
+    title: 'Update Icon List - Admin',
   },
   data() {
     return {
