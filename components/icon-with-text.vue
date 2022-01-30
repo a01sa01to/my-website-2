@@ -1,8 +1,7 @@
 <template>
   <div
     class="icon_container text-center"
-    @mouseover="hover = true"
-    @mouseout="hover = false"
+    v-b-hover="hoverhandler"
     :style="{ color: hover ? hovercolor : 'var(--text-color)' }"
     :data-color="hovercolor"
   >
@@ -30,6 +29,11 @@ export default Vue.extend({
     return {
       hover: false,
     }
+  },
+  methods: {
+    hoverhandler(hovered: boolean) {
+      this.hover = hovered
+    },
   },
 })
 </script>
