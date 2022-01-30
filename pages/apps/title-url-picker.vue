@@ -49,7 +49,11 @@
       <p>
         <i18n path="{chromeWebstore}からインストールしてください。">
           <template #chromeWebstore>
-            <external-link to="#"> Chrome Webstore </external-link>
+            <external-link
+              to="https://chrome.google.com/webstore/detail/apegdmeimjlklboalimnaokfnnngajcg"
+            >
+              Chrome Webstore
+            </external-link>
           </template>
         </i18n>
       </p>
