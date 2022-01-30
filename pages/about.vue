@@ -212,7 +212,6 @@ import {
   siTwitter,
   siWikipedia,
 } from 'simple-icons/icons'
-import SimpleiconContainer from '~/components/simpleicon-container.vue'
 export default Vue.extend({
   head: {
     title: 'About Me',
@@ -220,7 +219,6 @@ export default Vue.extend({
   components: {
     BIconLink45deg,
     BIconLock,
-    SimpleiconContainer,
   },
   data() {
     return {
