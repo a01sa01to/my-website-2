@@ -15,7 +15,7 @@
               <th>New</th>
               <th>Close</th>
             </tr>
-            <tr v-for="(val, key) in Data_Pref.municipality" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Pref.municipality" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -43,7 +43,7 @@
               <th>Gender</th>
               <th>Value</th>
             </tr>
-            <tr v-for="(val, key) in Data_Pref.gender" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Pref.gender" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -62,7 +62,7 @@
               <th>Age</th>
               <th>Value</th>
             </tr>
-            <tr v-for="(val, key) in Data_Pref.age" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Pref.age" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -81,7 +81,7 @@
               <th>Occupation</th>
               <th>Value</th>
             </tr>
-            <tr v-for="(val, key) in Data_Pref.occupation" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Pref.occupation" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -108,7 +108,7 @@
               <th>New</th>
               <th>Close</th>
             </tr>
-            <tr v-for="(val, key) in Data_Mito.municipality" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Mito.municipality" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -136,7 +136,7 @@
               <th>Gender</th>
               <th>Value</th>
             </tr>
-            <tr v-for="(val, key) in Data_Mito.gender" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Mito.gender" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -155,7 +155,7 @@
               <th>Age</th>
               <th>Value</th>
             </tr>
-            <tr v-for="(val, key) in Data_Mito.age" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Mito.age" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -174,7 +174,7 @@
               <th>Occupation</th>
               <th>Value</th>
             </tr>
-            <tr v-for="(val, key) in Data_Mito.occupation" v-bind:key="key">
+            <tr v-for="(val, key) in Data_Mito.occupation" :key="key">
               <td>{{ key }}</td>
               <td>
                 <b-form-input
@@ -211,7 +211,7 @@ type data_type = {
 
 export default Vue.extend({
   head: {
-    title: 'Covid19 Ibaraki Updater',
+    title: 'Covid19 Ibaraki Updater - Admin',
   },
   middleware: 'auth',
   data() {

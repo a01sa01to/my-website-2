@@ -3,7 +3,7 @@
     <b-breadcrumb>
       <b-breadcrumb-item
         v-for="d in data"
-        v-bind:key="d.to"
+        :key="d.to"
         :to="d.to"
         :active="d.active"
       >
