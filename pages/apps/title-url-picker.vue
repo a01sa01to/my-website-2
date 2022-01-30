@@ -9,6 +9,7 @@
         )
       "
     />
+    <TableOfContents />
     <b-container>
       <h2>{{ $t('使い方') }}</h2>
       <b-container>

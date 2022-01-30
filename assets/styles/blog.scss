@@ -21,3 +21,9 @@ img {
 img + ol {
   display: inline-block;
 }
+
+@media (prefers-color-scheme: dark) {
+  h2 {
+    background-color: #454b51;
+  }
+}
