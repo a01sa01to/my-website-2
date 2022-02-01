@@ -5,10 +5,10 @@ import os
 import re
 
 # チェックするディレクトリのリスト
-CHECK_DIR = ["pages", "components", "layouts"]
+CHECK_DIR = ["pages", "components", "layouts", "data"]
 
 # チェックするjsonファイルのリスト
-JSON_FILES = []
+JSON_FILES = ["apps.json"]
 
 # チェックするTypeScriptファイルのリスト
 TS_FILES = []
@@ -63,7 +63,11 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
         # すべてのVueファイルを検索
         vue_files = glob.glob(cdir + os.sep + "**" +
                               os.sep + "*.vue", recursive=True)
+        json_files = glob.glob(cdir + os.sep + "**" +
+                               os.sep + "*.json", recursive=True)
+
         file_count += len(vue_files)
+        file_count += len(json_files)
 
         # 各Vueファイルについて処理
         for path in vue_files:
@@ -92,6 +96,15 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
 
                 # タグを統合し、重複分を取り除く
                 all_tags = list(set(all_tags + fixed_tags))
+
+        for path in json_files:
+            with open(path, encoding=ENCODING) as file:
+                content = json.load(file)
+                if path == "data{}apps.json".format(os.sep):
+                    for item in content:
+                        if(item["translate"]):
+                            all_tags.append(item["title"])
+                        all_tags.append(item["text"])
 
     # Noneが混じっている場合、取り除く
     try:
