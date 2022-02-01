@@ -1,0 +1,248 @@
+[
+  {
+    "title": "Show my report without downloading (WebClass)",
+    "translate": false,
+    "publish": "2021.10.23",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/Webclass-PreventDL",
+    "text": "WebClassで、提出したレポートなどを、ダウンロードせずに閲覧するためのChrome拡張機能。（命名の語彙力がないことはお気になさらず...）",
+    "buttons": [
+      {
+        "text": "Download",
+        "url": "https://chrome.google.com/webstore/detail/jnfpcbofkkehicfggjmhgaabheodhhpe/",
+        "external": true,
+        "icon": "b-icon-download"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/WebClass-PreventDL",
+        "external": true,
+        "icon": "b-icon-github"
+      },
+      {
+        "text": "About",
+        "url": "./webclass-prevent-dl/",
+        "external": false,
+        "icon": "b-icon-book"
+      }
+    ]
+  },
+  {
+    "title": "席替えシステム",
+    "translate": true,
+    "publish": "2020.11.03",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/Seat-Change",
+    "text": "教室での席替えを勝手にしてくれるプログラム。行数と列数、人数を指定したり、希望者は優先的に前列にしたりすることもできる機能付き。",
+    "buttons": [
+      {
+        "text": "View",
+        "url": "https://repos.a01sa01to.com/Seat-Change/",
+        "external": true,
+        "icon": "b-icon-box-arrow-up-right"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/Seat-Change",
+        "external": true,
+        "icon": "b-icon-github"
+      }
+    ]
+  },
+  {
+    "title": "古河中等ばかっこいいシリーズ",
+    "translate": true,
+    "publish": "2020.07.13",
+    "imgsrc": "/images/kss_bakakkoii.jpg",
+    "text": "古河中等の有志発表で唯一の動画枠（だった）。初回発表は2016年9月9日の文化祭で、合計3回の文化祭、2回の学年リクリエーションに登場した。そのウェブサイトを、最終回直前にリニューアルし、2020.07.13に公開した。",
+    "buttons": [
+      {
+        "text": "View",
+        "url": "https://kss-bakakkoii.a01sa01to.com/",
+        "external": true,
+        "icon": "b-icon-box-arrow-up-right"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/kss-bakakkoii-website",
+        "external": true,
+        "icon": "b-icon-github"
+      },
+      {
+        "text": "Videos",
+        "url": "https://www.youtube.com/channel/UC_s6Env3fmLi1hIbYrrBk0Q",
+        "external": true,
+        "icon": "b-icon-youtube"
+      }
+    ]
+  },
+  {
+    "title": "茨城県新型コロナウイルス対策サイト",
+    "translate": true,
+    "publish": "2020.03.20",
+    "imgsrc": "/images/ibk_stopcovid19.png",
+    "text": "茨城県の新型コロナの感染状況や対策情報などがみられるダッシュボード。東京都公式版を派生させて作った。",
+    "buttons": [
+      {
+        "text": "View",
+        "url": "https://ibaraki.stopcovid19.jp/",
+        "external": true,
+        "icon": "b-icon-box-arrow-up-right"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/covid19-ibaraki",
+        "external": true,
+        "icon": "b-icon-github"
+      },
+      {
+        "text": "Twitter",
+        "url": "https://twitter.com/covid19_ibaraki",
+        "external": true,
+        "icon": "b-icon-twitter"
+      },
+      {
+        "text": "Tokyo",
+        "url": "https://stopcovid19.metro.tokyo.lg.jp/",
+        "external": true,
+        "icon": "b-icon-diagram3"
+      }
+    ]
+  },
+  {
+    "title": "README-Maker",
+    "translate": false,
+    "publish": "2019.12.14",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/README-Maker",
+    "text": "GitHubの「Template」機能を知らずに作ったREADME.md生成器。リポジトリ名と作品名、ライセンスを入力するだけで自分のテンプレに沿ったREADME.mdが作られる。",
+    "buttons": [
+      {
+        "text": "View",
+        "url": "https://repos.a01sa01to.com/README-Maker/",
+        "external": true,
+        "icon": "b-icon-box-arrow-up-right"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/README-Maker",
+        "external": true,
+        "icon": "b-icon-github"
+      }
+    ]
+  },
+  {
+    "title": "神経衰弱",
+    "translate": true,
+    "publish": "2019.12.09",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/NervousBreakdown",
+    "text": "4x4の神経衰弱。5年次の情報の課題で出されたものをそのままあげた。実はこれでWebpackを初めて使った。",
+    "buttons": [
+      {
+        "text": "View",
+        "url": "https://repos.a01sa01to.com/NervousBreakdown/",
+        "external": true,
+        "icon": "b-icon-box-arrow-up-right"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/NervousBreakdown",
+        "external": true,
+        "icon": "b-icon-github"
+      }
+    ]
+  },
+  {
+    "title": "Code Auto-Typer",
+    "translate": false,
+    "publish": "2019.08.19",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/Code-AutoTyper",
+    "text": "キーボードをカタカタ打つだけで勝手にコードが入力されるプログラム。ハッカー気分が味わえるかもしれない()",
+    "buttons": [
+      {
+        "text": "View",
+        "url": "https://repos.a01sa01to.com/Code-AutoTyper/",
+        "external": true,
+        "icon": "b-icon-box-arrow-up-right"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/Code-AutoTyper",
+        "external": true,
+        "icon": "b-icon-github"
+      }
+    ]
+  },
+  {
+    "title": "Title & URL Picker",
+    "translate": false,
+    "publish": "2019.03.16",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/TitleAndURL_Picker",
+    "text": "その名の通りのChrome拡張機能。開いているタブのタイトル・URLを取得でき、またMarkdown形式でリンクを作成できる。",
+    "buttons": [
+      {
+        "text": "Download",
+        "url": "https://chrome.google.com/webstore/detail/apegdmeimjlklboalimnaokfnnngajcg",
+        "external": true,
+        "icon": "b-icon-download"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/TitleAndURL_Picker",
+        "external": true,
+        "icon": "b-icon-github"
+      },
+      {
+        "text": "About",
+        "url": "./title-url-picker/",
+        "external": false,
+        "icon": "b-icon-book"
+      }
+    ]
+  },
+  {
+    "title": "古河中等教育学校の新Webサイト",
+    "translate": true,
+    "publish": "2018.??.??",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/KSS-New",
+    "text": "完全非公式。本家サイトがいろいろ見づらかったりしたので、勝手に様々な問題を直しちゃおうというために作ったサイト。ほぼ更新してない。",
+    "buttons": [
+      {
+        "text": "View",
+        "url": "https://kss-new.a01sa01to.com/",
+        "external": true,
+        "icon": "b-icon-box-arrow-up-right"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/KSS-New",
+        "external": true,
+        "icon": "b-icon-github"
+      }
+    ]
+  },
+  {
+    "title": "IME Changer",
+    "translate": false,
+    "publish": "2018.12.17",
+    "imgsrc": "https://opengraph.githubassets.com/0/a01sa01to/IMEChange",
+    "text": "自分のために作ったIMEを自動で切り替えるソフト。スタートアップに登録しておくと、自動でIMEが切り替わってくれる。",
+    "buttons": [
+      {
+        "text": "Download",
+        "url": "https://github.com/a01sa01to/IMEChange/releases/tag/v1.0",
+        "external": true,
+        "icon": "b-icon-download"
+      },
+      {
+        "text": "Source",
+        "url": "https://github.com/a01sa01to/IMEChange",
+        "external": true,
+        "icon": "b-icon-github"
+      },
+      {
+        "text": "Article",
+        "url": "https://qiita.com/a01sa01to/items/5142d35367a08d2ba0cd",
+        "external": true,
+        "icon": "b-icon-book"
+      }
+    ]
+  }
+]
