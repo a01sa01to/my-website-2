@@ -7,13 +7,17 @@
           <b-card
             :title="card.translate ? $t(card.title) : card.title"
             :sub-title="`Published on ${card.publish}`"
-            :img-src="card.imgsrc"
-            :img-alt="card.translate ? $t(card.title) : card.title"
-            img-top
             :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
             :text-variant="$store.state.darkmode ? 'light' : 'dark'"
             style="border-color: var(--border-color)"
           >
+            <template #header>
+              <b-img-lazy
+                :src="card.imgsrc"
+                :alt="card.translate ? $t(card.title) : card.title"
+                class="card-img-top"
+              />
+            </template>
             <b-card-text>{{ $t(card.text) }}</b-card-text>
             <div class="text-center">
               <b-button-group>

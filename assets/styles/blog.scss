@@ -12,13 +12,17 @@ h3 {
   border-bottom: 2px solid #1a73e8;
 }
 
-img {
+img,
+picture {
   max-width: 100%;
   width: 600px;
   border: 1px solid var(--border-color);
   margin: 1rem;
+  display: inline-block;
 }
-img + ol {
+
+img + ol,
+picture + ol {
   display: inline-block;
 }
 

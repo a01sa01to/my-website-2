@@ -14,7 +14,12 @@
       <h2 id="how-to-use">{{ $t('使い方') }}</h2>
       <b-container>
         <h3 id="getting-title">{{ $t('ページのタイトルを取得する') }}</h3>
-        <b-img-lazy fluid src="/images/apps/title-url-picker/01.jpg" />
+        <webp-image
+          src="/images/apps/title-url-picker/01"
+          ext="jpg"
+          :alt="$t('ページのタイトルを取得する')"
+          class="img-fluid"
+        />
         <ol>
           <li>{{ $t('拡張機能を開きます。') }}</li>
           <li>{{ $t('「Get Title」ボタンをクリックします。') }}</li>
@@ -23,7 +28,12 @@
       </b-container>
       <b-container>
         <h3 id="getting-url">{{ $t('ページのURLを取得') }}</h3>
-        <img src="/images/apps/title-url-picker/02.jpg" alt="URLを取得" />
+        <webp-image
+          src="/images/apps/title-url-picker/02"
+          ext="jpg"
+          :alt="$t('URLを取得')"
+          class="img-fluid"
+        />
         <ol>
           <li>{{ $t('拡張機能を開きます。') }}</li>
           <li>{{ $t('「Get URL」ボタンをクリックします。') }}</li>
@@ -34,7 +44,12 @@
         <h3 id="getting-markdown">
           {{ $t('Markdown形式でページへのリンクを作成') }}
         </h3>
-        <img src="/images/apps/title-url-picker/03.jpg" alt="リンクを作成" />
+        <webp-image
+          src="/images/apps/title-url-picker/03"
+          ext="jpg"
+          :alt="$t('リンクを作成')"
+          class="img-fluid"
+        />
         <ol>
           <li>{{ $t('拡張機能を開きます。') }}</li>
           <li>
@@ -89,8 +104,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import externalLink from '~/components/external-link.vue'
+import WebpImage from '~/components/WebpImage.vue'
 export default Vue.extend({
-  components: { externalLink },
+  components: { externalLink, WebpImage },
   head: {
     title: 'Title & URL Picker - Apps',
   },

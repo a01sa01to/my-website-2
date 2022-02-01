@@ -37,9 +37,16 @@
             sub-title="https://ibaraki.stopcovid19.jp/"
             :bg-variant="$store.state.darkmode ? 'dark' : 'default'"
             :text-variant="$store.state.darkmode ? 'default' : 'dark'"
-            img-top
-            img-src="/images/ibk_stopcovid19.png"
           >
+            <template #header>
+              <webp-image
+                src="/images/ibk_stopcovid19"
+                ext="png"
+                :alt="$t('茨城県新型コロナウイルス対策サイト')"
+                class="card-img-top"
+                style="width: 100%; height: auto"
+              />
+            </template>
             <b-card-text>
               {{ $t('2020年3月20日公開。') }}<br />
               {{ $t('新型コロナサイトとしては、（たぶん）茨城県初。') }}<br />
@@ -84,9 +91,16 @@
             sub-title="https://kss-bakakkoii.a01sa01to.com"
             :bg-variant="$store.state.darkmode ? 'dark' : 'default'"
             :text-variant="$store.state.darkmode ? 'default' : 'dark'"
-            img-top
-            img-src="/images/kss_bakakkoii.jpg"
           >
+            <template #header>
+              <webp-image
+                src="/images/kss_bakakkoii"
+                ext="jpg"
+                :alt="$t('古河中等ばかっこいいシリーズ')"
+                class="card-img-top"
+                style="width: 100%; height: auto"
+              />
+            </template>
             <b-card-text>
               {{ $t('Asaが編集者として参加した映像作品。') }}<br />
               {{
@@ -204,6 +218,7 @@ import {
   BIconChatDots,
   BIconServer,
 } from 'bootstrap-vue'
+import WebpImage from '~/components/WebpImage.vue'
 
 export default Vue.extend({
   head: {
@@ -216,12 +231,11 @@ export default Vue.extend({
     BIconServer,
     BIconTwitter,
     BIconInstagram,
+    WebpImage,
   },
   computed: {
     btn_variant() {
-      return this.$store.state.darkmode
-        ? 'outline-secondary'
-        : 'outline-primary'
+      return this.$store.state.darkmode ? 'outline-light' : 'outline-primary'
     },
   },
 })
