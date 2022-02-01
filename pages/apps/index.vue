@@ -10,6 +10,9 @@
             :img-src="card.imgsrc"
             :img-alt="card.translate ? $t(card.title) : card.title"
             img-top
+            :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
+            :text-variant="$store.state.darkmode ? 'light' : 'dark'"
+            style="border-color: var(--border-color)"
           >
             <b-card-text>{{ $t(card.text) }}</b-card-text>
             <div class="text-center">
