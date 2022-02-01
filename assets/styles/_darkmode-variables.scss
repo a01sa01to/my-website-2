@@ -8,6 +8,9 @@
   #darkmode-dummy {
     display: none;
   }
+  .text-muted {
+    color: #6c757d !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,5 +27,8 @@
     height: 0px;
     width: 0px;
     display: block;
+  }
+  .text-muted {
+    color: #afb6bc !important;
   }
 }
