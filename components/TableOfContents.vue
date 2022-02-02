@@ -2,14 +2,14 @@
   <b-container class="accordion" role="tablist">
     <b-card
       no-body
-      :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
+      :bg-variant="$store.state.darkmode ? 'dark' : 'white'"
       style="border-color: var(--border-color)"
     >
       <b-card-header role="tab">
         <b-button
           block
           v-b-toggle.toc
-          :variant="$store.state.darkmode ? 'dark' : 'light'"
+          :variant="$store.state.darkmode ? 'dark' : 'white'"
         >
           <b-icon-list-ul />&nbsp; Table of Contents
         </b-button>
