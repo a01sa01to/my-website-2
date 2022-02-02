@@ -1,33 +1,43 @@
-h2 {
-  margin: 1em 0;
-  padding: 6px;
-  padding-left: 16px;
-  background-color: #e7e8e9;
-  border-left: 3px solid #1a73e8;
-}
-
-h3 {
-  margin: 1em 0;
-  padding: 0 6px;
-  border-bottom: 2px solid #1a73e8;
-}
-
-img,
-picture {
-  max-width: 100%;
-  width: 600px;
-  border: 1px solid var(--border-color);
-  margin: 1rem;
-  display: inline-block;
-}
-
-img + ol,
-picture + ol {
-  display: inline-block;
-}
-
-@media (prefers-color-scheme: dark) {
+@mixin defaultsettings {
   h2 {
-    background-color: #454b51;
+    margin: 1em 0;
+    padding: 6px;
+    padding-left: 16px;
+    background-color: #e7e8e9;
+    border-left: 3px solid #1a73e8;
   }
+
+  h3 {
+    margin: 1em 0;
+    padding: 0 6px;
+    border-bottom: 2px solid #1a73e8;
+  }
+
+  img,
+  picture {
+    max-width: 100%;
+    width: 600px;
+    border: 1px solid var(--border-color);
+    margin: 1rem;
+    display: inline-block;
+  }
+
+  img + ol,
+  picture + ol {
+    display: inline-block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    h2 {
+      background-color: #454b51;
+    }
+  }
+}
+
+main {
+  @include defaultsettings;
+}
+
+::v-deep .nuxt-content {
+  @include defaultsettings;
 }
