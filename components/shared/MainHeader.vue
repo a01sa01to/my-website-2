@@ -2,7 +2,9 @@
   <b-container>
     <h1>{{ title }}</h1>
     <breadcrumb :data="b_data" />
-    <p v-if="description">{{ description }}</p>
+    <p v-if="description" :class="description_right ? 'text-right' : null">
+      {{ description }}
+    </p>
     <hr />
   </b-container>
 </template>
@@ -23,6 +25,11 @@ export default Vue.extend({
       type: String,
       required: false,
       default: '',
+    },
+    description_right: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
 })
