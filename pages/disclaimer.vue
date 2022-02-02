@@ -94,6 +94,4 @@ export default Vue.extend({
   },
 })
 </script>
-<style lang="scss" scoped>
-@import '~/assets/styles/blog.scss';
-</style>
+<style lang="scss" scoped src="~/assets/styles/blog.scss" />
