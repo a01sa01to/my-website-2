@@ -1,7 +1,7 @@
 <template>
-  <picture>
-    <source type="image/webp" :srcset="`${src}.webp`" />
-    <img :src="`${src}.${ext}`" :alt="alt" loading="lazy" />
+  <picture class="webpimage" :title="alt">
+    <source type="image/webp" :srcset="`${src}.webp`" class="webpimage" />
+    <img :src="`${src}.${ext}`" :alt="alt" loading="lazy" class="webpimage" />
   </picture>
 </template>
 
@@ -27,8 +27,13 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-img {
-  width: inherit;
-  max-width: inherit;
+picture.webpimage {
+  > img.webpimage {
+    display: inherit;
+    width: inherit;
+    max-width: inherit;
+    margin: 0;
+    border: 0;
+  }
 }
 </style>
