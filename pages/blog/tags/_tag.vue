@@ -5,7 +5,7 @@
       :b_data="breadcrumb_data"
     />
     <b-container>
-      <b-row>
+      <b-row cols-xl="4" cols-lg="3" cols-md="2" cols-sm="1" cols="1">
         <b-col v-for="(val, key) in BlogList" :key="key">
           <BlogCard :article="val" />
         </b-col>

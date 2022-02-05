@@ -4,13 +4,14 @@
       :title="`${year}年の記事一覧`"
       :b_data="breadcrumb_data"
     />
+    <table-of-contents />
     <b-container
       v-for="month in months"
       :key="month"
       v-if="BlogMonthlyList[month].length"
     >
       <h2>{{ month + 1 }}月</h2>
-      <b-row>
+      <b-row cols-xl="4" cols-lg="3" cols-md="2" cols-sm="1" cols="1">
         <b-col v-for="(val, key) in BlogMonthlyList[month]" :key="key">
           <BlogCard :article="val" />
         </b-col>
@@ -71,7 +72,7 @@ export default Vue.extend({
   },
   data() {
     const years: number[] = []
-    for (let i = new Date().getFullYear(); i >= 2019; i--) years.push(i)
+    for (let i = new Date().getFullYear(); i >= 2020; i--) years.push(i)
     return {
       years,
     }
