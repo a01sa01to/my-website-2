@@ -5,6 +5,7 @@
     <p v-if="description" :class="description_right ? 'text-right' : null">
       {{ description }}
     </p>
+    <slot />
     <hr />
   </b-container>
 </template>

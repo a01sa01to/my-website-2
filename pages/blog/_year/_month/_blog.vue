@@ -1,15 +1,35 @@
 <template>
   <div>
-    <p>{{ year }} {{ month }} {{ blogid }}</p>
-    <nuxt-content :document="mdContent"></nuxt-content>
-    <ul>
-      <li v-for="(value, key) in mdContent">{{ key }}: {{ value }}</li>
-    </ul>
+    <SharedMainHeader
+      :title="mdContent.title"
+      :b_data="breadcrumb_data"
+      :description="`Published on ${toDate(
+        mdContent.createDate
+      )}. Last Modified on ${toDate(mdContent.updateDate)}.`"
+      description_right
+    >
+      <div>
+        Tags:
+        <ul class="tagsList">
+          <li v-for="tag in mdContent.tags" :key="tag">
+            <nuxt-link :to="`/blog/tags/${tag}/`">
+              <b-icon-tag />
+              {{ tag }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </SharedMainHeader>
+    <table-of-contents />
+    <b-container>
+      <nuxt-content :document="mdContent" />
+    </b-container>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { BIconTag } from 'bootstrap-vue'
 
 export default Vue.extend({
   async asyncData({ $content, params, error }) {
@@ -24,6 +44,16 @@ export default Vue.extend({
         month,
         blogid: blog,
         mdContent,
+        breadcrumb_data: [
+          { to: '/', text: 'Home' },
+          { to: '/blog/', text: 'Blog' },
+          { to: `/blog/${year}/`, text: `${year}` },
+          { text: `${month}`, active: true },
+          {
+            text: `${(mdContent as any).title}`,
+            active: true,
+          },
+        ],
       }
     } catch (e) {
       error({ statusCode: 404 })
@@ -31,8 +61,40 @@ export default Vue.extend({
   },
   head() {
     return {
-      title: (this as any).mdContent.title,
+      title: `${(this as any).mdContent.title} - Blog`,
     }
+  },
+  components: {
+    BIconTag,
+  },
+  methods: {
+    toDate(isostr: string) {
+      const date = new Date(isostr)
+      return `${date.getUTCFullYear()}.${String(
+        date.getUTCMonth() + 1
+      ).padStart(2, '0')}.${String(date.getUTCDate()).padStart(2, '0')}`
+    },
   },
 })
 </script>
+
+<style lang="scss" scoped>
+@import '~/assets/styles/blog.scss';
+
+ul.tagsList {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    min-width: 2.5em;
+    text-align: center;
+    font-size: 0.9em;
+  }
+}
+</style>
