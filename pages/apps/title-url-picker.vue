@@ -19,8 +19,9 @@
           ext="jpg"
           :alt="$t('ページのタイトルを取得する')"
           class="img-fluid"
+          style="display: inline-block"
         />
-        <ol>
+        <ol style="display: inline-block">
           <li>{{ $t('拡張機能を開きます。') }}</li>
           <li>{{ $t('「Get Title」ボタンをクリックします。') }}</li>
           <li>{{ $t('テキストボックスから、タイトルをコピーできます。') }}</li>
@@ -33,8 +34,9 @@
           ext="jpg"
           :alt="$t('URLを取得')"
           class="img-fluid"
+          style="display: inline-block"
         />
-        <ol>
+        <ol style="display: inline-block">
           <li>{{ $t('拡張機能を開きます。') }}</li>
           <li>{{ $t('「Get URL」ボタンをクリックします。') }}</li>
           <li>{{ $t('テキストボックスから、URLをコピーできます。') }}</li>
@@ -49,8 +51,9 @@
           ext="jpg"
           :alt="$t('リンクを作成')"
           class="img-fluid"
+          style="display: inline-block"
         />
-        <ol>
+        <ol style="display: inline-block">
           <li>{{ $t('拡張機能を開きます。') }}</li>
           <li>
             {{ $t('「Get both with Markdown」ボタンをクリックします。') }}
