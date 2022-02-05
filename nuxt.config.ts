@@ -152,7 +152,6 @@ const config: NuxtConfig = {
   },
 
   serverMiddleware: [
-    '~/server-middleware/log.ts',
     {
       handler: '~/server-middleware/opendata/main.ts',
       path: '/opendata/api/',
