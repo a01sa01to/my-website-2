@@ -58,6 +58,8 @@ const config: NuxtConfig = {
       prism: {
         theme: '~/assets/styles/markdown-code-highlight.css',
       },
+      remarkPlugins: ['remark-math'],
+      rehypePlugins: ['rehype-katex'],
     },
   },
 
@@ -71,6 +73,10 @@ const config: NuxtConfig = {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css',
       },
     ],
     meta: [
