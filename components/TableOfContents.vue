@@ -30,10 +30,12 @@ export default Vue.extend({
   },
   mounted() {
     const ins = document.getElementById('tocbody')
+    let cnt = 0
     document
       .querySelector('main')
       ?.querySelectorAll('h2,h3,h4,h5,h6')
       ?.forEach((_) => {
+        ++cnt
         const e = _ as HTMLHeadingElement
         const a = document.createElement('a')
         a.href = '#' + e.id
@@ -41,6 +43,9 @@ export default Vue.extend({
         a.classList.add(e.tagName.toLowerCase())
         ins?.appendChild(a)
       })
+    if (cnt === 0) {
+      ins!.innerText = '見出しがありません'
+    }
   },
 })
 </script>
