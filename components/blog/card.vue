@@ -2,8 +2,8 @@
   <b-card
     :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
     :text-variant="$store.state.darkmode ? 'light' : 'dark'"
-    style="border-color: var(--border-color); max-width: 350px"
     :title="article.title"
+    class="bcard"
   >
     <p class="text-muted">
       Published on {{ toDate(article.createDate) }}.<br />
@@ -45,3 +45,10 @@ export default Vue.extend({
   },
 })
 </script>
+<style lang="scss" scoped>
+.bcard {
+  margin: 1rem 0;
+  border-color: var(--border-color);
+  max-width: 350px;
+}
+</style>
