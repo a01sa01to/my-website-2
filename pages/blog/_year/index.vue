@@ -5,6 +5,15 @@
       :b_data="breadcrumb_data"
     />
     <table-of-contents />
+    <b-container>
+      <b-pagination-nav
+        align="center"
+        :link-gen="linkGen"
+        :page-gen="pageGen"
+        :number-of-pages="years.length"
+        use-router
+      />
+    </b-container>
     <b-container
       v-for="month in months"
       :key="month"
