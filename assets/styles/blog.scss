@@ -27,6 +27,13 @@
     display: inline-block;
   }
 
+  blockquote {
+    border-left: 3px solid #bbb;
+    padding: 0.3em 1em;
+    margin: 1em 0;
+    font-style: italic;
+  }
+
   @media (prefers-color-scheme: dark) {
     h2 {
       background-color: #454b51;
