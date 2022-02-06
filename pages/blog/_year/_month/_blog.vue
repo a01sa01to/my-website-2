@@ -30,6 +30,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { BIconTag } from 'bootstrap-vue'
+import toDate from '~/utils/date_format'
 
 export default Vue.extend({
   async asyncData({ $content, params, error }) {
@@ -67,13 +68,10 @@ export default Vue.extend({
   components: {
     BIconTag,
   },
-  methods: {
-    toDate(isostr: string) {
-      const date = new Date(isostr)
-      return `${date.getUTCFullYear()}.${String(
-        date.getUTCMonth() + 1
-      ).padStart(2, '0')}.${String(date.getUTCDate()).padStart(2, '0')}`
-    },
+  data() {
+    return {
+      toDate,
+    }
   },
 })
 </script>

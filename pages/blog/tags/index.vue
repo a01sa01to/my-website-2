@@ -20,6 +20,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import toDate from '~/utils/date_format'
 export default Vue.extend({
   async asyncData({ $content }) {
     const BlogList = await $content('articles', { deep: true })
@@ -30,13 +31,6 @@ export default Vue.extend({
       count: number
       lastArticle: string
     }[] = []
-
-    const toDate = (isostr: string) => {
-      const date = new Date(isostr)
-      return `${date.getUTCFullYear()}.${String(
-        date.getUTCMonth() + 1
-      ).padStart(2, '0')}.${String(date.getUTCDate()).padStart(2, '0')}`
-    }
 
     BlogList.forEach((article: any) => {
       article.tags.forEach((tag: any) => {

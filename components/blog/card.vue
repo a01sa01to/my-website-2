@@ -25,6 +25,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { BIconBook } from 'bootstrap-vue'
+import toDate from '~/utils/date_format'
 export default Vue.extend({
   components: {
     BIconBook,
@@ -35,13 +36,10 @@ export default Vue.extend({
       required: true,
     },
   },
-  methods: {
-    toDate(isostr: string) {
-      const date = new Date(isostr)
-      return `${date.getUTCFullYear()}.${String(
-        date.getUTCMonth() + 1
-      ).padStart(2, '0')}.${String(date.getUTCDate()).padStart(2, '0')}`
-    },
+  data() {
+    return {
+      toDate,
+    }
   },
 })
 </script>

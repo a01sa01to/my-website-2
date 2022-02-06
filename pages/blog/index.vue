@@ -41,6 +41,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import toDate from '~/utils/date_format'
 
 export default Vue.extend({
   async asyncData({ $content }) {
@@ -58,15 +59,8 @@ export default Vue.extend({
   data() {
     return {
       thisYear: new Date().getFullYear(),
+      toDate,
     }
-  },
-  methods: {
-    toDate(isostr: string) {
-      const date = new Date(isostr)
-      return `${date.getUTCFullYear()}.${String(
-        date.getUTCMonth() + 1
-      ).padStart(2, '0')}.${String(date.getUTCDate()).padStart(2, '0')}`
-    },
   },
 })
 </script>
