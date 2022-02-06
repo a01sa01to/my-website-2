@@ -86,6 +86,11 @@ const config: NuxtConfig = {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     titleTemplate: "%s - Asa's Website",
+    script: [
+      {
+        src: '/twttr_load.js',
+      },
+    ],
   },
 
   googleAnalytics: {

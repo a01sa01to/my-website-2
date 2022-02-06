@@ -8,7 +8,7 @@ updateDate: 2021-06-29
 はい、題名の通りです。Windows Insider の特権です。<br>
 以下のツイートのように、「Windows 11 を実行できない」と言われたコンピュータで試したらできちゃいました。てへぺろ
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">PC正常性チェックアプリ（なおWindows11上で実行） <a href="https://t.co/pv9d147DlQ">pic.twitter.com/pv9d147DlQ</a></p>&mdash; Asa (@a01sa01to) <a href="https://twitter.com/a01sa01to/status/1409752298977329153?ref_src=twsrc%5Etfw">June 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<twitter-embed tweetid="1409752298977329153"></twitter-embed>
 
 てっきり実行できずに Windows10 のクリーンインストールを覚悟していたので、インストールできてよかった。
 
@@ -28,7 +28,7 @@ updateDate: 2021-06-29
 
 こちらの Moments にまとめてあります。
 
-<blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://t.co/yzjgaXZ7Xf">https://t.co/yzjgaXZ7Xf</a></p>&mdash; Asa (@a01sa01to) <a href="https://twitter.com/a01sa01to/status/1409773296564932626?ref_src=twsrc%5Etfw">June 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<twitter-embed tweetid="1409773296564932626"></twitter-embed>
 
 ウィンドウが角丸になったり、エクスプローラーのファイルのアイコンが変わったり、ウィンドウの表示/最小化にアニメーションがついたり、...など、UI は大幅に刷新されましたが、今のところは機能追加はあまりないような印象です。今後のアップデートに期待です。
 
