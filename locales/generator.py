@@ -19,6 +19,7 @@ CSV_FILES = []
 # タグの正規表現パターン
 tag_pattern_t = re.compile("\$t\([ ]*?['|`][^']*?['|`]")
 tag_pattern_tc = re.compile("\$tc\([ ]*?['|`][^']*?['|`]")
+tag_pattern_i18n = re.compile("<i18n path=[ ]*?['|`\"][^']*?[' |`\"]")
 
 # tsファイル内のヘッダーの正規表現パターン
 header_pattern = re.compile("\{ text: '[^']*?', value: '[^']*?'")
@@ -81,6 +82,8 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
                 tc_tags = [
                     tag[5:(len(tag) - 1)] for tag in tag_pattern_tc.findall(content) if tag[5:(len(tag) - 1)] != ''
                 ]
+                i18n_tags = [tag[12:(len(tag) - 1)] for tag in tag_pattern_i18n.findall(content) if
+                             tag[12:(len(tag) - 1)] != '']
                 # 「'」で始まっているタグがあるので修正
                 fixed_tags = []
                 for tag in t_tags:
@@ -89,6 +92,11 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
                         start = 1
                     fixed_tags.append(tag[start:])
                 for tag in tc_tags:
+                    start = 0
+                    if tag[0] == "'":
+                        start = 1
+                    fixed_tags.append(tag[start:])
+                for tag in i18n_tags:
                     start = 0
                     if tag[0] == "'":
                         start = 1
