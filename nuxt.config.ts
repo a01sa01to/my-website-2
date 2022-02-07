@@ -118,6 +118,7 @@ const config: NuxtConfig = {
     '@nuxt/content',
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
+    'nuxt-clipboard2',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
