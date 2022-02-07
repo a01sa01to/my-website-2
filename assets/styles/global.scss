@@ -1,5 +1,7 @@
 @import 'darkmode-variables';
-@import 'bootstrap-button-custom';
+@import 'bootstrap-custom/button';
+@import 'bootstrap-custom/pagination-nav';
+
 * {
   outline: none;
 }
