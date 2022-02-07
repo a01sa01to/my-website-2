@@ -47,7 +47,6 @@ const config: NuxtConfig = {
         display: 'swap',
       },
     ],
-    '@nuxtjs/google-analytics',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -93,7 +92,7 @@ const config: NuxtConfig = {
     ],
   },
 
-  googleAnalytics: {
+  'google-gtag': {
     id: 'G-Z23EQDNLQY',
   },
 
@@ -119,6 +118,7 @@ const config: NuxtConfig = {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
     'nuxt-clipboard2',
+    '@nuxtjs/google-gtag',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
