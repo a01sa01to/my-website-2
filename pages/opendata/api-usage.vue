@@ -143,7 +143,7 @@
         <p>
           {{
             $t(
-              'GraphQLでは、クエリに指定されたデータのみを返します。返されるデータについては、各データのページを参照してください。'
+              'GraphQLでは、クエリに指定されたデータのみを返します。すなわち、クエリから不要なデータを削除することによって、必要なデータのみ取得することができます。この結果、データ通信量削減などの効果が期待できます。返されるデータについては、各データのページを参照してください。'
             )
           }}
         </p>
@@ -222,10 +222,10 @@
             )
           }}<br />
           <code>([PAGINATION INFO])</code>→<br />
-          <code
-            >(before: [CURSOR], after: [CURSOR], first: [NUMBER], last:
-            [NUMBER])</code
-          ><br />
+          <code>
+            (before: [CURSOR], after: [CURSOR], first: [NUMBER], last: [NUMBER])
+          </code>
+          <br />
           {{
             $t(
               'ページ付けの機能が必要なく、すべてのデータを一括で取得する場合は、([PAGINATION INFO])の部分をすべて削除してください。'
