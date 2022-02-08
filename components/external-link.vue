@@ -21,7 +21,7 @@ export default Vue.extend({
 </script>
 <style lang="scss" scoped>
 a {
-  display: inline-block;
-  padding: 0 0.3em;
+  display: inline;
+  padding-right: 0.5em;
 }
 </style>
