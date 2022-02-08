@@ -1,13 +1,13 @@
 <template>
   <div>
-    <SharedMainHeader
+    <shared-main-header
       :title="`タグ「${tag}」のついた記事一覧`"
       :b_data="breadcrumb_data"
     />
     <b-container>
       <b-row cols-xl="4" cols-lg="3" cols-md="2" cols-sm="1" cols="1">
         <b-col v-for="(val, key) in BlogList" :key="key">
-          <BlogCard :article="val" />
+          <blog-card :article="val" />
         </b-col>
       </b-row>
     </b-container>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader title="Apps" :b_data="breadcrumb_data" />
+    <shared-main-header title="Apps" :b_data="breadcrumb_data" />
     <b-container>
       <b-row cols-xl="3" cols-md="2" cols-lg="2" cols-sm="1">
         <b-col v-for="card in AppsList" :key="card.publish">

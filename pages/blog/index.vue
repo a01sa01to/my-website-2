@@ -21,7 +21,7 @@
       <h2>Latest Articles</h2>
       <b-row cols-xl="3" cols-lg="3" cols-md="2" cols-sm="1" cols="1">
         <b-col v-for="(val, key) in BlogList" :key="key">
-          <BlogCard :article="val" />
+          <blog-card :article="val" />
         </b-col>
       </b-row>
     </b-container>

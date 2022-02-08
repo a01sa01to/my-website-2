@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader
+    <shared-main-header
       :title="$t('当サイトのOpendata APIの使い方')"
       :b_data="breadcrumb_data"
       :description="

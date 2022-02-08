@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader title="Admin Login" :b_data="breadcrumb_data" />
+    <shared-main-header title="Admin Login" :b_data="breadcrumb_data" />
     <b-container>
       <p>
         You cannot view this page without logging in.<br />

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader title="Update Icon List" :b_data="breadcrumb_data" />
+    <shared-main-header title="Update Icon List" :b_data="breadcrumb_data" />
     <b-container>
       <b-button
         href="https://account.adobe.com/profile"

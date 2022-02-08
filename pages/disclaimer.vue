@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader :title="$t('免責事項等')" :b_data="breadcrumb_data" />
+    <shared-main-header :title="$t('免責事項等')" :b_data="breadcrumb_data" />
     <b-container>
       <h2>{{ $t('利用上の注意') }}</h2>
       <ul>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader
+    <shared-main-header
       title="Title & URL Picker"
       :b_data="breadcrumb_data"
       :description="
@@ -9,7 +9,7 @@
         )
       "
     />
-    <TableOfContents />
+    <table-of-contents />
     <b-container>
       <h2 id="how-to-use">{{ $t('使い方') }}</h2>
       <b-container>
@@ -107,9 +107,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import externalLink from '~/components/external-link.vue'
-import WebpImage from '~/components/WebpImage.vue'
 export default Vue.extend({
-  components: { externalLink, WebpImage },
+  components: { externalLink },
   head: {
     title: 'Title & URL Picker - Apps',
   },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader
+    <shared-main-header
       title="Show my report without downloading (WebClass)"
       :b_data="breadcrumb_data"
       :description="

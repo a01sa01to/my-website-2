@@ -1,8 +1,8 @@
 <template>
   <div>
-    <SharedHeader />
-    <main><Nuxt /></main>
-    <SharedFooter />
+    <shared-header />
+    <main><nuxt /></main>
+    <shared-footer />
     <div id="darkmode-dummy" />
   </div>
 </template>

@@ -17,10 +17,10 @@
 		"body": "<twitter-embed tweetid=\"$1\"></twitter-embed>",
 		"description": "Twitter embed"
 	},
-	"SharedMainHeader": {
+	"shared-main-header": {
 		"scope": "vue",
-		"prefix": "SharedMainHeader",
-		"body": "<SharedMainHeader title=\"$1\" :b_data=\"breadcrumb_data\" description=\"\" descrion_right />",
-		"description": "SharedMainHeader"
+		"prefix": "shared-main-header",
+		"body": "<shared-main-header title=\"$1\" :b_data=\"breadcrumb_data\" description=\"\" descrion_right />",
+		"description": "shared-main-header"
 	},
 }

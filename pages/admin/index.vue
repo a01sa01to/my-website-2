@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader title="Admin Tools" :b_data="breadcrumb_data" />
+    <shared-main-header title="Admin Tools" :b_data="breadcrumb_data" />
     <b-container>
       <b-list-group>
         <b-list-group-item

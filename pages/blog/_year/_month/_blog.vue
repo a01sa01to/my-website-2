@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader
+    <shared-main-header
       :title="mdContent.title"
       :b_data="breadcrumb_data"
       :description="`Published on ${toDate(
@@ -19,7 +19,7 @@
           </li>
         </ul>
       </div>
-    </SharedMainHeader>
+    </shared-main-header>
     <table-of-contents />
     <b-container>
       <nuxt-content :document="mdContent" />

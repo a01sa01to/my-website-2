@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader
+    <shared-main-header
       :title="`${year}年の記事一覧`"
       :b_data="breadcrumb_data"
     />
@@ -22,7 +22,7 @@
       <h2>{{ month + 1 }}月</h2>
       <b-row cols-xl="4" cols-lg="3" cols-md="2" cols-sm="1" cols="1">
         <b-col v-for="(val, key) in BlogMonthlyList[month]" :key="key">
-          <BlogCard :article="val" />
+          <blog-card :article="val" />
         </b-col>
       </b-row>
     </b-container>

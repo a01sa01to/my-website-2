@@ -218,7 +218,6 @@ import {
   BIconChatDots,
   BIconServer,
 } from 'bootstrap-vue'
-import WebpImage from '~/components/WebpImage.vue'
 
 export default Vue.extend({
   head: {
@@ -231,7 +230,6 @@ export default Vue.extend({
     BIconServer,
     BIconTwitter,
     BIconInstagram,
-    WebpImage,
   },
   computed: {
     btn_variant() {

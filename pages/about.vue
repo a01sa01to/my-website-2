@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader title="About Me" :b_data="breadcrumb_data" />
+    <shared-main-header title="About Me" :b_data="breadcrumb_data" />
     <b-container>
       <h2>{{ $t('自己紹介') }}</h2>
       <p>
@@ -21,24 +21,24 @@
     <b-container>
       <h2>{{ $t('略歴') }}</h2>
       <div class="history">
-        <AboutHistoryItem year="2003" month="01" :text="$t('誕生')" />
-        <AboutHistoryItem year="2009" month="04" :text="$t('小学校に入学')" />
-        <AboutHistoryItem
+        <about-history-item year="2003" month="01" :text="$t('誕生')" />
+        <about-history-item year="2009" month="04" :text="$t('小学校に入学')" />
+        <about-history-item
           year="2015"
           month="04"
           :text="$t('古河中等教育学校に入学')"
         />
-        <AboutHistoryItem
+        <about-history-item
           year="2016"
           month="09"
           :text="$t('古河中等ばかっこいいシリーズを立ち上げる')"
         />
-        <AboutHistoryItem
+        <about-history-item
           year="2020"
           month="03"
           :text="$t('茨城県新型コロナ対策サイトを立ち上げる')"
         />
-        <AboutHistoryItem
+        <about-history-item
           year="2021"
           month="04"
           :text="$t('埼玉大学 工学部 情報工学科に入学')"

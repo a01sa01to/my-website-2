@@ -1,10 +1,11 @@
 <template>
   <div>
-    <SharedMainHeader title="タグ一覧" :b_data="breadcrumb_data" />
+    <shared-main-header title="タグ一覧" :b_data="breadcrumb_data" />
     <b-container>
       <b-table
         striped
         hover
+        responsive
         :dark="$store.state.darkmode"
         :items="List"
         :fields="fields"
