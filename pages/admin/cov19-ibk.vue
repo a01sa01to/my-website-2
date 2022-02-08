@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SharedMainHeader
+    <shared-main-header
       title="Covid19 Ibaraki Updater"
       :b_data="breadcrumb_data"
     />
@@ -23,6 +23,7 @@
                   size="sm"
                   number
                   v-model="Data_Pref.municipality[key][0]"
+                  @input="counter"
                 />
               </td>
               <td>
@@ -31,8 +32,14 @@
                   size="sm"
                   number
                   v-model="Data_Pref.municipality[key][1]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ PrefTotal.municipality[0] }}</td>
+              <td>{{ PrefTotal.municipality[1] }}</td>
             </tr>
           </table>
         </b-col>
@@ -51,8 +58,13 @@
                   size="sm"
                   number
                   v-model="Data_Pref.gender[key]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ PrefTotal.gender }}</td>
             </tr>
           </table>
           <br />
@@ -70,8 +82,13 @@
                   size="sm"
                   number
                   v-model="Data_Pref.age[key]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ PrefTotal.age }}</td>
             </tr>
           </table>
           <br />
@@ -89,8 +106,13 @@
                   size="sm"
                   number
                   v-model="Data_Pref.occupation[key]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ PrefTotal.occupation }}</td>
             </tr>
           </table>
         </b-col>
@@ -116,6 +138,7 @@
                   size="sm"
                   number
                   v-model="Data_Mito.municipality[key][0]"
+                  @input="counter"
                 />
               </td>
               <td>
@@ -124,8 +147,14 @@
                   size="sm"
                   number
                   v-model="Data_Mito.municipality[key][1]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ MitoTotal.municipality[0] }}</td>
+              <td>{{ MitoTotal.municipality[1] }}</td>
             </tr>
           </table>
         </b-col>
@@ -144,8 +173,13 @@
                   size="sm"
                   number
                   v-model="Data_Mito.gender[key]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ MitoTotal.gender }}</td>
             </tr>
           </table>
           <br />
@@ -163,8 +197,13 @@
                   size="sm"
                   number
                   v-model="Data_Mito.age[key]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ MitoTotal.age }}</td>
             </tr>
           </table>
           <br />
@@ -182,8 +221,13 @@
                   size="sm"
                   number
                   v-model="Data_Mito.occupation[key]"
+                  @input="counter"
                 />
               </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{ MitoTotal.occupation }}</td>
             </tr>
           </table>
         </b-col>
@@ -292,9 +336,32 @@ export default Vue.extend({
         },
       ],
       outputData: '',
+      PrefTotal: { municipality: [0, 0], age: 0, gender: 0, occupation: 0 },
+      MitoTotal: { municipality: [0, 0], age: 0, gender: 0, occupation: 0 },
     }
   },
   methods: {
+    counter() {
+      let Pref = { municipality: [0, 0], age: 0, gender: 0, occupation: 0 }
+      let Mito = { municipality: [0, 0], age: 0, gender: 0, occupation: 0 }
+      IbarakiMunicipalities.forEach((municipality) => {
+        Pref.municipality[0] += this.Data_Pref.municipality[municipality][0]
+        Pref.municipality[1] += this.Data_Pref.municipality[municipality][1]
+        Mito.municipality[0] += this.Data_Mito.municipality[municipality][0]
+        Mito.municipality[1] += this.Data_Mito.municipality[municipality][1]
+      })
+      for (const k of Object.entries(this.Data_Pref.age)) Pref.age += k[1]
+      for (const k of Object.entries(this.Data_Mito.age)) Mito.age += k[1]
+      for (const k of Object.entries(this.Data_Pref.gender)) Pref.gender += k[1]
+      for (const k of Object.entries(this.Data_Mito.gender)) Mito.gender += k[1]
+      for (const k of Object.entries(this.Data_Pref.occupation))
+        Pref.occupation += k[1]
+      for (const k of Object.entries(this.Data_Mito.occupation))
+        Mito.occupation += k[1]
+
+      this.PrefTotal = Pref
+      this.MitoTotal = Mito
+    },
     output() {
       const data = [] as string[][]
       const data_mito = [] as string[][]
