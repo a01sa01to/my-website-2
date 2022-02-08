@@ -7,7 +7,17 @@
           <ul class="list-unstyled ml-3">
             <li><nuxt-link to="/">Home</nuxt-link></li>
             <li><nuxt-link to="/sitemap/">Sitemap</nuxt-link></li>
-            <li><nuxt-link to="/terms/">Terms of Use</nuxt-link></li>
+            <li>
+              <nuxt-link to="/disclaimer/">{{ $t('免責事項等') }}</nuxt-link>
+            </li>
+          </ul>
+        </b-col>
+        <b-col>
+          <h5>Main</h5>
+          <ul class="list-unstyled ml-3">
+            <li><nuxt-link to="/apps/">Apps</nuxt-link></li>
+            <li><nuxt-link to="/blog/">Blog</nuxt-link></li>
+            <li><nuxt-link to="/opendata/">Opendata</nuxt-link></li>
           </ul>
         </b-col>
         <b-col>

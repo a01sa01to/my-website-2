@@ -11,11 +11,15 @@
       <b-navbar-toggle target="header-nav-collapse" />
       <b-collapse id="header-nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#">hogehoge</b-nav-item>
-          <b-nav-item href="#">hogehoge</b-nav-item>
-          <b-nav-item href="#">hogehoge</b-nav-item>
-          <b-nav-item href="#">hogehoge</b-nav-item>
-          <b-nav-item-dropdown text="Language" right>
+          <b-nav-item to="/">Home</b-nav-item>
+          <b-nav-item to="/apps/">Apps</b-nav-item>
+          <b-nav-item to="/blog/">Blog</b-nav-item>
+          <b-nav-item to="/opendata/">Opendata</b-nav-item>
+          <b-nav-item-dropdown
+            text="Language"
+            right
+            v-if="!$route.path.includes('/blog/')"
+          >
             <b-dropdown-item @click="changeLocale('ja')" href="#"
               >Japanese</b-dropdown-item
             >
