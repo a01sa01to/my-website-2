@@ -236,7 +236,7 @@
           <b-carousel
             controls
             indicators
-            interval="5000"
+            :interval="5000"
             v-if="this.$i18n.locale === 'ja'"
             fade
           >
@@ -268,7 +268,7 @@
           <b-carousel
             controls
             indicators
-            interval="5000"
+            :interval="5000"
             v-else
             fade
             class="carousel"
@@ -306,7 +306,7 @@
           <b-carousel
             controls
             indicators
-            interval="5000"
+            :interval="5000"
             v-if="this.$i18n.locale === 'ja'"
             fade
           >
@@ -341,7 +341,7 @@
           <b-carousel
             controls
             indicators
-            interval="5000"
+            :interval="5000"
             v-else
             fade
             class="carousel"
