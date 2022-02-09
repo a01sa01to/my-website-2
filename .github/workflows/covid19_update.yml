@@ -19,22 +19,54 @@ jobs:
           python-version: '3.10'
       - name: Download Files
         run: |
+          echo "::group::080004_ibaraki_covid19_patients.csv"
           curl ${DATA_UPDATE_URL}?data=patients_data -L -o 080004_ibaraki_covid19_patients.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_test_people.csv"
           curl ${DATA_UPDATE_URL}?data=tested_people -L -o 080004_ibaraki_covid19_test_people.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_mutant_test_people.csv"
           curl ${DATA_UPDATE_URL}?data=mutant_tested_people -L -o 080004_ibaraki_covid19_mutant_test_people.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_call_center.csv"
           curl ${DATA_UPDATE_URL}?data=call_center -L -o 080004_ibaraki_covid19_call_center.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_positive_number.csv"
           curl ${DATA_UPDATE_URL}?data=positive_number -L -o 080004_ibaraki_covid19_positive_number.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_mutant_positive_number.json"
           curl ${DATA_UPDATE_URL}?data=mutant_positive_number -L -o 080004_ibaraki_covid19_mutant_positive_number.json
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_recovered_number.csv"
           curl ${DATA_UPDATE_URL}?data=recovered_number -L -o 080004_ibaraki_covid19_recovered_number.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_death_number.csv"
           curl ${DATA_UPDATE_URL}?data=death_number -L -o 080004_ibaraki_covid19_death_number.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_death_attributes.csv"
           curl ${DATA_UPDATE_URL}?data=death_attributes -L -o 080004_ibaraki_covid19_death_attributes.csv
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_inspections_summary.json"
           curl ${DATA_UPDATE_URL}?data=inspections_summary -L -o 080004_ibaraki_covid19_inspections_summary.json
+          echo "::endgroup::"
+          echo "::group::080004_ibaraki_covid19_summary.json"
           curl ${DATA_UPDATE_URL}?data=main_summary -L -o 080004_ibaraki_covid19_summary.json
+          echo "::endgroup::"
+          echo "::080004_ibaraki_covid19_corona_next.json"
           curl ${DATA_UPDATE_URL}?data=corona_next -L -o 080004_ibaraki_covid19_corona_next.json
+          echo "::endgroup::"
+          echo "::group::otherpref.csv"
           curl ${DATA_UPDATE_URL}?data=forked_sites -L -o otherpref.csv
+          echo "::endgroup::"
+          echo "::group::news.json"
           curl ${DATA_UPDATE_URL}?data=news_json -L -o news.json
+          echo "::endgroup::"
+          echo "::group::last_update.json"
           curl ${DATA_UPDATE_URL}?data=last_update -L -o last_update.json
+          echo "::endgroup::"
+          echo "::group::Vaccination data"
           curl --compressed https://data.vrs.digital.go.jp/vaccination/opendata/latest/prefecture.ndjson -L -o vaccine_data.ndjson
+          echo "::endgroup::"
         working-directory: ./static/opendata/api/raw/covid19_ibaraki/
         env:
           DATA_UPDATE_URL: ${{ secrets.DATA_UPDATE_URL }}
