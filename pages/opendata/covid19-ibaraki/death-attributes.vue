@@ -14,7 +14,7 @@
       <h2>{{ $t('ファイルに関する情報') }}</h2>
       <opendata-metadata
         :last_update="last_update"
-        created_date="2020/05/23 16:00"
+        created_date="2021/05/23 16:00"
         file_name="080004_ibaraki_covid19_death_attributes.csv"
         :file_size="size"
         data_format="csv"
@@ -57,7 +57,7 @@
       </p>
       <opendata-url-dl-copy
         url="https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_death_attributes.csv"
-        file_name="080004_ibaraki_covid19_call_center.csv"
+        file_name="080004_ibaraki_covid19_death_attributes.csv"
       />
     </b-container>
     <b-container>
