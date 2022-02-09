@@ -28,7 +28,7 @@
           >
             <template #opendatadef>
               <external-link to="https://ibaraki.stopcovid19.jp/">
-                {{ $t('「茨城県 新型コロナウイルス感染症 対策サイト」') }}
+                {{ $t('「茨城県新型コロナウイルス感染症対策サイト」') }}
               </external-link>
             </template>
           </i18n>

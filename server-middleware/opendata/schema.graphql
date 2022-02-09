@@ -6,7 +6,7 @@ schema {
 
 type Query {
   """
-  茨城県 新型コロナウイルス感染症 のデータ
+  茨城県新型コロナウイルス感染症のデータ
   """
   covid19_ibaraki: Covid19_ibaraki
 }
@@ -38,7 +38,7 @@ type PageInfo {
 # ----- Cov19_ibaraki ----- #
 
 """
-茨城県 新型コロナウイルス感染症 のデータ
+茨城県新型コロナウイルス感染症のデータ
 """
 type Covid19_ibaraki {
   """
