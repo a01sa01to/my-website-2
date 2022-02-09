@@ -356,11 +356,11 @@ type Cov19Ibk_CoronaNext {
   """
   care_rate: Float!
   """
-  直近1週間の新規陽性者数 合計
+  直近1週間の新規陽性者数 1日当たりの平均
   """
   new_patients: Float!
   """
-  直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 合計
+  直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 1日当たりの平均
   """
   non_closecontact: Float!
   """
@@ -372,31 +372,31 @@ type Cov19Ibk_CoronaNext {
   """
   positive_rate: Float!
   """
-  1週間前の、重症病床稼働数
+  1週間前時点の、重症病床稼働数
   """
   severe_lastweek: Int!
   """
-  1週間前の、病床稼働数
+  1週間前時点の、病床稼働数
   """
   sickbed_lastweek: Int!
   """
-  1週間前の、入院率
+  1週間前時点の、入院率
   """
   care_rate_lastweek: Float!
   """
-  1週間前の、直近1週間の新規陽性者数 合計
+  1週間前時点の、直近1週間の新規陽性者数 1日当たりの平均
   """
   new_patients_lastweek: Float!
   """
-  1週間前の、直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 合計
+  1週間前時点の、直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 1日当たりの平均
   """
   non_closecontact_lastweek: Float!
   """
-  1週間前の、療養者数
+  1週間前時点の、療養者数
   """
   care_lastweek: Int!
   """
-  1週間前の、陽性率
+  1週間前時点の、陽性率
   """
   positive_rate_lastweek: Float!
 }
