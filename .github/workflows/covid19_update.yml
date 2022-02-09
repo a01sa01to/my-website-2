@@ -83,6 +83,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3.12.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: Update COVID-19 Open Data
+          commit-message: Update COVID-19 Data
+          title: Update COVID-19 Data
           labels: auto_merge
           branch-suffix: 'short-commit-hash'
