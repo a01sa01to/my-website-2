@@ -92,6 +92,13 @@
           {{ $t('Opendata APIの使い方についてはこちら') }}
         </nuxt-link>
       </p>
+      <p>
+        {{
+          $t(
+            'APIで用いるクエリは以下の通りです。[YOUR QUERY HERE]の部分を、改行文字を適宜エスケープしたうえで、以下の内容に置き換えてください。'
+          )
+        }}
+      </p>
       <div class="nuxt-content-highlight">
         <pre class="language-text"><code>query {
   covid19_ibaraki {
