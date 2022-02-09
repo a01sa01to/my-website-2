@@ -409,6 +409,7 @@ const getData = () => {
         count: number
         status_1: number
         status_2: number
+        status_3: number
       }) => ({
         date: str2date(item.date),
         government_code: '080004',
@@ -417,6 +418,7 @@ const getData = () => {
         total: item.count,
         first: item.status_1,
         second: item.status_2,
+        third: item.status_3,
       })
     )
 

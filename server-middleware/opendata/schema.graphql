@@ -1066,6 +1066,10 @@ type Cov19Ibk_Vaccination_dataset {
   2回目接種
   """
   second: Int!
+  """
+  3回目接種
+  """
+  third: Int!
 }
 
 """
