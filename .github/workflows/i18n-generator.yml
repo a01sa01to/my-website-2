@@ -1,0 +1,34 @@
+name: i18n Generator
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  i18n-builder:
+    if: false == contains(github.event.commits[0].message, 'Update locales/ja.json')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout development branch
+        uses: actions/checkout@v2.4.0
+        with:
+          ref: development
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2.3.1
+        with:
+          python-version: '3.10'
+      - name: Run script
+        run: python locales/generator.py
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3.12.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update locales/ja.json
+          title: Update translation files
+          labels: auto_merge
+          branch-suffix: 'short-commit-hash'
