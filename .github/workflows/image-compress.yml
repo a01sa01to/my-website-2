@@ -30,7 +30,7 @@ jobs:
       - name: Checkout Branch
         uses: actions/checkout@v2.4.0
         with:
-          ref: development
+          ref: main
       - name: Compress Images
         uses: calibreapp/image-actions@main
         id: calibre

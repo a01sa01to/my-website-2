@@ -17,7 +17,7 @@ jobs:
       - name: Checkout development branch
         uses: actions/checkout@v2.4.0
         with:
-          ref: development
+          ref: main
       - name: Set up Python 3.10
         uses: actions/setup-python@v2.3.1
         with:
