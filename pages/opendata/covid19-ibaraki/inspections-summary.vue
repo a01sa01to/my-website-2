@@ -126,7 +126,7 @@ export default Vue.extend({
           text: this.$t('茨城県新型コロナウイルス感染症'),
         },
         {
-          to: '/opendata/covid19-ibaraki/corona-next/',
+          to: '/opendata/covid19-ibaraki/inspections-summary/',
           text: this.$t('検査実施件数（県全体）'),
           active: true,
         },

@@ -152,7 +152,7 @@ export default Vue.extend({
           text: this.$t('茨城県新型コロナウイルス感染症'),
         },
         {
-          to: '/opendata/covid19-ibaraki/corona-next/',
+          to: '/opendata/covid19-ibaraki/mutant-positive-number/',
           text: this.$t('変異株陽性確認数'),
           active: true,
         },

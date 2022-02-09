@@ -130,7 +130,7 @@ export default Vue.extend({
           text: this.$t('茨城県新型コロナウイルス感染症'),
         },
         {
-          to: '/opendata/covid19-ibaraki/call-center/',
+          to: '/opendata/covid19-ibaraki/death-attributes/',
           text: this.$t('死亡者属性'),
           active: true,
         },
