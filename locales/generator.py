@@ -19,7 +19,7 @@ CSV_FILES = []
 # タグの正規表現パターン
 tag_pattern_t = re.compile("\$t\([ ]*?['|`][^']*?['|`]")
 tag_pattern_tc = re.compile("\$tc\([ ]*?['|`][^']*?['|`]")
-tag_pattern_i18n = re.compile("<i18n path=[ ]*?['|`\"][^']*?[' |`\"]")
+tag_pattern_i18n = re.compile("<i18n[ ]*?path=['|`\"][^']*?[' |`\"]")
 
 # tsファイル内のヘッダーの正規表現パターン
 header_pattern = re.compile("\{ text: '[^']*?', value: '[^']*?'")
