@@ -1,0 +1,53 @@
+name: Compress images
+on:
+  pull_request:
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
+  push:
+    branches:
+      - main
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 0'
+jobs:
+  build:
+    name: Compress
+    runs-on: ubuntu-latest
+    # Only run on main repo on and PRs that match the main repo.
+    if: |
+      github.repository == 'a01sa01to/a01sa01to.com' &&
+      (github.event_name != 'pull_request' ||
+       github.event.pull_request.head.repo.full_name == github.repository)
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v2.4.0
+        with:
+          ref: development
+      - name: Compress Images
+        uses: calibreapp/image-actions@main
+        id: calibre
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          # For non-Pull Requests, run in compressOnly mode and we'll PR after.
+          compressOnly: ${{ github.event_name != 'pull_request' }}
+      - name: Create Pull Request
+        # If it's not a Pull Request then commit any changes as a new PR.
+        if: |
+          github.event_name != 'pull_request' &&
+          steps.calibre.outputs.markdown != ''
+        uses: peter-evans/create-pull-request@v3.12.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Auto Compress Images
+          branch-suffix: timestamp
+          commit-message: Compress Images
+          labels: auto_merge
+          body: ${{ steps.calibre.outputs.markdown }}
