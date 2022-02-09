@@ -81,6 +81,6 @@ for filename in FILELIST:
                       indent=2, separators=(",", ": "))
 
 
-with open("../../../../../data/opendata_covid19_ibaraki.json", "w", encoding="UTF-8") as f:
+with open("../../../../../data/opendata/covid19_ibaraki.json", "w", encoding="UTF-8") as f:
     json.dump(json_list, f, ensure_ascii=False,
               indent=2, separators=(",", ": "))
