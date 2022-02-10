@@ -85,6 +85,9 @@ const config: NuxtConfig = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@a01sa01to' },
+      { name: 'twitter:creator', content: '@a01sa01to' },
     ],
     titleTemplate: "%s - Asa's Website",
     script: [
