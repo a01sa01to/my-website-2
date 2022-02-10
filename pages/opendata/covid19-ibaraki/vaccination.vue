@@ -132,6 +132,14 @@ export default Vue.extend({
       title: `${this.$t('ワクチン接種状況')} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '国が集計したオープンデータを、「茨城県新型コロナウイルス感染症対策サイト」で用いる形式に改変したものです。'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

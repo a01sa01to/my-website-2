@@ -1,5 +1,6 @@
 ---
 title: ドメインを移管しました
+description: ドメインを移管したのでまとめました
 tags: ['Domain', 'Website']
 createDate: 2021-02-01
 updateDate: 2021-05-30

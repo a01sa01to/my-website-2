@@ -124,6 +124,14 @@ export default Vue.extend({
       title: `${this.$t('茨城版コロナNext')} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '茨城版コロナNextの指標のデータを集計したオープンデータです。'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

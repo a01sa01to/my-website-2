@@ -80,8 +80,18 @@ export default Vue.extend({
       BlogList,
     }
   },
-  head: {
-    title: 'Opendata',
+  head() {
+    return {
+      title: 'Opendata',
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            'Asaがオープンデータを提供するために立ち上げたサイトです。'
+          ) as string,
+        },
+      ],
+    }
   },
   data() {
     return {

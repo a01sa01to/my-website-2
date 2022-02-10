@@ -82,6 +82,14 @@ export default Vue.extend({
   head() {
     return {
       title: this.$t('免責事項') as string,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '当サイトを利用する際の免責事項を掲載しています'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

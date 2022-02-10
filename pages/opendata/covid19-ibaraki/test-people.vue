@@ -140,6 +140,14 @@ export default Vue.extend({
       title: `${this.$t(
         '検査実施人数（県衛生研究所・水戸市保健所実施分）'
       )} - ${this.$t('茨城県新型コロナウイルス感染症')} - Opendata`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '県衛生研究所及び水戸市保健所で実施しているPCR検査を受けた人の数を日別に集計したオープンデータです。'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

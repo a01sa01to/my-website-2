@@ -140,6 +140,14 @@ export default Vue.extend({
       title: `${this.$t('変異株陽性確認数')} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '茨城県の公表日別の変異株陽性確認数を、性別・年代別とともに集計したオープンデータです。-19）に関する情報を提供します。'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

@@ -117,6 +117,14 @@ export default Vue.extend({
       title: `${this.$t('陽性者の状況')} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '茨城県の陽性者の状況を集計したオープンデータです。療養中、回復済、死亡、その他などに分けてあります。'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

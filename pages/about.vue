@@ -212,8 +212,16 @@ import {
   siWikipedia,
 } from 'simple-icons/icons'
 export default Vue.extend({
-  head: {
-    title: 'About Me',
+  head() {
+    return {
+      title: 'About Me',
+      meta: [
+        {
+          name: 'description',
+          content: this.$t('Asaの自己紹介ページです。') as string,
+        },
+      ],
+    }
   },
   components: {
     BIconLink45deg,

@@ -1,5 +1,6 @@
 ---
 title: Nuxtで作り直し
+description: Nuxtでサイトを作り直してます
 tags: ['Nuxt', 'Website']
 createDate: 2022-01-15
 updateDate: 2022-01-15

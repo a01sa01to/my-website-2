@@ -118,6 +118,14 @@ export default Vue.extend({
       title: `${this.$t('死亡者属性')} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '茨城県内の、新型コロナウイルスによる死亡者の属性を集計したオープンデータです。'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

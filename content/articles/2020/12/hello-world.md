@@ -1,5 +1,6 @@
 ---
 title: 'Hello World, publishing my website'
+description: サイトをリフォームしました
 tags: ['HelloWorld']
 createDate: 2020-12-01
 updateDate: 2022-02-05

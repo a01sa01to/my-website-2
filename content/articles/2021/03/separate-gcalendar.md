@@ -1,5 +1,6 @@
 ---
 title: Googleカレンダーで予定別にカレンダーを仕分ける
+description: Googleカレンダーで予定を仕分けたいことがあったので、備忘録的なものです
 tags: ['Google', 'Calendar']
 createDate: 2021-03-16
 updateDate: 2021-05-30

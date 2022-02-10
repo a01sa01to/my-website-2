@@ -77,6 +77,12 @@ export default Vue.extend({
   head() {
     return {
       title: `${(this as any).year}年の記事一覧`,
+      meta: [
+        {
+          name: 'description',
+          content: `${(this as any).year}年の記事一覧です`,
+        },
+      ],
     }
   },
   data() {

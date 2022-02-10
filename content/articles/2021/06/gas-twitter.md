@@ -1,5 +1,6 @@
 ---
 title: GASでライブラリを使わずにTwitterクライアントを作成する
+description: Google Apps ScriptでTwitterの投稿を行うためのクライアントを作りました
 tags: ['Google', 'AppsScript']
 createDate: 2021-06-25
 updateDate: 2021-06-25

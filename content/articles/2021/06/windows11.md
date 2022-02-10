@@ -1,5 +1,6 @@
 ---
 title: Windows 11 がやってきた！！
+description: Windows 11を導入したので、感想です
 tags: ['Windows', 'Windows11']
 createDate: 2021-06-29
 updateDate: 2021-06-29

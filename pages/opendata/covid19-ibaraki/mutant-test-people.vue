@@ -147,6 +147,14 @@ export default Vue.extend({
       title: `${this.$t('変異株検査実施件数（県衛生研究所）')} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            '県衛生研究所で実施している変異株PCR検査の数を週別に集計したオープンデータです。'
+          ) as string,
+        },
+      ],
     }
   },
   data() {

@@ -75,8 +75,16 @@ export default Vue.extend({
       ],
     }
   },
-  head: {
-    title: 'タグ一覧 - Blog',
+  head() {
+    return {
+      title: 'タグ一覧 - Blog',
+      meta: [
+        {
+          name: 'description',
+          content: '私のBlogについたタグ一覧です',
+        },
+      ],
+    }
   },
   data() {
     return {

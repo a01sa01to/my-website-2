@@ -109,8 +109,18 @@ import Vue from 'vue'
 import externalLink from '~/components/external-link.vue'
 export default Vue.extend({
   components: { externalLink },
-  head: {
-    title: 'Title & URL Picker - Apps',
+  head() {
+    return {
+      title: 'Title & URL Picker - Apps',
+      meta: [
+        {
+          name: 'description',
+          content: this.$t(
+            'Chrome拡張機能「Title & URL Picker」に関するページです'
+          ) as string,
+        },
+      ],
+    }
   },
   data() {
     return {

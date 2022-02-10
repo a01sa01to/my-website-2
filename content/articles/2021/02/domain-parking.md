@@ -1,5 +1,6 @@
 ---
 title: ドメインパーキングを使ってみる
+description: お名前.comのドメインパーキングを使ってみました
 tags: ['Domain', 'DomainParking']
 createDate: 2021-02-02
 updateDate: 2021-05-30

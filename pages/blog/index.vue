@@ -53,8 +53,16 @@ export default Vue.extend({
       BlogList,
     }
   },
-  head: {
-    title: 'Blog',
+  head() {
+    return {
+      title: 'Blog',
+      meta: [
+        {
+          name: 'description',
+          content: "Asa's Blogトップページ",
+        },
+      ],
+    }
   },
   data() {
     return {

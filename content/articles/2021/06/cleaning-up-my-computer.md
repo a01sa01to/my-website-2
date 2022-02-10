@@ -1,5 +1,6 @@
 ---
 title: Cleaning Up My Computer
+description: クリーンアップをしたので、差分を比べてみました
 tags: ['Computer']
 createDate: 2021-06-24
 updateDate: 2021-06-24

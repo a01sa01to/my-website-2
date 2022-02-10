@@ -1,5 +1,6 @@
 ---
 title: FirebaseUIで日本語にしてAuthDomainを設定したい
+description: FirebaseUIを日本語にしたうえで、AuthDomainを設定するのに手こずったので、備忘録です
 tags: ['Google', 'Firebase']
 createDate: 2021-05-19
 updateDate: 2021-06-28
