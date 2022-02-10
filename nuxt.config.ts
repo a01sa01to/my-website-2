@@ -114,8 +114,6 @@ const config: NuxtConfig = {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
     ['cookie-universal-nuxt', { parseJSON: false }],
     '@nuxt/content',
     '@nuxtjs/axios',
@@ -130,13 +128,6 @@ const config: NuxtConfig = {
   privateRuntimeConfig: {
     GITHUB_CLI_ID: process.env.GITHUB_CLI_ID,
     GITHUB_CLI_SEC: process.env.GITHUB_CLI_SEC,
-  },
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'en',
-    },
   },
 
   router: {
