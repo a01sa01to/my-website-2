@@ -139,22 +139,6 @@ const config: NuxtConfig = {
     },
   },
 
-  render: {
-    static: {
-      setHeaders(res, path) {
-        path = path.replace(/\\/g, '/')
-        if (path.includes('/opendata/api/')) {
-          res.setHeader('Access-Control-Allow-Origin', '*')
-          res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-          res.setHeader(
-            'Access-Control-Allow-Headers',
-            'Accept, Content-Type, Content-Length'
-          )
-        }
-      },
-    },
-  },
-
   router: {
     trailingSlash: true,
     middleware: ['trailingslash-redirect'],
