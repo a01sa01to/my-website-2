@@ -23,8 +23,7 @@ handlers:
     static_files: static/\1
     upload: static/.*\.(gif|png|jpg|ico|txt|webp)$
     secure: always
-    http_headers:
-      Cache-Control: public, max-age=31536000 # 1年
+    expiration: 365d
 
   - url: /opendata/api/raw/
     static_dir: static/opendata/api/raw/
