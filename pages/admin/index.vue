@@ -2,20 +2,12 @@
   <div>
     <shared-main-header title="Admin Tools" :b_data="breadcrumb_data" />
     <b-container>
-      <b-list-group>
-        <b-list-group-item
-          :variant="$store.state.darkmode ? 'dark' : 'light'"
-          to="./cov19-ibk/"
-        >
-          Covid19 Ibaraki Updater
-        </b-list-group-item>
-        <b-list-group-item
-          :variant="$store.state.darkmode ? 'dark' : 'light'"
-          to="./update-icon/"
-        >
-          Update Icon List
-        </b-list-group-item>
-      </b-list-group>
+      <ul>
+        <li>
+          <nuxt-link to="./cov19-ibk/">Covid19 Ibaraki Updater</nuxt-link>
+        </li>
+        <li><nuxt-link to="./update-icon/">Update Icon List</nuxt-link></li>
+      </ul>
     </b-container>
   </div>
 </template>
