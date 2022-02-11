@@ -1,8 +1,10 @@
 <template>
   <div>
-    <h1>{{ error.statusCode }}</h1>
-    <p>{{ statuscode2message(error.statusCode) }}</p>
-    <nuxt-link to="/">{{ $t('トップページに戻る') }}</nuxt-link>
+    <b-container>
+      <h1>{{ error.statusCode }}</h1>
+      <p>{{ statuscode2message(error.statusCode) }}</p>
+      <nuxt-link to="/">{{ $t('トップページに戻る') }}</nuxt-link>
+    </b-container>
   </div>
 </template>
 
