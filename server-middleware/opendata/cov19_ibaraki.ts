@@ -1,10 +1,12 @@
 import fs from 'fs'
-import path from 'path'
+import { join, resolve } from 'path'
 import csv2json from './functions/csv2json'
 import { PaginationArg, PaginationFn } from './functions/pagination'
 import str2date from './functions/str2date'
 
-const opendataBasepath = path.join(
+const __dirname = resolve()
+
+const opendataBasepath = join(
   __dirname,
   '..',
   '..',
@@ -33,9 +35,7 @@ type LastUpdateType = {
 
 const getData = () => {
   const LastUpdate: LastUpdateType = JSON.parse(
-    fs
-      .readFileSync(path.resolve(opendataBasepath, 'last_update.json'))
-      .toString()
+    fs.readFileSync(resolve(opendataBasepath, 'last_update.json')).toString()
   )
 
   const ret: { [key: string]: any } = {}
@@ -43,7 +43,7 @@ const getData = () => {
     // call_center
     const filecontent = fs
       .readFileSync(
-        path.resolve(opendataBasepath, '080004_ibaraki_covid19_call_center.csv')
+        resolve(opendataBasepath, '080004_ibaraki_covid19_call_center.csv')
       )
       .toString()
     const overridesMap = {
@@ -69,10 +69,7 @@ const getData = () => {
     // corona_next
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_corona_next.json'
-        )
+        resolve(opendataBasepath, '080004_ibaraki_covid19_corona_next.json')
       )
       .toString()
     const jsonData: { [key: string]: string | number | null } =
@@ -87,10 +84,7 @@ const getData = () => {
     // death_attributes
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_death_attributes.csv'
-        )
+        resolve(opendataBasepath, '080004_ibaraki_covid19_death_attributes.csv')
       )
       .toString()
     const overridesMap = {
@@ -117,10 +111,7 @@ const getData = () => {
     // death_number
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_death_number.csv'
-        )
+        resolve(opendataBasepath, '080004_ibaraki_covid19_death_number.csv')
       )
       .toString()
     const overridesMap = {
@@ -146,7 +137,7 @@ const getData = () => {
     // inspections_summary
     const filecontent = fs
       .readFileSync(
-        path.resolve(
+        resolve(
           opendataBasepath,
           '080004_ibaraki_covid19_inspections_summary.json'
         )
@@ -162,7 +153,7 @@ const getData = () => {
     // mutant_positive_number
     const filecontent = fs
       .readFileSync(
-        path.resolve(
+        resolve(
           opendataBasepath,
           '080004_ibaraki_covid19_mutant_positive_number.json'
         )
@@ -213,7 +204,7 @@ const getData = () => {
     // mutant_test_people
     const filecontent = fs
       .readFileSync(
-        path.resolve(
+        resolve(
           opendataBasepath,
           '080004_ibaraki_covid19_mutant_test_people.csv'
         )
@@ -245,7 +236,7 @@ const getData = () => {
     // patients
     const filecontent = fs
       .readFileSync(
-        path.resolve(opendataBasepath, '080004_ibaraki_covid19_patients.csv')
+        resolve(opendataBasepath, '080004_ibaraki_covid19_patients.csv')
       )
       .toString()
     const overridesMap = {
@@ -285,10 +276,7 @@ const getData = () => {
     // positive_number
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_positive_number.csv'
-        )
+        resolve(opendataBasepath, '080004_ibaraki_covid19_positive_number.csv')
       )
       .toString()
     const overridesMap = {
@@ -315,10 +303,7 @@ const getData = () => {
     // recovered_number
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_recovered_number.csv'
-        )
+        resolve(opendataBasepath, '080004_ibaraki_covid19_recovered_number.csv')
       )
       .toString()
     const overridesMap = {
@@ -344,7 +329,7 @@ const getData = () => {
     // summary
     const filecontent = fs
       .readFileSync(
-        path.resolve(opendataBasepath, '080004_ibaraki_covid19_summary.json')
+        resolve(opendataBasepath, '080004_ibaraki_covid19_summary.json')
       )
       .toString()
     const jsonData = JSON.parse(filecontent)
@@ -370,7 +355,7 @@ const getData = () => {
     // test_people
     const filecontent = fs
       .readFileSync(
-        path.resolve(opendataBasepath, '080004_ibaraki_covid19_test_people.csv')
+        resolve(opendataBasepath, '080004_ibaraki_covid19_test_people.csv')
       )
       .toString()
     const overridesMap = {
@@ -396,10 +381,7 @@ const getData = () => {
     // vaccination
     const filecontent = fs
       .readFileSync(
-        path.resolve(
-          opendataBasepath,
-          '080004_ibaraki_covid19_vaccination.json'
-        )
+        resolve(opendataBasepath, '080004_ibaraki_covid19_vaccination.json')
       )
       .toString()
     let jsonData = JSON.parse(filecontent)

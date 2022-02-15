@@ -1,10 +1,12 @@
-import { readFileSync } from 'fs'
-import { IncomingMessage } from 'http'
-import { join } from 'path'
 import { ServerMiddleware } from '@nuxt/types'
 import { graphqlHTTP } from 'express-graphql'
+import { readFileSync } from 'fs'
 import { buildSchema } from 'graphql'
+import { IncomingMessage } from 'http'
+import { join, resolve } from 'path'
 import Covid19Ibaraki from './cov19_ibaraki'
+
+const __dirname = resolve()
 
 const api: ServerMiddleware = (_req, res, _next) => {
   const req = _req as IncomingMessage & { url: string }
