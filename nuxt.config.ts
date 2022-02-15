@@ -130,7 +130,7 @@ export default defineNuxtConfig({
 
   router: {
     trailingSlash: true,
-    middleware: ['trailingslash-redirect'],
+    middleware: ['trailingslash-redirect', 'blog-redirect-temp'],
   },
 
   serverMiddleware: [
