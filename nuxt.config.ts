@@ -1,33 +1,6 @@
-import { NuxtConfig } from '@nuxt/types'
-import '@nuxtjs/auth-next'
+import { defineNuxtConfig } from '@nuxt/bridge'
 
-const config: NuxtConfig = {
-  auth: {
-    strategies: {
-      github: {
-        cliendId: process.env.GITHUB_CLI_ID,
-        clientSecret: process.env.GITHUB_CLI_SEC,
-      },
-    },
-    cookie: {
-      options: {
-        path: '/admin/',
-        maxAge: 60 * 60 * 24 * 7,
-      },
-    },
-    localStorage: false,
-    redirect: {
-      home: '/admin/',
-      callback: '/admin/callback/',
-      login: '/admin/login/',
-      logout: '/admin/login/',
-    },
-  },
-
-  bootstrapVue: {
-    icons: false,
-  },
-
+export default defineNuxtConfig({
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
@@ -51,16 +24,6 @@ const config: NuxtConfig = {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
-  content: {
-    markdown: {
-      prism: {
-        theme: '~/assets/styles/markdown-code-highlight.css',
-      },
-      remarkPlugins: ['remark-math'],
-      rehypePlugins: ['rehype-katex'],
-    },
-  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/global.scss'],
@@ -97,10 +60,6 @@ const config: NuxtConfig = {
     ],
   },
 
-  'google-gtag': {
-    id: 'G-Z23EQDNLQY',
-  },
-
   loading: {
     color: '#0d6efd',
     continuous: true,
@@ -115,13 +74,52 @@ const config: NuxtConfig = {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    ['bootstrap-vue/nuxt', { icons: false }],
     ['cookie-universal-nuxt', { parseJSON: false }],
-    '@nuxt/content',
+    [
+      '@nuxt/content',
+      {
+        markdown: {
+          prism: {
+            theme: '~/assets/styles/markdown-code-highlight.css',
+          },
+          remarkPlugins: ['remark-math'],
+          rehypePlugins: ['rehype-katex'],
+        },
+      },
+    ],
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
+    [
+      '@nuxtjs/auth-next',
+      {
+        strategies: {
+          github: {
+            cliendId: process.env.GITHUB_CLI_ID,
+            clientSecret: process.env.GITHUB_CLI_SEC,
+          },
+        },
+        cookie: {
+          options: {
+            path: '/admin/',
+            maxAge: 60 * 60 * 24 * 7,
+          },
+        },
+        localStorage: false,
+        redirect: {
+          home: '/admin/',
+          callback: '/admin/callback/',
+          login: '/admin/login/',
+          logout: '/admin/login/',
+        },
+      },
+    ],
     'nuxt-clipboard2',
-    '@nuxtjs/google-gtag',
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: 'G-Z23EQDNLQY',
+      },
+    ],
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -143,6 +141,4 @@ const config: NuxtConfig = {
       path: '/opendata/api/',
     },
   ],
-}
-
-export default config
+})
