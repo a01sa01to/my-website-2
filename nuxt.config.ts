@@ -76,18 +76,18 @@ export default defineNuxtConfig({
     // https://go.nuxtjs.dev/bootstrap
     ['bootstrap-vue/nuxt', { icons: false }],
     ['cookie-universal-nuxt', { parseJSON: false }],
-    [
-      '@nuxt/content',
-      {
-        markdown: {
-          prism: {
-            theme: '~/assets/styles/markdown-code-highlight.css',
-          },
-          remarkPlugins: ['remark-math'],
-          rehypePlugins: ['rehype-katex'],
-        },
-      },
-    ],
+    // [
+    //   '@nuxt/content',
+    //   {
+    //     markdown: {
+    //       prism: {
+    //         theme: '~/assets/styles/markdown-code-highlight.css',
+    //       },
+    //       remarkPlugins: ['remark-math'],
+    //       rehypePlugins: ['rehype-katex'],
+    //     },
+    //   },
+    // ],
     '@nuxtjs/axios',
     [
       '@nuxtjs/auth-next',
