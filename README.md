@@ -1,5 +1,7 @@
 # a01sa01to.com
 
+[![DeepSource](https://deepsource.io/gh/a01sa01to/a01sa01to.com.svg/?label=active+issues&show_trend=true&token=MQQG9wzMiS7bt3heas-yHwkd)](https://deepsource.io/gh/a01sa01to/a01sa01to.com/?ref=repository-badge)
+
 ## Build Setup
 
 ```bash
