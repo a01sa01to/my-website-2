@@ -1,0 +1,14 @@
+deepsource_autofix:
+  - '**/*'
+
+javascript:
+  - '**/*.js'
+  - '**/*.jsx'
+  - '**/*.ts'
+  - '**/*.tsx'
+
+python:
+  - '**/*.py'
+
+shell:
+  - '**/*.sh'
