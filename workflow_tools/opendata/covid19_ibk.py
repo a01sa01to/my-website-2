@@ -67,8 +67,7 @@ for filename in FILELIST:
             else:
                 filesize = "{:.2f} {}".format(round(filesize, 2), SIZEUNIT[i])
             break
-        else:
-            filesize /= 1024
+        filesize /= 1024
 
     json_list[aliasname]["lastUpdate"] = lastUpdate[aliasname]
     json_list[aliasname]["size"] = filesize
