@@ -10,7 +10,7 @@ jobs:
       - name: Get actor's name
         run: echo $GITHUB_ACTOR
         env:
-          - GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_ACTOR: ${{ github.actor }}
       - name: Label for Transifex
         if: github.actor == 'transifex-integration[bot]' && !endsWith(github.event.pull_request.title, '[manual sync]')
         uses: actions/labeler@v3
