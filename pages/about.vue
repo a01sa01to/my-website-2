@@ -109,6 +109,15 @@
         Instagram
       </b-button>
       <b-button
+        href="https://docs.microsoft.com/ja-jp/users/a01sa01to/"
+        target="_blank"
+        class="btn-custom"
+        style="--bg-color: #5e5e5e"
+      >
+        <simpleicon-container :data="siMicrosoft" />
+        Microsoft Docs
+      </b-button>
+      <b-button
         href="https://www.nicovideo.jp/user/46836937"
         target="_blank"
         class="btn-custom"
@@ -202,6 +211,7 @@ import {
   siGithub,
   siGoogle,
   siInstagram,
+  siMicrosoft,
   siNiconico,
   siNpm,
   siPixiv,
@@ -238,6 +248,7 @@ export default Vue.extend({
       siGithub,
       siGoogle,
       siInstagram,
+      siMicrosoft,
       siNiconico,
       siNpm,
       siPixiv,
