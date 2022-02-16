@@ -17,16 +17,16 @@ TS_FILES = []
 CSV_FILES = []
 
 # タグの正規表現パターン
-tag_pattern_t = re.compile("\$t\([ ]*?['|`][^']*?['|`]")
-tag_pattern_tc = re.compile("\$tc\([ ]*?['|`][^']*?['|`]")
+tag_pattern_t = re.compile(r"\$t\([ ]*?['|`][^']*?['|`]")
+tag_pattern_tc = re.compile(r"\$tc\([ ]*?['|`][^']*?['|`]")
 tag_pattern_i18n = re.compile("<i18n[ ]*?path=['|`\"][^']*?[' |`\"]")
 
 # tsファイル内のヘッダーの正規表現パターン
-header_pattern = re.compile("\{ text: '[^']*?', value: '[^']*?'")
+header_pattern = re.compile(r"\{ text: '[^']*?', value: '[^']*?'")
 
 # tsファイル内のtranslatable unitの正規表現パターン
 translatable_pattern = re.compile(
-    "\{[ ]*?text: '[^']*?',[ ]*?translatable: true")
+    r"\{[ ]*?text: '[^']*?',[ ]*?translatable: true")
 
 # 文字エンコーディング
 ENCODING = "UTF-8"
