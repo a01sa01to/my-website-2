@@ -1,6 +1,6 @@
 import { GetterTree, MutationTree } from 'vuex'
 
-export const state = () => ({
+export const state = (): { darkmode: boolean } => ({
   darkmode: false,
 })
 
