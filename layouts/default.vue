@@ -7,18 +7,6 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-div {
-  display: flex;
-  flex-flow: column;
-  min-height: 100%;
-}
-main {
-  flex: 1;
-  padding-top: calc(64px + 1rem);
-}
-</style>
-
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
@@ -41,3 +29,15 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+div {
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+}
+main {
+  flex: 1;
+  padding-top: calc(64px + 1rem);
+}
+</style>
