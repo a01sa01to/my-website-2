@@ -14,8 +14,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { BIconChevronRight } from 'bootstrap-vue'
+import Vue from 'vue'
 export default Vue.extend({
   components: {
     BIconChevronRight,
@@ -23,6 +23,7 @@ export default Vue.extend({
   props: {
     hovercolor: {
       type: String,
+      default: '#6c757d',
     },
   },
   data() {
