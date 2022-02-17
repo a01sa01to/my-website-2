@@ -64,6 +64,7 @@
           :variant="btn_variant"
           href="https://kss-bakakkoii.a01sa01to.com/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Home
         </b-button>
@@ -71,6 +72,7 @@
           :variant="btn_variant"
           href="https://kss-bakakkoii.a01sa01to.com/video/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {{ $t('動画一覧') }}
         </b-button>
@@ -78,6 +80,7 @@
           :variant="btn_variant"
           href="https://kss-bakakkoii.a01sa01to.com/video/tips"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {{ $t('動画の豆知識') }}
         </b-button>
@@ -91,6 +94,7 @@
           :variant="btn_variant"
           href="https://twitter.com/a01sa01to"
           target="_blank"
+          rel="noopener noreferrer"
         >
           @a01sa01to
           {{ $t('（日常ツイート）') }}
@@ -99,6 +103,7 @@
           :variant="btn_variant"
           href="https://twitter.com/covid19_ibaraki"
           target="_blank"
+          rel="noopener noreferrer"
         >
           @covid19_ibaraki
           {{ $t('（茨城県の新型コロナ情報）') }}
@@ -107,6 +112,7 @@
           :variant="btn_variant"
           href="https://twitter.com/kss_bakakkoii"
           target="_blank"
+          rel="noopener noreferrer"
         >
           @kss_bakakkoii
           {{ $t('（古河中等ばかっこいいシリーズ・更新終了）') }}
@@ -121,6 +127,7 @@
           :variant="btn_variant"
           href="https://github.com/a01sa01to"
           target="_blank"
+          rel="noopener noreferrer"
         >
           @a01sa01to
         </b-button>
@@ -128,6 +135,7 @@
           :variant="btn_variant"
           href="https://github.com/mspsd"
           target="_blank"
+          rel="noopener noreferrer"
         >
           @mspsd
         </b-button>
@@ -135,6 +143,7 @@
           :variant="btn_variant"
           href="https://github.com/kss-pc-club"
           target="_blank"
+          rel="noopener noreferrer"
         >
           @kss-pc-club
         </b-button>

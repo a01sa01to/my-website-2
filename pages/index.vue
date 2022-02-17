@@ -60,6 +60,7 @@
               href="https://ibaraki.stopcovid19.jp"
               :variant="btn_variant"
               target="_blank"
+              rel="noopener noreferrer"
               pill
             >
               <b-icon-book />
@@ -69,6 +70,7 @@
               href="https://github.com/a01sa01to/covid19-ibaraki"
               :variant="btn_variant"
               target="_blank"
+              rel="noopener noreferrer"
               pill
             >
               <b-icon-github />
@@ -78,6 +80,7 @@
               href="https://twitter.com/covid19_ibaraki"
               :variant="btn_variant"
               target="_blank"
+              rel="noopener noreferrer"
               pill
             >
               <b-icon-twitter />
@@ -113,6 +116,7 @@
               href="https://kss-bakakkoii.a01sa01to.com"
               :variant="btn_variant"
               target="_blank"
+              rel="noopener noreferrer"
               pill
             >
               <b-icon-book />
@@ -122,6 +126,7 @@
               href="https://github.com/a01sa01to/kss-bakakkoii-website"
               :variant="btn_variant"
               target="_blank"
+              rel="noopener noreferrer"
               pill
             >
               <b-icon-github />
@@ -131,6 +136,7 @@
               href="https://twitter.com/kss_bakakkoii"
               :variant="btn_variant"
               target="_blank"
+              rel="noopener noreferrer"
               pill
             >
               <b-icon-twitter />
@@ -209,15 +215,15 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import {
   BIconBook,
-  BIconGithub,
-  BIconTwitter,
-  BIconInstagram,
   BIconChatDots,
+  BIconGithub,
+  BIconInstagram,
   BIconServer,
+  BIconTwitter,
 } from 'bootstrap-vue'
+import Vue from 'vue'
 
 export default Vue.extend({
   head() {

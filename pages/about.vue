@@ -57,6 +57,7 @@
       <b-button
         href="https://atcoder.jp/users/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #000"
       >
@@ -66,6 +67,7 @@
       <b-button
         href="https://codeforces.com/profile/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #1f8acb"
       >
@@ -75,6 +77,7 @@
       <b-button
         href="https://facebook.com/asato.tsuchiya.77"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #1877f2"
       >
@@ -84,6 +87,7 @@
       <b-button
         href="https://github.com/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #181717"
       >
@@ -93,6 +97,7 @@
       <b-button
         href="https://g.dev/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #4285f4"
       >
@@ -102,6 +107,7 @@
       <b-button
         href="https://instagram.com/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #e4405f"
       >
@@ -111,6 +117,7 @@
       <b-button
         href="https://docs.microsoft.com/ja-jp/users/a01sa01to/"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #5e5e5e"
       >
@@ -120,6 +127,7 @@
       <b-button
         href="https://www.nicovideo.jp/user/46836937"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #231815"
       >
@@ -129,6 +137,7 @@
       <b-button
         href="https://www.npmjs.com/~a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #c83837"
       >
@@ -138,6 +147,7 @@
       <b-button
         href="https://peing.net/ja/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #5eb9ba"
       >
@@ -147,6 +157,7 @@
       <b-button
         href="https://www.pixiv.net/users/21010304"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #0096fa"
       >
@@ -156,6 +167,7 @@
       <b-button
         href="https://qiita.com/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #55c500"
       >
@@ -165,6 +177,7 @@
       <b-button
         href="https://steamcommunity.com/id/a01sa01to/"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #000"
       >
@@ -174,6 +187,7 @@
       <b-button
         href="https://www.twitch.tv/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #9146ff"
       >
@@ -183,6 +197,7 @@
       <b-button
         href="https://twitter.com/a01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #1da1f2"
       >
@@ -192,6 +207,7 @@
       <b-button
         href="https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:A01sa01to"
         target="_blank"
+        rel="noopener noreferrer"
         class="btn-custom"
         style="--bg-color: #000"
       >
@@ -203,7 +219,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { BIconLink45deg, BIconLock } from 'bootstrap-vue'
 import {
   siCodeforces,
@@ -221,6 +236,7 @@ import {
   siTwitter,
   siWikipedia,
 } from 'simple-icons/icons'
+import Vue from 'vue'
 export default Vue.extend({
   head() {
     return {
