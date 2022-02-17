@@ -20,12 +20,20 @@
             right
             v-if="!$route.path.includes('/blog/')"
           >
-            <b-dropdown-item @click="changeLocale('ja')" href="#"
-              >Japanese</b-dropdown-item
+            <b-dropdown-item
+              @click="changeLocale('ja')"
+              href="#"
+              :disabled="$i18n.locale === 'ja'"
             >
-            <b-dropdown-item @click="changeLocale('en')" href="#"
-              >English</b-dropdown-item
+              Japanese
+            </b-dropdown-item>
+            <b-dropdown-item
+              @click="changeLocale('en')"
+              href="#"
+              :disabled="$i18n.locale === 'en'"
             >
+              English
+            </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
