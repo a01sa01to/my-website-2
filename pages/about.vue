@@ -219,7 +219,7 @@
 </template>
 
 <script lang="ts">
-import { BIconLink45deg, BIconLock } from 'bootstrap-vue'
+import { BIconLink45deg } from 'bootstrap-vue'
 import {
   siCodeforces,
   siFacebook,
@@ -251,7 +251,6 @@ export default Vue.extend({
   },
   components: {
     BIconLink45deg,
-    BIconLock,
   },
   data() {
     return {
