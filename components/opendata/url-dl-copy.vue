@@ -1,6 +1,6 @@
 <template>
   <b-input-group>
-    <b-form-input type="url" class="url" readonly v-model="url" />
+    <b-form-input type="url" class="url" readonly :value="url" />
     <b-input-group-append>
       <b-button class="btn" @click="copy">
         <b-icon-files />
@@ -14,8 +14,8 @@
   </b-input-group>
 </template>
 <script lang="ts">
+import { BIconDownload, BIconFiles } from 'bootstrap-vue'
 import Vue from 'vue'
-import { BIconFiles, BIconDownload } from 'bootstrap-vue'
 
 export default Vue.extend({
   props: {
