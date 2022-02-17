@@ -28,8 +28,8 @@
   </div>
 </template>
 <script lang="ts">
+import { BIconHeart, BIconInfoCircle, BIconTwitter } from 'bootstrap-vue'
 import Vue from 'vue'
-import { BIconTwitter, BIconHeart, BIconInfoCircle } from 'bootstrap-vue'
 
 export default Vue.extend({
   props: {
@@ -50,17 +50,17 @@ export default Vue.extend({
   },
   computed: {
     variant() {
-      return this.$store.state.darkmode ? 'dark' : 'light'
+      return this.$colorMode.value === 'dark' ? 'dark' : 'light'
     },
     invVariant() {
-      return this.$store.state.darkmode ? 'secondary' : 'dark'
+      return this.$colorMode.value === 'dark' ? 'secondary' : 'dark'
     },
   },
   mounted() {
     ;(window as any).twttr.ready((twttr: any) => {
       twttr.widgets
         .createTweet(this.tweetid, this.$el, {
-          theme: this.$store.state.darkmode ? 'dark' : 'light',
+          theme: this.$colorMode.value === 'dark' ? 'dark' : 'light',
         })
         .then((_el: any) => {
           ;(this as any).loading = false

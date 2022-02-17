@@ -180,7 +180,9 @@ export default Vue.extend({
   },
   computed: {
     btn_variant() {
-      return this.$store.state.darkmode ? 'outline-light' : 'outline-primary'
+      return this.$colorMode.value === 'dark'
+        ? 'outline-light'
+        : 'outline-primary'
     },
   },
 })

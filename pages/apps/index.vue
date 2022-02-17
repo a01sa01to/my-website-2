@@ -7,8 +7,8 @@
           <b-card
             :title="card.translate ? $t(card.title) : card.title"
             :sub-title="`Published on ${card.publish}`"
-            :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
-            :text-variant="$store.state.darkmode ? 'light' : 'dark'"
+            :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'light'"
+            :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
             style="border-color: var(--border-color)"
           >
             <template #header>
@@ -42,17 +42,17 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import AppsList from '~/data/apps.json'
 import {
-  BIconDownload,
-  BIconGithub,
   BIconBook,
   BIconBoxArrowUpRight,
-  BIconYoutube,
-  BIconTwitter,
   BIconDiagram3,
+  BIconDownload,
+  BIconGithub,
+  BIconTwitter,
+  BIconYoutube,
 } from 'bootstrap-vue'
+import Vue from 'vue'
+import AppsList from '~/data/apps.json'
 export default Vue.extend({
   head() {
     return {

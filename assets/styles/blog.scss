@@ -28,11 +28,11 @@
     margin: 1em 0;
     font-style: italic;
   }
+}
 
-  @media (prefers-color-scheme: dark) {
-    h2 {
-      background-color: #454b51;
-    }
+.dark-mode {
+  h2 {
+    background-color: #454b51;
   }
 }
 

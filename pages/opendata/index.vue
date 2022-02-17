@@ -2,8 +2,8 @@
   <div>
     <b-container>
       <b-jumbotron
-        :text-variant="$store.state.darkmode ? 'light' : 'dark'"
-        :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
+        :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
+        :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'light'"
       >
         <template #header>Asa's Opendata Catalog</template>
         <template #lead>Scroll down to explore this site</template>

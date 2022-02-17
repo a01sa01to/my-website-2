@@ -12,7 +12,7 @@
         responsive
         :items="files"
         :fields="fields"
-        :dark="$store.state.darkmode"
+        :dark="$colorMode.value === 'dark'"
         :sort-compare="sortComp"
       >
         <template #cell(text)="{ index, value }">

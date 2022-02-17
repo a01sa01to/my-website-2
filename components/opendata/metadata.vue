@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-table-simple hover responsive :dark="$store.state.darkmode">
+    <b-table-simple hover responsive :dark="$colorMode.value === 'dark'">
       <b-tbody class="filetable">
         <b-tr>
           <b-td class="filetabletd">

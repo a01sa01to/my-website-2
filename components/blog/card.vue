@@ -1,7 +1,7 @@
 <template>
   <b-card
-    :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
-    :text-variant="$store.state.darkmode ? 'light' : 'dark'"
+    :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'light'"
+    :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
     :title="article.title"
     class="bcard"
   >
@@ -12,7 +12,9 @@
     </p>
     <div class="text-center">
       <b-button
-        :variant="$store.state.darkmode ? 'outline-light' : 'outline-dark'"
+        :variant="
+          $colorMode.value === 'dark' ? 'outline-light' : 'outline-dark'
+        "
         pill
         :to="article.path.replace('articles', 'blog')"
       >
@@ -23,8 +25,8 @@
   </b-card>
 </template>
 <script lang="ts">
-import Vue from 'vue'
 import { BIconBook } from 'bootstrap-vue'
+import Vue from 'vue'
 import toDate from '~/utils/date_format'
 export default Vue.extend({
   components: {

@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: dark) {
+.dark-mode {
   /* https://github.com/PrismJS/prism-themes/blob/master/themes/prism-vsc-dark-plus.css */
 
   pre[class*='language-'],
@@ -281,7 +281,7 @@
   }
 }
 
-@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+.light-mode {
   /**
   * GHColors theme by Avi Aryan (http://aviaryan.in)
   * Inspired by Github syntax coloring

@@ -35,6 +35,32 @@
               English
             </b-dropdown-item>
           </b-nav-item-dropdown>
+          <b-nav-item-dropdown text="Theme" right>
+            <b-dropdown-item
+              @click="$colorMode.preference = 'system'"
+              href="#"
+              :disabled="$colorMode.preference === 'system'"
+            >
+              <b-icon-display />
+              System ({{ $colorMode.value }})
+            </b-dropdown-item>
+            <b-dropdown-item
+              @click="$colorMode.preference = 'light'"
+              href="#"
+              :disabled="$colorMode.preference === 'light'"
+            >
+              <b-icon-sun />
+              Light
+            </b-dropdown-item>
+            <b-dropdown-item
+              @click="$colorMode.preference = 'dark'"
+              href="#"
+              :disabled="$colorMode.preference === 'dark'"
+            >
+              <b-icon-moon />
+              Dark
+            </b-dropdown-item>
+          </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -42,13 +68,20 @@
 </template>
 
 <script lang="ts">
+import { BIconDisplay, BIconMoon, BIconSun } from 'bootstrap-vue'
 import 'cookie-universal-nuxt'
 import Vue from 'vue'
 import 'vue-i18n'
+
 export default Vue.extend({
+  components: {
+    BIconSun,
+    BIconMoon,
+    BIconDisplay,
+  },
   computed: {
     navbarTheme() {
-      return this.$store.state.darkmode ? 'dark' : 'light'
+      return this.$colorMode.value === 'dark' ? 'dark' : 'light'
     },
   },
   methods: {

@@ -2,8 +2,8 @@
   <div>
     <b-container>
       <b-jumbotron
-        :text-variant="$store.state.darkmode ? 'light' : 'dark'"
-        :bg-variant="$store.state.darkmode ? 'dark' : 'light'"
+        :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
+        :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'light'"
       >
         <template #header>Asa's Website</template>
         <template #lead>Scroll down to explore this site</template>
@@ -35,8 +35,8 @@
           <b-card
             :title="$t('茨城県新型コロナウイルス対策サイト')"
             sub-title="https://ibaraki.stopcovid19.jp/"
-            :bg-variant="$store.state.darkmode ? 'dark' : 'default'"
-            :text-variant="$store.state.darkmode ? 'default' : 'dark'"
+            :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'default'"
+            :text-variant="$colorMode.value === 'dark' ? 'default' : 'dark'"
           >
             <template #header>
               <webp-image
@@ -92,8 +92,8 @@
           <b-card
             :title="$t('古河中等ばかっこいいシリーズ')"
             sub-title="https://kss-bakakkoii.a01sa01to.com"
-            :bg-variant="$store.state.darkmode ? 'dark' : 'default'"
-            :text-variant="$store.state.darkmode ? 'default' : 'dark'"
+            :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'default'"
+            :text-variant="$colorMode.value === 'dark' ? 'default' : 'dark'"
           >
             <template #header>
               <webp-image
@@ -247,7 +247,9 @@ export default Vue.extend({
   },
   computed: {
     btn_variant() {
-      return this.$store.state.darkmode ? 'outline-light' : 'outline-primary'
+      return this.$colorMode.value === 'dark'
+        ? 'outline-light'
+        : 'outline-primary'
     },
   },
 })

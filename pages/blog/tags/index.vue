@@ -6,7 +6,7 @@
         striped
         hover
         responsive
-        :dark="$store.state.darkmode"
+        :dark="$colorMode.value === 'dark'"
         :items="List"
         :fields="fields"
       >

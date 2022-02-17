@@ -79,7 +79,7 @@ export default defineNuxtConfig({
     //   {
     //     markdown: {
     //       prism: {
-    //         theme: '~/assets/styles/markdown-code-highlight.css',
+    //         theme: '~/assets/styles/markdown-code-highlight.scss',
     //       },
     //       remarkPlugins: ['remark-math'],
     //       rehypePlugins: ['rehype-katex'],
@@ -118,6 +118,7 @@ export default defineNuxtConfig({
         id: 'G-Z23EQDNLQY',
       },
     ],
+    '@nuxtjs/color-mode',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

@@ -2,14 +2,14 @@
   <b-container class="accordion" role="tablist">
     <b-card
       no-body
-      :bg-variant="$store.state.darkmode ? 'dark' : 'white'"
+      :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'white'"
       style="border-color: var(--border-color)"
     >
       <b-card-header role="tab">
         <b-button
           block
           v-b-toggle.toc
-          :variant="$store.state.darkmode ? 'dark' : 'white'"
+          :variant="$colorMode.value === 'dark' ? 'dark' : 'white'"
         >
           <b-icon-list-ul />&nbsp; Table of Contents
         </b-button>
@@ -22,8 +22,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { BIconListUl } from 'bootstrap-vue'
+import Vue from 'vue'
 export default Vue.extend({
   components: {
     BIconListUl,
