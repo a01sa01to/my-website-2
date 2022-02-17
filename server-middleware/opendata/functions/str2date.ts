@@ -4,7 +4,7 @@ const str2date = (str: string): string | null => {
     return null
   }
   return (
-    date.getFullYear() +
+    String(date.getFullYear()) +
     '-' +
     String(date.getMonth() + 1).padStart(2, '0') +
     '-' +
