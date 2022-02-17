@@ -61,8 +61,8 @@ for filename in FILELIST:
     aliasname = ALIASLIST[filename]
     filesize = os.path.getsize(filename)
     for i in range(len(SIZEUNIT)):
-        if(filesize / 1024 < 1):
-            if(i == 0):
+        if filesize / 1024 < 1:
+            if i == 0:
                 filesize = "{:.0f} {}".format(filesize, SIZEUNIT[i])
             else:
                 filesize = "{:.2f} {}".format(round(filesize, 2), SIZEUNIT[i])

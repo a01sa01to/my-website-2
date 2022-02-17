@@ -109,7 +109,7 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
                 content = json.load(file)
                 if path == "data{}apps.json".format(os.sep):
                     for item in content:
-                        if(item["translate"]):
+                        if item["translate"]:
                             all_tags.append(item["title"])
                         all_tags.append(item["text"])
 
