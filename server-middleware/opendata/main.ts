@@ -8,7 +8,7 @@ import Covid19Ibaraki from './cov19_ibaraki'
 
 const __dirname = resolve()
 
-const api: ServerMiddleware = (_req, res, _next) => {
+const api: ServerMiddleware = (_req, res) => {
   const req = _req as IncomingMessage & { url: string }
   req.url = '/opendata/api' + req.url
 
