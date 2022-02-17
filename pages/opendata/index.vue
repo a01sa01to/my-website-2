@@ -68,18 +68,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import toDate from '~/utils/date_format'
-
 export default Vue.extend({
-  async asyncData({ $content }) {
-    const BlogList = await $content('articles', { deep: true })
-      .sortBy('createDate', 'desc')
-      .limit(3)
-      .fetch()
-    return {
-      BlogList,
-    }
-  },
   head() {
     return {
       title: 'Opendata',
@@ -91,12 +80,6 @@ export default Vue.extend({
           ) as string,
         },
       ],
-    }
-  },
-  data() {
-    return {
-      thisYear: new Date().getFullYear(),
-      toDate,
     }
   },
 })
