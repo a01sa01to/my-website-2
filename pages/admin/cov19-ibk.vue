@@ -236,7 +236,9 @@
     <hr />
     <b-container>
       <h2>Output</h2>
-      <b-button @click="output()" variant="primary">Generate</b-button><br />
+      <b-button @click="output()" variant="primary">Generate</b-button>
+      <b-button @click="copy" variant="primary">Copy</b-button>
+      <br />
       <b-form-textarea :value="outputData" readonly />
     </b-container>
   </div>
@@ -543,6 +545,21 @@ export default Vue.extend({
         .concat(data_mito)
         .map((_) => _.join('\t'))
         .join('\n')
+    },
+    async copy() {
+      try {
+        await (this as any).$copyText(this.outputData)
+        this.$bvToast.toast('URL Copied', {
+          autoHideDelay: 5000,
+          variant: 'success',
+        })
+      } catch (e) {
+        console.error(e)
+        this.$bvToast.toast('Failed to copy' as string, {
+          autoHideDelay: 5000,
+          variant: 'danger',
+        })
+      }
     },
   },
 })
