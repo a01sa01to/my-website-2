@@ -23,7 +23,7 @@
                   size="sm"
                   number
                   v-model="Data_Pref.municipality[key][0]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
               <td>
@@ -32,7 +32,7 @@
                   size="sm"
                   number
                   v-model="Data_Pref.municipality[key][1]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -58,7 +58,7 @@
                   size="sm"
                   number
                   v-model="Data_Pref.gender[key]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -82,7 +82,7 @@
                   size="sm"
                   number
                   v-model="Data_Pref.age[key]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -106,7 +106,7 @@
                   size="sm"
                   number
                   v-model="Data_Pref.occupation[key]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -138,7 +138,7 @@
                   size="sm"
                   number
                   v-model="Data_Mito.municipality[key][0]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
               <td>
@@ -147,7 +147,7 @@
                   size="sm"
                   number
                   v-model="Data_Mito.municipality[key][1]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -173,7 +173,7 @@
                   size="sm"
                   number
                   v-model="Data_Mito.gender[key]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -197,7 +197,7 @@
                   size="sm"
                   number
                   v-model="Data_Mito.age[key]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -221,7 +221,7 @@
                   size="sm"
                   number
                   v-model="Data_Mito.occupation[key]"
-                  @input="counter"
+                  @change="counter"
                 />
               </td>
             </tr>
@@ -323,7 +323,7 @@ export default Vue.extend({
     })
 
     return {
-      isDarkmode: this.$store.state.darkmode,
+      isDarkmode: this.$colorMode.value === 'dark',
       Data_Pref,
       Data_Mito,
       breadcrumb_data: [
