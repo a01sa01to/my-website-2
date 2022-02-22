@@ -1,6 +1,9 @@
 version = 1
 
-exclude_patterns = ["static/opendata/**"]
+exclude_patterns = [
+  "static/opendata/**",
+  "data/opendata/**"
+]
 
 [[analyzers]]
 name = "secrets"
