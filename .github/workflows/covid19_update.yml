@@ -79,26 +79,11 @@ jobs:
       - name: Create Info Json
         run: python ../../../../../workflow_tools/opendata/covid19_ibk.py
         working-directory: ./static/opendata/api/raw/covid19_ibaraki
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Update today's COVID-19 Data" -a
-      - name: Temporary disable branch protection
-        uses: Hatzelencio/branch-protection@v1.0.0
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3.12.1
         with:
-          path: .github/config/branch_unlock_main.yml
-        env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-      - name: Enable branch protection
-        uses: Hatzelencio/branch-protection@v1.0.0
-        with:
-          path: .github/config/branch_protect_main.yml
-        env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update COVID-19 Data
+          title: Update COVID-19 Data
+          labels: auto_merge
+          branch-suffix: 'short-commit-hash'
