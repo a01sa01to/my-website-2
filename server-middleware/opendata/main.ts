@@ -8,8 +8,7 @@ import Covid19Ibaraki from './cov19_ibaraki'
 
 const __dirname = resolve()
 
-const api: ServerMiddleware = (_req, res) => {
-  const req = _req as IncomingMessage & { url: string }
+const api: ServerMiddleware = (req, res) => {
   req.url = '/opendata/api' + req.url
 
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -37,7 +36,7 @@ const api: ServerMiddleware = (_req, res) => {
     pretty: true,
     rootValue: root,
     schema,
-  })(req, res)
+  })(req as IncomingMessage & { url: string }, res)
 }
 
 export default api
