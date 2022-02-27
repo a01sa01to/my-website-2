@@ -119,6 +119,10 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxtjs/color-mode',
+    [
+      '@nuxtjs/redirect-module',
+      [{ from: '^/blog/(.*)$', to: '/uconst/', statuscode: 302 }],
+    ],
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -131,6 +135,6 @@ export default defineNuxtConfig({
 
   router: {
     trailingSlash: true,
-    middleware: ['trailingslash-redirect', 'blog-redirect-temp'],
+    middleware: ['trailingslash-redirect'],
   },
 })
