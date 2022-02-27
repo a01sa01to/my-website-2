@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
+import MyConfig from './config/main'
 
 export default defineNuxtConfig({
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -6,18 +7,7 @@ export default defineNuxtConfig({
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    [
-      '@nuxtjs/google-fonts',
-      {
-        families: {
-          Muli: true,
-          'Noto Sans JP': [300],
-          'Open Sans': true,
-          Quicksand: true,
-        },
-        display: 'swap',
-      },
-    ],
+    ['@nuxtjs/google-fonts', MyConfig.modules['@nuxtjs/google-fonts']],
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -72,66 +62,15 @@ export default defineNuxtConfig({
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    ['bootstrap-vue/nuxt', { icons: false }],
-    ['cookie-universal-nuxt', { parseJSON: false }],
-    // [
-    //   '@nuxt/content',
-    //   {
-    //     markdown: {
-    //       prism: {
-    //         theme: '~/assets/styles/markdown-code-highlight.scss',
-    //       },
-    //       remarkPlugins: ['remark-math'],
-    //       rehypePlugins: ['rehype-katex'],
-    //     },
-    //   },
-    // ],
+    ['bootstrap-vue/nuxt', MyConfig.modules['bootstrap-vue']],
+    ['cookie-universal-nuxt', MyConfig.modules['cookie-universal-nuxt']],
+    // ['@nuxt/content', MyConfig.modules['@nuxt/content']],
     '@nuxtjs/axios',
-    [
-      '@nuxtjs/auth-next',
-      {
-        strategies: {
-          github: {
-            cliendId: process.env.GITHUB_CLI_ID,
-            clientSecret: process.env.GITHUB_CLI_SEC,
-          },
-        },
-        cookie: {
-          options: {
-            path: '/admin/',
-            maxAge: 60 * 60 * 24 * 7,
-          },
-        },
-        localStorage: false,
-        redirect: {
-          home: '/admin/',
-          callback: '/admin/callback/',
-          login: '/admin/login/',
-          logout: '/admin/login/',
-        },
-      },
-    ],
+    ['@nuxtjs/auth-next', MyConfig.modules['@nuxtjs/auth-next']],
     'nuxt-clipboard2',
-    [
-      '@nuxtjs/google-gtag',
-      {
-        id: 'G-Z23EQDNLQY',
-      },
-    ],
+    ['@nuxtjs/google-gtag', MyConfig.modules['@nuxtjs/google-gtag']],
     '@nuxtjs/color-mode',
-    [
-      '@nuxtjs/redirect-module',
-      [
-        { from: '^/blog/(.*)$', to: '/uconst/', statusCode: 302 },
-        {
-          // POSTリクエスト対応のため、301ではなく308にする
-          // Ref: https://developer.mozilla.org/ja/docs/Web/HTTP/Status/308
-          from: '^/opendata/api/(.*)$',
-          to: '/api/opendata/$1',
-          statusCode: 308,
-        },
-      ],
-    ],
+    ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
