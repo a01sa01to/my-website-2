@@ -2,21 +2,14 @@ import { defineNuxtConfig } from '@nuxt/bridge'
 import MyConfig from './config/main'
 
 export default defineNuxtConfig({
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     ['@nuxtjs/google-fonts', MyConfig.modules['@nuxtjs/google-fonts']],
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/global.scss'],
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     link: [
       {
@@ -59,9 +52,7 @@ export default defineNuxtConfig({
     throttle: 200,
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
     ['bootstrap-vue/nuxt', MyConfig.modules['bootstrap-vue']],
     ['cookie-universal-nuxt', MyConfig.modules['cookie-universal-nuxt']],
     // ['@nuxt/content', MyConfig.modules['@nuxt/content']],
@@ -73,7 +64,6 @@ export default defineNuxtConfig({
     ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],
   ],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/vue-i18n.ts'],
 
   privateRuntimeConfig: {
