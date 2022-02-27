@@ -97,7 +97,7 @@
             )
           }}
         </p>
-        <p><code>https://a01sa01to.com/opendata/api/</code></p>
+        <p><code>https://a01sa01to.com/api/opendata/</code></p>
       </b-container>
       <b-container>
         <h3 id="opendata-api-com">{{ $t('Opendata APIでの通信') }}</h3>
@@ -133,7 +133,7 @@
             )
           }}<br />
           <code>
-            curl 'https://a01sa01to.com/opendata/api/' -X POST -d '{"query":
+            curl 'https://a01sa01to.com/api/opendata/' -X POST -d '{"query":
             "[YOUR QUERY HERE]"}'
           </code>
         </p>

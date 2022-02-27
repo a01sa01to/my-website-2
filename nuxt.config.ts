@@ -133,11 +133,4 @@ export default defineNuxtConfig({
     trailingSlash: true,
     middleware: ['trailingslash-redirect', 'blog-redirect-temp'],
   },
-
-  serverMiddleware: [
-    {
-      handler: '~/server-middleware/opendata/main.ts',
-      path: '/opendata/api/',
-    },
-  ],
 })

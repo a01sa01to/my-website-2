@@ -9,7 +9,7 @@ import Covid19Ibaraki from './cov19_ibaraki'
 const __dirname = resolve()
 
 const api: ServerMiddleware = (req, res) => {
-  req.url = '/opendata/api' + req.url
+  req.url = '/opendata/api' + String(req.url ?? '')
 
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
@@ -22,7 +22,10 @@ const api: ServerMiddleware = (req, res) => {
   }
 
   const schema = buildSchema(
-    readFileSync(join(__dirname, 'schema.graphql'), 'utf8').toString()
+    readFileSync(
+      join(__dirname, 'server', 'opendata', 'schema.graphql'),
+      'utf8'
+    ).toString()
   )
 
   const root = {
@@ -38,5 +41,4 @@ const api: ServerMiddleware = (req, res) => {
     schema,
   })(req as IncomingMessage & { url: string }, res)
 }
-
 export default api

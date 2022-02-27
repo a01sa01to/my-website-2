@@ -1,8 +1,9 @@
+import Types from '../types/csv2json'
 import str2date from './str2date'
 
 const csv2json = (
   csvContent: string,
-  overridesMap: { [key: string]: { header: string; type: string } }
+  overridesMap: Types.overrides_map
 ): string => {
   csvContent = csvContent.replace(/\r\n/g, '\n')
   const csvLines = csvContent.split('\n')
@@ -14,7 +15,8 @@ const csv2json = (
     })
     .map((line) => {
       const lineData = line.split(',')
-      const jsonLine: { [key: string]: any } = {}
+      const jsonLine: { [key: string]: number | boolean | string } = {}
+
       lineData.forEach((data, i) => {
         const overrideMap = overridesMap[csvHeaders[i]]
         if (!overrideMap) {
