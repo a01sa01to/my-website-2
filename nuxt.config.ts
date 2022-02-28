@@ -71,6 +71,10 @@ export default defineNuxtConfig({
     GITHUB_CLI_SEC: process.env.GITHUB_CLI_SEC,
   },
 
+  publicRuntimeConfig: {
+    development: process.env.development,
+  },
+
   router: {
     trailingSlash: true,
     middleware: ['trailingslash-redirect'],

@@ -6,10 +6,10 @@ import type { IncomingMessage } from 'http'
 import { join, resolve } from 'path'
 import Covid19Ibaraki from './cov19_ibaraki'
 
-const __dirname = resolve()
+const __dirname = resolve(process.env.development ? '' : '..')
 
 const api: ServerMiddleware = (req, res) => {
-  req.url = '/opendata/api' + String(req.url ?? '')
+  req.url = '/api/opendata' + String(req.url ?? '')
 
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
@@ -17,13 +17,16 @@ const api: ServerMiddleware = (req, res) => {
     'Access-Control-Allow-Headers',
     'Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization'
   )
+
   if (req.method === 'OPTIONS') {
     res.statusCode = 200
+    res.end()
+    return
   }
 
   const schema = buildSchema(
     readFileSync(
-      join(__dirname, '..', 'server', 'opendata', 'schema.graphql'),
+      join(__dirname, 'server', 'opendata', 'schema.graphql'),
       'utf8'
     ).toString()
   )
