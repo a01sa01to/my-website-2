@@ -61,7 +61,7 @@ export default defineNuxtConfig({
     'nuxt-clipboard2',
     ['@nuxtjs/google-gtag', MyConfig.modules['@nuxtjs/google-gtag']],
     '@nuxtjs/color-mode',
-    ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],
+    // ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],
   ],
 
   plugins: ['~/plugins/vue-i18n.ts'],
@@ -75,4 +75,6 @@ export default defineNuxtConfig({
     trailingSlash: true,
     middleware: ['trailingslash-redirect'],
   },
+
+  serverMiddleware: ['~/server/middleware/redirect.ts'],
 })
