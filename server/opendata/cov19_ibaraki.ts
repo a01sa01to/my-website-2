@@ -10,6 +10,7 @@ const __dirname = resolve()
 
 const opendataBasepath = join(
   __dirname,
+  '..',
   'static',
   'opendata',
   'api',

@@ -23,7 +23,7 @@ const api: ServerMiddleware = (req, res) => {
 
   const schema = buildSchema(
     readFileSync(
-      join(__dirname, 'server', 'opendata', 'schema.graphql'),
+      join(__dirname, '..', 'server', 'opendata', 'schema.graphql'),
       'utf8'
     ).toString()
   )
