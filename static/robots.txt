@@ -1,2 +1,13 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /admin/
+Allow: /apps/
+Allow: /blog/
+Allow: /opendata/
+Allow: /about/
+Allow: /disclaimer/
+Allow: /sitemap/
+Disallow: /uconst/
+Allow: /images/
+Disallow: /opendata/api/raw/
+Allow: /opendata/api-usage/

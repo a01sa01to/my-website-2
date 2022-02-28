@@ -12,7 +12,6 @@ automatic_scaling:
 env: standard
 instance_class: F1
 runtime: nodejs16
-service: beta
 
 handlers:
   - url: /_nuxt
