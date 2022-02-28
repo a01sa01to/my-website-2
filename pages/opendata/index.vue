@@ -1,5 +1,6 @@
 <template>
   <div>
+    <breadcrumb :data="breadcrumb_data" jsononly />
     <b-container>
       <b-jumbotron
         :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
@@ -79,6 +80,14 @@ export default Vue.extend({
             'Asaがオープンデータを提供するために立ち上げたサイトです。'
           ) as string,
         },
+      ],
+    }
+  },
+  data() {
+    return {
+      breadcrumb_data: [
+        { text: 'Home', to: '/' },
+        { text: 'Opendata', to: '/opendata/' },
       ],
     }
   },

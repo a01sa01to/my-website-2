@@ -1,5 +1,6 @@
 <template>
   <div>
+    <breadcrumb :data="breadcrumb_data" jsononly />
     <b-container>
       <b-jumbotron
         :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
@@ -68,6 +69,10 @@ export default Vue.extend({
     return {
       thisYear: new Date().getFullYear(),
       toDate,
+      breadcrumb_data: [
+        { name: 'Home', to: '/' },
+        { name: 'Blog', to: '/blog/' },
+      ],
     }
   },
 })
