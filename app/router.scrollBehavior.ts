@@ -1,4 +1,4 @@
-import { Route } from 'vue-router/types/router'
+import type { Route } from 'vue-router/types/router'
 
 type PositionDescriptor = { x: number; y: number } | { selector: string } | void
 

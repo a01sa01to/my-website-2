@@ -1,4 +1,4 @@
-import Types from '../types/csv2json'
+import type Types from '../types/csv2json'
 import str2date from './str2date'
 
 const csv2json = (

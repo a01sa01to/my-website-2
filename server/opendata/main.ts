@@ -1,8 +1,8 @@
-import { ServerMiddleware } from '@nuxt/types'
+import type { ServerMiddleware } from '@nuxt/types'
 import { graphqlHTTP } from 'express-graphql'
 import { readFileSync } from 'fs'
 import { buildSchema } from 'graphql'
-import { IncomingMessage } from 'http'
+import type { IncomingMessage } from 'http'
 import { join, resolve } from 'path'
 import Covid19Ibaraki from './cov19_ibaraki'
 
