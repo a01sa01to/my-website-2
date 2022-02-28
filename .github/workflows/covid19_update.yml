@@ -52,7 +52,7 @@ jobs:
           echo "::group::080004_ibaraki_covid19_summary.json"
           curl ${DATA_UPDATE_URL}?data=main_summary -L -o 080004_ibaraki_covid19_summary.json
           echo "::endgroup::"
-          echo "::080004_ibaraki_covid19_corona_next.json"
+          echo "::group::080004_ibaraki_covid19_corona_next.json"
           curl ${DATA_UPDATE_URL}?data=corona_next -L -o 080004_ibaraki_covid19_corona_next.json
           echo "::endgroup::"
           echo "::group::otherpref.csv"
