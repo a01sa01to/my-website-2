@@ -2,7 +2,7 @@ steps:
   # バージョンを10個までにする、古いのは消す
   - id: delete-old-versions
     name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: '/bin/bash'
+    entrypoint: bash
     args:
       [
         '-c',
@@ -12,7 +12,8 @@ steps:
   # .envをつくる
   - id: create-env
     name: ubuntu
-    args: ['bash', './workflow_tools/builder/generate_env.sh']
+    entrypoint: bash
+    args: ['./workflow_tools/builder/generate_env.sh']
     env:
       - 'GITHUB_CLI_ID=$_GITHUB_CLI_ID'
       - 'GITHUB_CLI_SEC=$_GITHUB_CLI_SEC'
@@ -20,6 +21,7 @@ steps:
   # Cacheを取得（node_modules）
   - id: get-cache-node
     name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: gsutil
     args:
       [
         'cp',
@@ -36,6 +38,7 @@ steps:
   # Cacheを取得（yarn）
   - id: get-cache-yarn
     name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: gsutil
     args: ['cp', 'gs://cloudbuild-cache-node/yarn.tar.gz', './yarn.tar.gz']
 
   # Cacheを解凍（yarn）
@@ -81,6 +84,7 @@ steps:
   # Cache Upload（node_modules）
   - id: upload-cache-node
     name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: gsutil
     args:
       [
         'cp',
@@ -98,5 +102,6 @@ steps:
   # Cache Upload（yarn）
   - id: upload-cache-yarn
     name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: gsutil
     args: ['cp', './yarn.tar.gz', 'gs://cloudbuild-cache-node/yarn.tar.gz']
     waitFor: ['compress-cache-yarn']
