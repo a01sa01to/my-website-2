@@ -1,8 +1,8 @@
 # Git
-/.git/
+.git
 
 # Node
-/node_modules/
+node_modules
 /.yarn-cache/
 node-modules.tar.gz
 yarn.tar.gz
