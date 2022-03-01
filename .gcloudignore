@@ -3,3 +3,6 @@ dist
 node_modules
 vendor
 *.jar
+node-modules.tar.gz
+yarn.tar.gz
+.yarn-cache

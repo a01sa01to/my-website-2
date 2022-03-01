@@ -1,22 +1,102 @@
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
+  # バージョンを10個までにする、古いのは消す
+  - id: delete-old-versions
+    name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: '/bin/bash'
     args:
       [
         '-c',
         "gcloud app versions list --service=default | grep 0.00 | sort -rk 4,4 | awk '{print $2}' | tail -n +11 | xargs -l gcloud app versions delete {}",
       ]
-  - name: ubuntu
+
+  # .envをつくる
+  - id: create-env
+    name: ubuntu
     args: ['bash', './workflow_tools/builder/generate_env.sh']
     env:
       - 'GITHUB_CLI_ID=$_GITHUB_CLI_ID'
       - 'GITHUB_CLI_SEC=$_GITHUB_CLI_SEC'
-  - name: node:16
+
+  # Cacheを取得（node_modules）
+  - id: get-cache-node
+    name: 'gcr.io/cloud-builders/gsutil'
+    args:
+      [
+        'cp',
+        'gs://cloudbuild-cache-node/node-modules.tar.gz',
+        './node_modules.tar.gz',
+      ]
+
+  # Cacheを解凍（node_modules）
+  - id: extract-cache-node
+    name: bash
+    args: ['tar', 'xzf', 'node_modules.tar.gz']
+    waitFor: ['get-cache-node']
+
+  # Cacheを取得（yarn）
+  - id: get-cache-yarn
+    name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', 'gs://cloudbuild-cache-node/yarn.tar.gz', './yarn.tar.gz']
+
+  # Cacheを解凍（yarn）
+  - id: extract-cache-yarn
+    name: bash
+    args: ['tar', 'xzf', 'yarn.tar.gz']
+    waitFor: ['get-cache-yarn']
+
+  # Cacheの保存先を変更
+  - id: change-yarn-cache-dir
+    name: node:16
+    entrypoint: yarn
+    args: ['config', 'set', 'cache-folder', './.yarn-cache']
+    waitFor: ['extract-cache-yarn']
+
+  # install deps
+  - id: install-deps
+    name: node:16
     entrypoint: yarn
     args: ['install']
-  - name: node:16
+    waitFor: ['extract-cache-node', 'extract-cache-yarn']
+
+  # build
+  - id: build
+    name: node:16
     entrypoint: yarn
     args: ['build']
-  - name: 'gcr.io/cloud-builders/gcloud'
+    waitFor: ['create-env', 'install-deps']
+
+  # deploy
+  - id: deploy
+    name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy', 'app.yaml']
     timeout: '1600s'
+    waitFor: ['delete-old-versions', 'build']
+
+  # Cache圧縮（node_modules）
+  - id: compress-cache-node
+    name: bash
+    args: ['tar', 'czf', 'node_modules.tar.gz', 'node_modules']
+    waitFor: ['deploy']
+
+  # Cache Upload（node_modules）
+  - id: upload-cache-node
+    name: 'gcr.io/cloud-builders/gsutil'
+    args:
+      [
+        'cp',
+        './node_modules.tar.gz',
+        'gs://cloudbuild-cache-node/node-modules.tar.gz',
+      ]
+    waitFor: ['compress-cache-node']
+
+  # Cache圧縮（yarn）
+  - id: compress-cache-yarn
+    name: bash
+    args: ['tar', 'czf', 'yarn.tar.gz', '.yarn-cache']
+    waitFor: ['deploy']
+
+  # Cache Upload（yarn）
+  - id: upload-cache-yarn
+    name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', './yarn.tar.gz', 'gs://cloudbuild-cache-node/yarn.tar.gz']
+    waitFor: ['compress-cache-yarn']
