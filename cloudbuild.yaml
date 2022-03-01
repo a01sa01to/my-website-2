@@ -56,7 +56,7 @@ steps:
     name: node:16
     entrypoint: yarn
     args: ['install']
-    waitFor: ['extract-cache-node', 'extract-cache-yarn']
+    waitFor: ['extract-cache-node', 'change-yarn-cache-dir']
 
   # build
   - id: build
