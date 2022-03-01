@@ -6,7 +6,9 @@ import type { IncomingMessage } from 'http'
 import { join, resolve } from 'path'
 import Covid19Ibaraki from './cov19_ibaraki'
 
-const __dirname = resolve(process.env.development ? '' : '..')
+const __dirname = resolve(
+  ...(process.env.development ? ['static'] : ['public'])
+)
 
 const api: ServerMiddleware = (req, res) => {
   req.url = '/api/opendata' + String(req.url ?? '')
@@ -26,7 +28,7 @@ const api: ServerMiddleware = (req, res) => {
 
   const schema = buildSchema(
     readFileSync(
-      join(__dirname, 'server', 'opendata', 'schema.graphql'),
+      join(__dirname, 'opendata', 'schema.graphql'),
       'utf8'
     ).toString()
   )
