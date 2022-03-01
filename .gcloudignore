@@ -1,8 +1,41 @@
-.git
-dist
-node_modules
-vendor
-*.jar
+# Git
+/.git/
+
+# Node
+/node_modules/
+/.yarn-cache/
 node-modules.tar.gz
 yarn.tar.gz
-.yarn-cache
+
+# Deployには不要
+/.github/
+/.husky/
+/.nuxt/
+/.vscode/
+/app/
+/assets/
+/components/
+/config/
+/content/
+/data/
+/layouts/
+/locales/
+/middleware/
+/pages/
+/plugins/
+/server/
+/static/
+/store/
+/utils/
+/workflow_tools/
+/.deepsource.toml
+/.editorconfig
+/.gcloudignore
+/.gitignore
+/.prettierignore
+/.prettierrc
+/app.yaml
+/cloudbuild.yaml
+/nuxt.config.ts
+/README.md
+/tsconfig.json
