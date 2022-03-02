@@ -1,6 +1,6 @@
 window.twttr = (function (d, s, id) {
   const js = d.createElement(s),
-    [fjs, ..._ignore] = d.getElementsByTagName(s),
+    [fjs] = d.getElementsByTagName(s),
     t = window.twttr || {}
   if (d.getElementById(id)) return t
   js.id = id
