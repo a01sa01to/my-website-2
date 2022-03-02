@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from 'http'
 
-export default async (
+export default (
   req: IncomingMessage,
   res: ServerResponse,
   next: (err?: any) => void
