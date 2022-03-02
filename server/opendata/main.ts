@@ -10,7 +10,7 @@ const __dirname = resolve(
   ...(process.env.development ? ['static'] : ['public'])
 )
 
-const api: ServerMiddleware = (req, res) => {
+const api: ServerMiddleware = (req: IncomingMessage & { url: string }, res) => {
   req.url = '/api/opendata' + String(req.url ?? '')
 
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -44,6 +44,6 @@ const api: ServerMiddleware = (req, res) => {
     pretty: true,
     rootValue: root,
     schema,
-  })(req as IncomingMessage & { url: string }, res)
+  })(req, res)
 }
 export default api
