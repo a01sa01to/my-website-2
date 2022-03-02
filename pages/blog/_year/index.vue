@@ -14,11 +14,7 @@
         use-router
       />
     </b-container>
-    <b-container
-      v-for="month in months"
-      :key="month"
-      v-if="BlogMonthlyList[month].length"
-    >
+    <b-container v-for="month in months" :key="month">
       <h2>{{ month + 1 }}月</h2>
       <b-row cols-xl="4" cols-lg="3" cols-md="2" cols-sm="1" cols="1">
         <b-col v-for="(val, key) in BlogMonthlyList[month]" :key="key">
@@ -68,7 +64,9 @@ export default Vue.extend({
           { to: '/blog/', text: 'Blog' },
           { to: `/blog/${year}/`, text: `${year}`, active: true },
         ],
-        months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].reverse(),
+        months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+          .reverse()
+          .filter((val) => BlogMonthlyList[val].length),
       }
     } catch (e) {
       error({ statusCode: 404 })
