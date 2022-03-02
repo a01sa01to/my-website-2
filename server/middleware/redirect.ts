@@ -4,12 +4,12 @@ export default async (
   res: ServerResponse,
   next: Function
 ) => {
-  if (req.url.match(/^\/blog\/(.*)$/)) {
+  if (/^\/blog\/(.*)$/.test(req.url)) {
     res.writeHead(302, {
       Location: '/uconst/',
     })
     res.end()
-  } else if (req.url.match(/^\/opendata\/api\/$/)) {
+  } else if (/^\/opendata\/api\/$/.test(req.url)) {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
     res.setHeader(
