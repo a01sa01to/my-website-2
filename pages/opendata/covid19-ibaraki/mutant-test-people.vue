@@ -1,28 +1,17 @@
 <template>
   <div>
-    <shared-main-header
-      :title="$t('変異株検査実施件数（県衛生研究所）')"
-      :b_data="breadcrumb_data"
+    <opendata-metadata
+      :breadcrumb_data="breadcrumb_data"
+      :last_update="last_update"
+      created_date="2021/06/02 21:30"
+      :url="dl_url"
+      :file_size="size"
+      data_format="csv"
+      :title="title"
+      :description="description"
+      :keywords="keywords"
+      :coverage="coverage"
     />
-    <b-container>
-      <p>
-        {{
-          $t(
-            '県衛生研究所で実施している変異株PCR検査の数を週別に集計したオープンデータです。'
-          )
-        }}
-      </p>
-    </b-container>
-    <b-container>
-      <h2>{{ $t('ファイルに関する情報') }}</h2>
-      <opendata-metadata
-        :last_update="last_update"
-        created_date="2021/06/02 21:30"
-        file_name="080004_ibaraki_covid19_mutant_test_people.csv"
-        :file_size="size"
-        data_format="csv"
-      />
-    </b-container>
     <b-container>
       <h2>{{ $t('ご利用時の注意点') }}</h2>
       <ul>
@@ -84,10 +73,7 @@
           )
         }}
       </p>
-      <opendata-url-dl-copy
-        url="https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_mutant_test_people.csv"
-        file_name="080004_ibaraki_covid19_mutant_test_people.csv"
-      />
+      <opendata-url-dl-copy :url="dl_url" />
     </b-container>
     <b-container>
       <h2>{{ $t('Opendata APIについて') }}</h2>
@@ -144,20 +130,19 @@ import FileData from '~/data/opendata/covid19-ibaraki.json'
 export default Vue.extend({
   head() {
     return {
-      title: `${this.$t('変異株検査実施件数（県衛生研究所）')} - ${this.$t(
+      title: `${this.$t(this.title)} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
       meta: [
         {
           name: 'description',
-          content: this.$t(
-            '県衛生研究所で実施している変異株PCR検査の数を週別に集計したオープンデータです。'
-          ) as string,
+          content: this.$t(this.description) as string,
         },
       ],
     }
   },
   data() {
+    const title = '変異株検査実施件数（県衛生研究所）'
     return {
       breadcrumb_data: [
         { to: '/', text: 'Home' },
@@ -168,12 +153,20 @@ export default Vue.extend({
         },
         {
           to: '/opendata/covid19-ibaraki/mutant-test-people/',
-          text: this.$t('変異株検査実施件数（県衛生研究所）'),
+          text: this.$t(title),
           active: true,
         },
       ],
       last_update: FileData.mutant_test_people.lastUpdate,
       size: FileData.mutant_test_people.size,
+
+      title,
+      description:
+        '県衛生研究所で実施している変異株PCR検査の数を週別に集計したオープンデータです。',
+      coverage: '2021-01-25/2022-02-20',
+      dl_url:
+        'https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_mutant_test_people.csv',
+      keywords: ['COVID-19 > JAPAN > IBARAKI > NUMBER OF MUTANT STRAINS TEST'],
     }
   },
 })

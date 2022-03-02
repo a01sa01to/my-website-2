@@ -1,28 +1,18 @@
 <template>
   <div>
-    <shared-main-header
-      :title="$t('ワクチン接種状況')"
-      :b_data="breadcrumb_data"
+    <opendata-metadata
+      :breadcrumb_data="breadcrumb_data"
+      :last_update="last_update"
+      created_date="2021/06/03 21:00"
+      :url="dl_url"
+      :file_size="size"
+      data_format="json"
+      :title="title"
+      :description="description"
+      :keywords="keywords"
+      :coverage="coverage"
+      :partof="partof"
     />
-    <b-container>
-      <p>
-        {{
-          $t(
-            '国が集計したオープンデータを、「茨城県新型コロナウイルス感染症対策サイト」で用いる形式に改変したものです。'
-          )
-        }}
-      </p>
-    </b-container>
-    <b-container>
-      <h2>{{ $t('ファイルに関する情報') }}</h2>
-      <opendata-metadata
-        :last_update="last_update"
-        created_date="2021/06/03 21:00"
-        file_name="080004_ibaraki_covid19_vaccination.json"
-        :file_size="size"
-        data_format="json"
-      />
-    </b-container>
     <b-container>
       <h2>{{ $t('ご利用時の注意点') }}</h2>
       <ul>
@@ -69,10 +59,7 @@
           )
         }}
       </p>
-      <opendata-url-dl-copy
-        url="https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_vaccination.json"
-        file_name="080004_ibaraki_covid19_vaccination.json"
-      />
+      <opendata-url-dl-copy :url="dl_url" />
     </b-container>
     <b-container>
       <h2>{{ $t('Opendata APIについて') }}</h2>
@@ -129,20 +116,19 @@ import FileData from '~/data/opendata/covid19-ibaraki.json'
 export default Vue.extend({
   head() {
     return {
-      title: `${this.$t('ワクチン接種状況')} - ${this.$t(
+      title: `${this.$t(this.title)} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
       meta: [
         {
           name: 'description',
-          content: this.$t(
-            '国が集計したオープンデータを、「茨城県新型コロナウイルス感染症対策サイト」で用いる形式に改変したものです。'
-          ) as string,
+          content: this.$t(this.description) as string,
         },
       ],
     }
   },
   data() {
+    const title = 'ワクチン接種状況'
     return {
       breadcrumb_data: [
         { to: '/', text: 'Home' },
@@ -153,12 +139,22 @@ export default Vue.extend({
         },
         {
           to: '/opendata/covid19-ibaraki/vaccination/',
-          text: this.$t('ワクチン接種状況'),
+          text: this.$t(title),
           active: true,
         },
       ],
       last_update: FileData.vaccination.lastUpdate,
       size: FileData.vaccination.size,
+
+      title,
+      description:
+        '国が集計したオープンデータを、「茨城県新型コロナウイルス感染症対策サイト」で用いる形式に改変したものです。',
+      coverage: '2021-04-12/..',
+      partof:
+        'https://data.vrs.digital.go.jp/vaccination/opendata/latest/prefecture.ndjson',
+      dl_url:
+        'https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_vaccination.json',
+      keywords: ['COVID-19 > JAPAN > IBARAKI > NUMBER OF VACCINATION'],
     }
   },
 })

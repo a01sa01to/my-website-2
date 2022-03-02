@@ -1,25 +1,17 @@
 <template>
   <div>
-    <shared-main-header :title="$t('陽性確認数')" :b_data="breadcrumb_data" />
-    <b-container>
-      <p>
-        {{
-          $t(
-            '茨城県における公表日別の陽性確認数を、濃厚接触者数とともに集計したオープンデータです。'
-          )
-        }}
-      </p>
-    </b-container>
-    <b-container>
-      <h2>{{ $t('ファイルに関する情報') }}</h2>
-      <opendata-metadata
-        :last_update="last_update"
-        created_date="2020/12/01 21:50"
-        file_name="080004_ibaraki_covid19_positive_number.csv"
-        :file_size="size"
-        data_format="csv"
-      />
-    </b-container>
+    <opendata-metadata
+      :breadcrumb_data="breadcrumb_data"
+      :last_update="last_update"
+      created_date="2020/12/01 21:50"
+      :url="dl_url"
+      :file_size="size"
+      data_format="csv"
+      :title="title"
+      :description="description"
+      :keywords="keywords"
+      :coverage="coverage"
+    />
     <b-container>
       <h2>{{ $t('ご利用時の注意点') }}</h2>
       <ul>
@@ -72,10 +64,7 @@
           )
         }}
       </p>
-      <opendata-url-dl-copy
-        url="https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_positive_number.csv"
-        file_name="080004_ibaraki_covid19_positive_number.csv"
-      />
+      <opendata-url-dl-copy :url="dl_url" />
     </b-container>
     <b-container>
       <h2>{{ $t('Opendata APIについて') }}</h2>
@@ -130,20 +119,19 @@ import FileData from '~/data/opendata/covid19-ibaraki.json'
 export default Vue.extend({
   head() {
     return {
-      title: `${this.$t('陽性確認数')} - ${this.$t(
+      title: `${this.$t(this.title)} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
       meta: [
         {
           name: 'description',
-          content: this.$t(
-            '茨城県における公表日別の陽性確認数を、濃厚接触者数とともに集計したオープンデータです。'
-          ) as string,
+          content: this.$t(this.description) as string,
         },
       ],
     }
   },
   data() {
+    const title = '陽性確認数'
     return {
       breadcrumb_data: [
         { to: '/', text: 'Home' },
@@ -154,12 +142,20 @@ export default Vue.extend({
         },
         {
           to: '/opendata/covid19-ibaraki/positive-number/',
-          text: this.$t('陽性確認数'),
+          text: this.$t(title),
           active: true,
         },
       ],
       last_update: FileData.positive_number.lastUpdate,
       size: FileData.positive_number.size,
+
+      title,
+      description:
+        '茨城県における公表日別の陽性確認数を、濃厚接触者数とともに集計したオープンデータです。',
+      coverage: '2020-03-16/..',
+      dl_url:
+        'https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_positive_number.csv',
+      keywords: ['COVID-19 > JAPAN > IBARAKI > NUMBER OF CONFIRMED POSITIVE'],
     }
   },
 })

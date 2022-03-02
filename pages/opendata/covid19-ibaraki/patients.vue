@@ -1,25 +1,17 @@
 <template>
   <div>
-    <shared-main-header :title="$t('陽性患者属性')" :b_data="breadcrumb_data" />
-    <b-container>
-      <p>
-        {{
-          $t(
-            '茨城県内の、新型コロナウイルス感染症の陽性患者の年代、性別、居住地などの属性情報を一覧化したオープンデータです。'
-          )
-        }}
-      </p>
-    </b-container>
-    <b-container>
-      <h2>{{ $t('ファイルに関する情報') }}</h2>
-      <opendata-metadata
-        :last_update="last_update"
-        created_date="2020/12/01 21:50"
-        file_name="080004_ibaraki_covid19_patients.csv"
-        :file_size="size"
-        data_format="csv"
-      />
-    </b-container>
+    <opendata-metadata
+      :breadcrumb_data="breadcrumb_data"
+      :last_update="last_update"
+      created_date="2020/12/01 21:50"
+      :url="dl_url"
+      :file_size="size"
+      data_format="csv"
+      :title="title"
+      :description="description"
+      :keywords="keywords"
+      :coverage="coverage"
+    />
     <b-container>
       <h2>{{ $t('ご利用時の注意点') }}</h2>
       <ul>
@@ -93,10 +85,7 @@
           )
         }}
       </p>
-      <opendata-url-dl-copy
-        url="https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_patients.csv"
-        file_name="080004_ibaraki_covid19_patients.csv"
-      />
+      <opendata-url-dl-copy :url="dl_url" />
     </b-container>
     <b-container>
       <h2>{{ $t('Opendata APIについて') }}</h2>
@@ -154,20 +143,19 @@ import FileData from '~/data/opendata/covid19-ibaraki.json'
 export default Vue.extend({
   head() {
     return {
-      title: `${this.$t('陽性患者属性')} - ${this.$t(
+      title: `${this.$t(this.title)} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
       meta: [
         {
           name: 'description',
-          content: this.$t(
-            '茨城県内の、新型コロナウイルス感染症の陽性患者の年代、性別、居住地などの属性情報を一覧化したオープンデータです。'
-          ) as string,
+          content: this.$t(this.description) as string,
         },
       ],
     }
   },
   data() {
+    const title = '陽性患者属性'
     return {
       breadcrumb_data: [
         { to: '/', text: 'Home' },
@@ -178,12 +166,20 @@ export default Vue.extend({
         },
         {
           to: '/opendata/covid19-ibaraki/patients/',
-          text: this.$t('陽性患者属性'),
+          text: this.$t(title),
           active: true,
         },
       ],
       last_update: FileData.patients.lastUpdate,
       size: FileData.patients.size,
+
+      title,
+      description:
+        '茨城県内の、新型コロナウイルス感染症の陽性患者の年代、性別、居住地などの属性情報を一覧化したオープンデータです。',
+      coverage: '2020-01-31/..',
+      dl_url:
+        'https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_patients.csv',
+      keywords: ['COVID-19 > JAPAN > IBARAKI > ATTRIBUTES OF PATIENTS'],
     }
   },
 })

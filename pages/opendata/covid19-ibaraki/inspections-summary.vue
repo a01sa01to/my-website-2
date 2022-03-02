@@ -1,28 +1,16 @@
 <template>
   <div>
-    <shared-main-header
-      :title="$t('検査実施件数（県全体）')"
-      :b_data="breadcrumb_data"
+    <opendata-metadata
+      :breadcrumb_data="breadcrumb_data"
+      :last_update="last_update"
+      created_date="2020/12/01 21:50"
+      :url="dl_url"
+      :file_size="size"
+      data_format="json"
+      :title="title"
+      :description="description"
+      disableJSON
     />
-    <b-container>
-      <p>
-        {{
-          $t(
-            '茨城県全体の検査実施件数を集計したオープンデータです。日別ではありません。'
-          )
-        }}
-      </p>
-    </b-container>
-    <b-container>
-      <h2>{{ $t('ファイルに関する情報') }}</h2>
-      <opendata-metadata
-        :last_update="last_update"
-        created_date="2020/12/01 21:50"
-        file_name="080004_ibaraki_covid19_inspections_summary.json"
-        :file_size="size"
-        data_format="json"
-      />
-    </b-container>
     <b-container>
       <h2>{{ $t('ご利用時の注意点') }}</h2>
       <ul>
@@ -62,10 +50,7 @@
           )
         }}
       </p>
-      <opendata-url-dl-copy
-        url="https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_inspections_summary.json"
-        file_name="080004_ibaraki_covid19_inspections_summary.json"
-      />
+      <opendata-url-dl-copy :url="dl_url" />
     </b-container>
     <b-container>
       <h2>{{ $t('Opendata APIについて') }}</h2>
@@ -111,20 +96,19 @@ import FileData from '~/data/opendata/covid19-ibaraki.json'
 export default Vue.extend({
   head() {
     return {
-      title: `${this.$t('検査実施件数（県全体）')} - ${this.$t(
+      title: `${this.$t(this.title)} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
       meta: [
         {
           name: 'description',
-          content: this.$t(
-            '茨城県全体の検査実施件数を集計したオープンデータです。日別ではありません。'
-          ) as string,
+          content: this.$t(this.description) as string,
         },
       ],
     }
   },
   data() {
+    const title = '検査実施件数（県全体）'
     return {
       breadcrumb_data: [
         { to: '/', text: 'Home' },
@@ -135,12 +119,18 @@ export default Vue.extend({
         },
         {
           to: '/opendata/covid19-ibaraki/inspections-summary/',
-          text: this.$t('検査実施件数（県全体）'),
+          text: this.$t(title),
           active: true,
         },
       ],
       last_update: FileData.inspections_summary.lastUpdate,
       size: FileData.inspections_summary.size,
+
+      title,
+      description:
+        '茨城県全体の検査実施件数を集計したオープンデータです。日別ではありません。',
+      dl_url:
+        'https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_inspections_summary.json',
     }
   },
 })

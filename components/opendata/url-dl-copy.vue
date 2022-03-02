@@ -23,10 +23,6 @@ export default Vue.extend({
       type: String,
       required: true,
     },
-    file_name: {
-      type: String,
-      required: true,
-    },
   },
   components: {
     BIconFiles,
@@ -53,7 +49,7 @@ export default Vue.extend({
       ;(this as any).$gtag('event', 'opendata_dl')
       const a = document.createElement('a')
       a.href = this.url
-      a.download = this.file_name
+      a.download = this.url.split('/').slice(-1)[0]
       a.click()
     },
   },
