@@ -13,13 +13,13 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
       - name: Label for Transifex
         if: github.actor == 'transifex-integration[bot]' && !endsWith(github.event.pull_request.title, '[manual sync]')
-        uses: actions/labeler@v3
+        uses: actions/labeler@v4
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           configuration-path: '.github/labeler/transifex.yml'
       - name: Label for DeepSource
         if: github.actor == 'deepsource-autofix[bot]'
-        uses: actions/labeler@v3
+        uses: actions/labeler@v4
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           configuration-path: '.github/labeler/deepsource.yml'
