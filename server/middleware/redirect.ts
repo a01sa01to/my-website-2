@@ -1,8 +1,9 @@
 import type { IncomingMessage, ServerResponse } from 'http'
+
 export default async (
   req: IncomingMessage,
   res: ServerResponse,
-  next: Function
+  next: (err?: any) => void
 ) => {
   if (/^\/blog\/(.*)$/.test(req.url)) {
     res.writeHead(302, {
