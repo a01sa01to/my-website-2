@@ -74,7 +74,7 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
             with open(path, encoding=ENCODING) as file:
                 # ファイルの内容を文字列として取得
                 # ここで改行を空白として扱うのは、vue内のi18nタグが正しく認識できない場合があるため
-                content = ' '.join([l.strip() for l in file])
+                content = ' '.join([line.strip() for line in file])
                 # 全タグを正規表現で取得
                 t_tags = [tag[4:(len(tag) - 1)] for tag in tag_pattern_t.findall(content) if
                           tag[4:(len(tag) - 1)] != '']
