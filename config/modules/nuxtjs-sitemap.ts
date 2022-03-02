@@ -21,7 +21,7 @@ export default {
   gzip: true,
   exclude: ['/admin/**', '/uconst/'],
   routes: () => {
-    let blog = allFiles('./content/articles/')
+    const blog = allFiles('./content/articles/')
       .map((file) => file.replace('.md', ''))
       .map((file) => file.replace(/\\/g, '/'))
       .map((file) => file.replace('content/articles/', 'blog/'))

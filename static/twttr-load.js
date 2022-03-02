@@ -1,5 +1,5 @@
 window.twttr = (function (d, s, id) {
-  let js = d.createElement(s),
+  const js = d.createElement(s),
     fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {}
   if (d.getElementById(id)) return t

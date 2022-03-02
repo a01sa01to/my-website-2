@@ -23,7 +23,7 @@ const getData = (): DataTypes.all_data => {
     fs.readFileSync(resolve(opendataBasepath, 'last_update.json')).toString()
   )
 
-  let ret: DataTypes.all_data = {
+  const ret: DataTypes.all_data = {
     call_center: () => {
       throw new Error('Function not implemented.')
     },
