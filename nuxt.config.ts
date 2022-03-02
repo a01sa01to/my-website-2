@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     titleTemplate: "%s - Asa's Website",
     script: [
       {
-        src: '/twttr_load.js',
+        src: '/twttr-load.js',
       },
     ],
   },

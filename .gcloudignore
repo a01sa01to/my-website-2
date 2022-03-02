@@ -27,7 +27,7 @@ yarn.tar.gz
 /static/
 /store/
 /utils/
-/workflow_tools/
+/workflow-tools/
 /.deepsource.toml
 /.editorconfig
 /.gcloudignore

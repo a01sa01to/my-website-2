@@ -124,7 +124,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import FileData from '~/data/opendata/covid19_ibaraki.json'
+import FileData from '~/data/opendata/covid19-ibaraki.json'
 
 export default Vue.extend({
   head() {

@@ -21,7 +21,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import toDate from '~/utils/date_format'
+import toDate from '~/utils/date-format'
 export default Vue.extend({
   async asyncData({ $content }) {
     const BlogList = await $content('articles', { deep: true })

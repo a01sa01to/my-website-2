@@ -4,7 +4,7 @@ import { readFileSync } from 'fs'
 import { buildSchema } from 'graphql'
 import type { IncomingMessage } from 'http'
 import { join, resolve } from 'path'
-import Covid19Ibaraki from './cov19_ibaraki'
+import Covid19Ibaraki from './cov19-ibaraki'
 
 const __dirname = resolve(
   ...(process.env.development ? ['static'] : ['public'])

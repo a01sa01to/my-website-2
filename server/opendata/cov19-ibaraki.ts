@@ -3,7 +3,7 @@ import { join, resolve } from 'path'
 import csv2json from './functions/csv2json'
 import { PaginationFn } from './functions/pagination'
 import str2date from './functions/str2date'
-import type DataTypes from './types/cov19_ibaraki'
+import type DataTypes from './types/cov19-ibaraki'
 import type Csv2jsonTypes from './types/csv2json'
 
 const __dirname = resolve(

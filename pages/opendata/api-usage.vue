@@ -71,7 +71,7 @@
         </li>
         <li>
           <webp-image
-            src="/images/opendata/api-usage/download_raw"
+            src="/images/opendata/api-usage/download-raw"
             ext="png"
             :alt="$t('ダウンロード画面')"
             style="display: inline-block"

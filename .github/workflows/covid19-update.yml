@@ -71,13 +71,13 @@ jobs:
         env:
           DATA_UPDATE_URL: ${{ secrets.DATA_UPDATE_URL }}
       - name: Convert Vaccine Data
-        run: python ../../../../../workflow_tools/opendata/cov19_vaccine_data.py
+        run: python ../../../../../workflow-tools/opendata/cov19-vaccine-data.py
         working-directory: ./static/opendata/api/raw/covid19_ibaraki
       - name: Remove Base Vaccine Data
         run: rm vaccine_data.ndjson
         working-directory: ./static/opendata/api/raw/covid19_ibaraki
       - name: Create Info Json
-        run: python ../../../../../workflow_tools/opendata/covid19_ibk.py
+        run: python ../../../../../workflow-tools/opendata/covid19-ibk.py
         working-directory: ./static/opendata/api/raw/covid19_ibaraki
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.12.1

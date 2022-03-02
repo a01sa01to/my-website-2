@@ -40,7 +40,7 @@
           >
             <template #header>
               <webp-image
-                src="/images/ibk_stopcovid19"
+                src="/images/ibk-stopcovid19"
                 ext="png"
                 :alt="$t('茨城県新型コロナウイルス対策サイト')"
                 class="card-img-top"
@@ -97,7 +97,7 @@
           >
             <template #header>
               <webp-image
-                src="/images/kss_bakakkoii"
+                src="/images/kss-bakakkoii"
                 ext="jpg"
                 :alt="$t('古河中等ばかっこいいシリーズ')"
                 class="card-img-top"

@@ -13,7 +13,7 @@ steps:
   - id: create-env
     name: ubuntu
     entrypoint: bash
-    args: ['./workflow_tools/builder/generate_env.sh']
+    args: ['./workflow-tools/builder/generate-env.sh']
     env:
       - 'GITHUB_CLI_ID=$_GITHUB_CLI_ID'
       - 'GITHUB_CLI_SEC=$_GITHUB_CLI_SEC'

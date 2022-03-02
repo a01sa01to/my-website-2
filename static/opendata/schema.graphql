@@ -35,7 +35,7 @@ type PageInfo {
   endCursor: String!
 }
 
-# ----- Cov19_ibaraki ----- #
+# ----- Cov19 ibaraki ----- #
 
 """
 茨城県新型コロナウイルス感染症のデータ
