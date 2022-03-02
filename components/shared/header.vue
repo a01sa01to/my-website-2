@@ -7,7 +7,9 @@
       :variant="navbarTheme"
       toggleable="lg"
     >
-      <b-navbar-brand href="#">Asa's Website</b-navbar-brand>
+      <b-navbar-brand to="/" style="color: var(--text-color)">
+        Asa's Website
+      </b-navbar-brand>
       <b-navbar-toggle target="header-nav-collapse" />
       <b-collapse id="header-nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
