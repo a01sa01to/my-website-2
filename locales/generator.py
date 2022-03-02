@@ -116,7 +116,7 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
     # Noneが混じっている場合、取り除く
     try:
         all_tags.pop(all_tags.index(None))
-    except:
+    except ValueError:
         print('None is not in List')
 
     # 全角のハイフン、半角のハイフン、全角のダッシュ、全角ハイフンマイナスが混じっているので、取り除く
@@ -124,7 +124,7 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
     for x in ["-", "‐", "―", "－"]:
         try:
             all_tags.pop(all_tags.index(x))
-        except Exception:
+        except ValueError:
             pass
 
     # 翻訳が複数あるもの("."で区切られている特殊なもの)を保管するリスト
@@ -152,7 +152,7 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
                 try:
                     int(tag[:-1])
                     continue
-                except Exception:
+                except ValueError:
                     pass
             tentative_ja_json[tag] = tag
 
