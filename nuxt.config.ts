@@ -62,6 +62,7 @@ export default defineNuxtConfig({
     ['@nuxtjs/google-gtag', MyConfig.modules['@nuxtjs/google-gtag']],
     '@nuxtjs/color-mode',
     // ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],
+    ['@nuxtjs/sitemap', MyConfig.modules['@nuxtjs/sitemap']], // Should be placed at the last
   ],
 
   plugins: ['~/plugins/vue-i18n.ts'],
