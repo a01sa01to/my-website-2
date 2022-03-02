@@ -120,7 +120,6 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
         print('None is not in List')
 
     # 全角のハイフン、半角のハイフン、全角のダッシュ、全角ハイフンマイナスが混じっているので、取り除く
-    # 理由は components/index/CardsReference/ConfirmedCasesAttributes/Card.vue の translateWord メソッドを参照。
     for x in ["-", "‐", "―", "－"]:
         try:
             all_tags.pop(all_tags.index(x))
@@ -199,16 +198,6 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
             print("Nothing to add.")
         if ja_tag:
             ja_json_keys.pop(ja_json_keys.index(key))
-
-    # 以前はあったが今はない翻訳を削除する
-#     for key in ja_json_keys:
-#         ja_tag = ja_json.get(key)
-#         ja_json.pop(key)
-#         print("Remove TAG: " + str(ja_tag) + " from " + JA_JSON_PATH)
-#         if not warn_count:
-#             result.write(",".join(["RUN", datetime.today().strftime("%Y/%m/%d %H:%M")]) + '\n')
-#         result.write(",".join(["TAG_REMOVE", str(ja_tag)]) + '\n')
-#         warn_count += 1
 
     made_json = ja_json
 

@@ -79,7 +79,7 @@ for filename in FILELIST:
             json.dump(json_base, f, ensure_ascii=False,
                       indent=2, separators=(",", ": "))
 
-
-with open("../../../../../data/opendata/covid19-ibaraki.json", "w", encoding="UTF-8") as f:
+RESULT_FILE = "../../../../../data/opendata/covid19-ibaraki.json"
+with open(RESULT_FILE, "w", encoding="UTF-8") as f:
     json.dump(json_list, f, ensure_ascii=False,
               indent=2, separators=(",", ": "))
