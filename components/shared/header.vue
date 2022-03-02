@@ -44,7 +44,7 @@
               :disabled="$colorMode.preference === 'system'"
             >
               <b-icon-display />
-              System ({{ $colorMode.value }})
+              System (<span id="system-color-config" />)
             </b-dropdown-item>
             <b-dropdown-item
               @click="$colorMode.preference = 'light'"
@@ -106,5 +106,14 @@ header {
   width: 100%;
   height: 64px;
   z-index: 100;
+}
+
+#system-color-config::before {
+  content: 'Light';
+}
+@media (prefers-color-scheme: dark) {
+  #system-color-config::before {
+    content: 'Dark';
+  }
 }
 </style>
