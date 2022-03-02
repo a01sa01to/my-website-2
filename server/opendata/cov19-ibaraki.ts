@@ -18,7 +18,7 @@ const opendataBasepath = join(
   'covid19_ibaraki'
 )
 
-const getData = () => {
+const getData = (): DataTypes.all_data => {
   const LastUpdate: DataTypes.last_update = JSON.parse(
     fs.readFileSync(resolve(opendataBasepath, 'last_update.json')).toString()
   )
