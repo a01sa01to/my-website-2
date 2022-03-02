@@ -3,8 +3,8 @@ import type { IncomingMessage, ServerResponse } from 'http'
 export default (
   req: IncomingMessage,
   res: ServerResponse,
-  next: (err?: any) => void
-) => {
+  next: () => void
+): void => {
   if (/^\/blog\/(.*)$/.test(req.url)) {
     res.writeHead(302, {
       Location: '/uconst/',
