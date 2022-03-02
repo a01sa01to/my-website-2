@@ -60,12 +60,12 @@ with open("last_update.json", "r", encoding="UTF-8") as f:
 for filename in FILELIST:
     aliasname = ALIASLIST[filename]
     filesize = os.path.getsize(filename)
-    for i in range(len(SIZEUNIT)):
+    for idx, val in enumerate(SIZEUNIT):
         if filesize / 1024 < 1:
-            if i == 0:
-                filesize = "{:.0f} {}".format(filesize, SIZEUNIT[i])
+            if idx == 0:
+                filesize = "{:.0f} {}".format(filesize, val)
             else:
-                filesize = "{:.2f} {}".format(round(filesize, 2), SIZEUNIT[i])
+                filesize = "{:.2f} {}".format(round(filesize, 2), val)
             break
         filesize /= 1024
 
