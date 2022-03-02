@@ -76,13 +76,21 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
                 # ここで改行を空白として扱うのは、vue内のi18nタグが正しく認識できない場合があるため
                 content = ' '.join([line.strip() for line in file])
                 # 全タグを正規表現で取得
-                t_tags = [tag[4:(len(tag) - 1)] for tag in tag_pattern_t.findall(content) if
-                          tag[4:(len(tag) - 1)] != '']
-                tc_tags = [
-                    tag[5:(len(tag) - 1)] for tag in tag_pattern_tc.findall(content) if tag[5:(len(tag) - 1)] != ''
+                t_tags = [
+                    tag[4:(len(tag) - 1)]
+                    for tag in tag_pattern_t.findall(content)
+                    if tag[4:(len(tag) - 1)] != ''
                 ]
-                i18n_tags = [tag[12:(len(tag) - 1)] for tag in tag_pattern_i18n.findall(content) if
-                             tag[12:(len(tag) - 1)] != '']
+                tc_tags = [
+                    tag[5:(len(tag) - 1)]
+                    for tag in tag_pattern_tc.findall(content)
+                    if tag[5:(len(tag) - 1)] != ''
+                ]
+                i18n_tags = [
+                    tag[12:(len(tag) - 1)]
+                    for tag in tag_pattern_i18n.findall(content)
+                    if tag[12:(len(tag) - 1)] != ''
+                ]
                 # 「'」で始まっているタグがあるので修正
                 fixed_tags = []
                 for tag in t_tags:
@@ -185,15 +193,6 @@ with open(JA_JSON_PATH, mode="r", encoding=ENCODING) as ja_file:
         if not ja_tag and str(tentative_tag):
             ja_json[key] = tentative_tag
             print("Add TAG: " + str(tentative_tag) + " to " + JA_JSON_PATH)
-
-        # 変更してはならない部分を変更する可能性があるため、変更に関しては自動化しない。
-        # elif ja_tag != tentative_tag:
-        #     ja_json[key] = tentative_tag
-        #     print("Change TAG: " + str(ja_tag) + " to " + str(tentative_tag))
-        #     if not warn_count:
-        #         result.write(",".join(["RUN", datetime.today().strftime("%Y/%m/%d %H:%M")]) + '\n')
-        #     result.write(",".join(["TAG_CHANGE", str(ja_tag) + " to " + str(tentative_tag)]) + '\n')
-        #     warn_count += 1
         elif not ja_tag:
             print("Nothing to add.")
         if ja_tag:
