@@ -91,7 +91,7 @@ export default Vue.extend({
       breadcrumb_data: [
         { to: '/', text: 'Home' },
         { to: '/blog/', text: 'Blog' },
-        { text: 'タグ一覧', active: true },
+        { to: '/blog/tags/', text: 'タグ一覧', active: true },
       ],
     }
   },

@@ -49,8 +49,9 @@ export default Vue.extend({
           { to: '/', text: 'Home' },
           { to: '/blog/', text: 'Blog' },
           { to: `/blog/${year}/`, text: `${year}` },
-          { text: `${month}`, active: true },
+          { to: `/blog/${year}/${month}/`, text: `${month}`, active: true },
           {
+            to: `/blog/${year}/${month}/${blog}/`,
             text: `${(mdContent as any).title}`,
             active: true,
           },

@@ -173,7 +173,7 @@ export default Vue.extend({
     return {
       breadcrumb_data: [
         { text: 'Home', to: '/' },
-        { text: 'Sitemap', active: true },
+        { text: 'Sitemap', to: '/sitemap/', active: true },
       ],
       yr: new Date().getFullYear(),
     }

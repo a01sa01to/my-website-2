@@ -29,7 +29,7 @@ export default Vue.extend({
         { to: '/', text: 'Home' },
         { to: '/blog/', text: 'Blog' },
         { to: `/blog/tags/`, text: `タグ一覧` },
-        { text: tag, active: true },
+        { to: `/blog/tags/${tag}/`, text: tag, active: true },
       ],
       tag,
     }
