@@ -85,6 +85,13 @@
           )
         }}
       </p>
+      <b-alert show variant="warning">
+        {{
+          $t(
+            '2022年1月13日以前にこちらに記載されていたURLは、2022年3月1日をもって利用できなくなりました。以下のURLをご利用ください。'
+          )
+        }}
+      </b-alert>
       <opendata-url-dl-copy :url="dl_url" />
     </b-container>
     <b-container>
