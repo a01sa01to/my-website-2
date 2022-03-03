@@ -65,7 +65,7 @@ export default defineNuxtConfig({
     ['@nuxtjs/sitemap', MyConfig.modules['@nuxtjs/sitemap']], // Should be placed at the last
   ],
 
-  plugins: ['~/plugins/vue-i18n.ts'],
+  plugins: ['~/plugins/vue-i18n.ts', '~/plugins/jsonld.ts'],
 
   privateRuntimeConfig: {
     GITHUB_CLI_ID: process.env.GITHUB_CLI_ID,

@@ -32,8 +32,8 @@ export default Vue.extend({
       default: false,
     },
   },
-  head() {
-    const jsonld = {
+  jsonld() {
+    return {
       '@context': 'http://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: this.data
@@ -46,16 +46,6 @@ export default Vue.extend({
           }
         })
         .splice(1),
-    }
-
-    return {
-      script: [
-        {
-          hid: 'jsonld-breadcrumb',
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify(jsonld),
-        },
-      ],
     }
   },
 })

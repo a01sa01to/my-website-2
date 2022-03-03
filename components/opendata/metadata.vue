@@ -115,7 +115,7 @@ export default Vue.extend({
     },
     keywords: {
       type: Array,
-      default: [],
+      default: () => [],
     },
     coverage: {
       type: String,
@@ -134,7 +134,9 @@ export default Vue.extend({
       default: '',
     },
   },
-  head() {
+  jsonld() {
+    if (this.disableJSON) return null
+
     const jsonld = {
       '@context': 'http://schema.org',
       '@type': 'Dataset',
@@ -166,17 +168,7 @@ export default Vue.extend({
     if (this.partof) {
       ;(jsonld as any).isPartOf = this.partof
     }
-
-    if (this.disableJSON) return {}
-    return {
-      script: [
-        {
-          hid: 'jsonld-dataset',
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify(jsonld),
-        },
-      ],
-    }
+    return jsonld
   },
 })
 </script>
