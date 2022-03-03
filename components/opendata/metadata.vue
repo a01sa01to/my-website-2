@@ -83,6 +83,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import type { Dataset, WithContext } from 'schema-dts'
+
 export default Vue.extend({
   props: {
     last_update: {
@@ -137,8 +139,8 @@ export default Vue.extend({
   jsonld() {
     if (this.disableJSON) return null
 
-    const jsonld = {
-      '@context': 'http://schema.org',
+    const jsonld: WithContext<Dataset> = {
+      '@context': 'https://schema.org',
       '@type': 'Dataset',
       name: this.$t(this.title, 'en'),
       description: this.$t(this.description, 'en'),

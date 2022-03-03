@@ -47,6 +47,7 @@
     "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
-    "sass-loader": "10"
+    "sass-loader": "10",
+    "schema-dts": "^1.1.0"
   }
 }

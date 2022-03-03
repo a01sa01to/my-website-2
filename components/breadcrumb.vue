@@ -14,6 +14,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import type { BreadcrumbList, WithContext, ListItem } from 'schema-dts'
 
 type BreadcrumbData = {
   to: string
@@ -33,12 +34,13 @@ export default Vue.extend({
     },
   },
   jsonld() {
-    return {
-      '@context': 'http://schema.org',
+    const jsonld: WithContext<BreadcrumbList> = {
+      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: this.data
-        .map((val: BreadcrumbData, index: number) => {
+        .map((val: BreadcrumbData, index: number): WithContext<ListItem> => {
           return {
+            '@context': 'https://schema.org',
             '@type': 'ListItem',
             position: index,
             name: val.text,
@@ -47,6 +49,7 @@ export default Vue.extend({
         })
         .splice(1),
     }
+    return jsonld
   },
 })
 </script>
