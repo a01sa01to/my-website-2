@@ -191,3 +191,8 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+// Nuxt-contentが復活するまでの暫定処置
+@import '~/assets/styles/markdown-code-highlight.scss';
+</style>
