@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev --https",
+    "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
     "lint:prettier": "prettier --check .",
