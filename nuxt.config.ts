@@ -65,6 +65,8 @@ export default defineNuxtConfig({
     ['@nuxtjs/sitemap', MyConfig.modules['@nuxtjs/sitemap']], // Should be placed at the last
   ],
 
+  modern: 'server',
+
   plugins: ['~/plugins/vue-i18n.ts', '~/plugins/jsonld.ts'],
 
   privateRuntimeConfig: {
