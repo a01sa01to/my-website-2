@@ -285,5 +285,6 @@
   "動画の豆知識": "Video Trivia",
   "このページは現在メンテナンス中です。": "This page is currently under maintenance.",
   "「@deprecated」のついたデータは、現在は用いられていない指標であることを示しています。そのため、予期しないデータが返ってくる場合があります。": "Data with \"@deprecated\" indicates that it is not currently used. Therefore, unexpected data may be returned.",
-  "2022年1月13日以前にこちらに記載されていたURLは、2022年3月1日をもって利用できなくなりました。以下のURLをご利用ください。": "The URL listed here prior to January 13, 2022 are no longer available as of March 1, 2022. Please use the following URL."
+  "2022年1月13日以前にこちらに記載されていたURLは、2022年3月1日をもって利用できなくなりました。以下のURLをご利用ください。": "The URL listed here prior to January 13, 2022 are no longer available as of March 1, 2022. Please use the following URL.",
+  "直前のページに戻る": "Back to previous page"
 }
