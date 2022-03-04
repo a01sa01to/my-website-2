@@ -5,8 +5,8 @@
     :style="{ color: hover ? hovercolor : 'var(--text-color)' }"
     :data-color="hovercolor"
   >
-    <div id="icon"><slot name="icon" /></div>
-    <span id="text">
+    <div class="icon"><slot name="icon" /></div>
+    <span class="text">
       <slot name="text" />
       <b-icon-chevron-right />
     </span>
@@ -42,11 +42,11 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .icon_container {
   transition: 300ms;
-  #icon {
+  .icon {
     font-size: 2rem;
     color: inherit;
   }
-  #text {
+  .text {
     font-size: 0.9rem;
     color: inherit;
   }
