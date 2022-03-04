@@ -82,26 +82,26 @@
         <pre class="language-text"><code>query {
   covid19_ibaraki {
     corona_next {
-      <span class="token comment"># {{$t('「*」のついたデータは、現在は用いられていない指標であることを示しています。')}}</span>
+      <span class="token comment"># {{$t('「@deprecated」のついたデータは、現在は用いられていない指標であることを示しています。そのため、予期しないデータが返ってくる場合があります。')}}</span>
       last_update                <span class="token comment"># {{$t('最終更新日時')}}: String!</span>
       stage                      <span class="token comment"># {{$t('現在の対策ステージ')}}: Int!</span>
       move_date                  <span class="token comment"># {{$t('対策ステージの移行日')}}: String!</span>
 
       severe                     <span class="token comment"># {{$t('重症病床稼働数')}}: Int!</span>
       sickbed                    <span class="token comment"># {{$t('病床稼働数')}}: Int!</span>
-      care_rate                  <span class="token comment"># *{{$t('入院率')}}: Float!</span>
+      care_rate                  <span class="token comment"># {{$t('入院率')}}: Float!</span> <span class="token keyword">@deprecated</span>
       new_patients               <span class="token comment"># {{$t('陽性者数の直近1週間での平均')}}: Float!</span>
       non_closecontact           <span class="token comment"># {{$t('陽性者のうち、濃厚接触者ではない人の数の直近1週間での平均')}}: Float!</span>
-      care                       <span class="token comment"># *{{$t('療養者数')}}: Int!</span>
-      positive_rate              <span class="token comment"># *{{$t('陽性率の直近1週間での平均')}}: Float!</span>
+      care                       <span class="token comment"># {{$t('療養者数')}}: Int!</span> <span class="token keyword">@deprecated</span>
+      positive_rate              <span class="token comment"># {{$t('陽性率の直近1週間での平均')}}: Float!</span> <span class="token keyword">@deprecated</span>
 
       severe_lastweek            <span class="token comment"># {{$t('1週間前時点での、重症病床稼働数')}}: Int!</span>
       sickbed_lastweek           <span class="token comment"># {{$t('1週間前時点での、病床稼働数')}}: Int!</span>
-      care_rate_lastweek         <span class="token comment"># *{{$t('1週間前時点での入院率')}}: Float!</span>
+      care_rate_lastweek         <span class="token comment"># {{$t('1週間前時点での入院率')}}: Float!</span> <span class="token keyword">@deprecated</span>
       new_patients_lastweek      <span class="token comment"># {{$t('1週間前時点での、陽性者数の1週間での平均')}}: Float!</span>
       non_closecontact_lastweek  <span class="token comment"># {{$t('1週間前時点での、陽性者のうち、濃厚接触者ではない人の数の1週間での平均')}}: Float!</span>
-      care_lastweek              <span class="token comment"># *{{$t('1週間前時点での療養者数')}}: Int!</span>
-      positive_rate_lastweek     <span class="token comment"># *{{$t('1週間前時点での、陽性率の1週間での平均')}}: Float!</span>
+      care_lastweek              <span class="token comment"># {{$t('1週間前時点での療養者数')}}: Int!</span> <span class="token keyword">@deprecated</span>
+      positive_rate_lastweek     <span class="token comment"># {{$t('1週間前時点での、陽性率の1週間での平均')}}: Float!</span> <span class="token keyword">@deprecated</span>
     }
   }
 }</code></pre>

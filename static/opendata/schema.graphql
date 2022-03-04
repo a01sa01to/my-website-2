@@ -355,6 +355,9 @@ type Cov19Ibk_CoronaNext {
   入院率
   """
   care_rate: Float!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが帰ってくる可能性があります。"
+    )
   """
   直近1週間の新規陽性者数 1日当たりの平均
   """
@@ -367,10 +370,16 @@ type Cov19Ibk_CoronaNext {
   療養者数
   """
   care: Int!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが帰ってくる可能性があります。"
+    )
   """
   陽性率
   """
   positive_rate: Float!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが帰ってくる可能性があります。"
+    )
   """
   1週間前時点の、重症病床稼働数
   """
@@ -383,6 +392,9 @@ type Cov19Ibk_CoronaNext {
   1週間前時点の、入院率
   """
   care_rate_lastweek: Float!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが帰ってくる可能性があります。"
+    )
   """
   1週間前時点の、直近1週間の新規陽性者数 1日当たりの平均
   """
@@ -395,10 +407,16 @@ type Cov19Ibk_CoronaNext {
   1週間前時点の、療養者数
   """
   care_lastweek: Int!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが帰ってくる可能性があります。"
+    )
   """
   1週間前時点の、陽性率
   """
   positive_rate_lastweek: Float!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが帰ってくる可能性があります。"
+    )
 }
 
 """
