@@ -7,7 +7,7 @@ export default async (
   if (!process.env.development) {
     res.setHeader(
       'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains'
+      'max-age=31536000; includeSubDomains; preload'
     )
   }
   res.setHeader('X-Content-Type-Options', 'nosniff')
