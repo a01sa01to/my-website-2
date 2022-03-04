@@ -1,9 +1,10 @@
 import type { IncomingMessage, ServerResponse } from 'http'
-export default async (
-  req: IncomingMessage,
+
+export default (
+  _req: IncomingMessage,
   res: ServerResponse,
-  next: Function
-) => {
+  next: () => void
+): void => {
   if (!process.env.development) {
     res.setHeader(
       'Strict-Transport-Security',
