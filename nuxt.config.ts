@@ -81,5 +81,8 @@ export default defineNuxtConfig({
     middleware: ['trailingslash-redirect'],
   },
 
-  serverMiddleware: ['~/server/middleware/redirect.ts'],
+  serverMiddleware: [
+    '~/server/middleware/redirect.ts',
+    '~/server/middleware/add-header.ts',
+  ],
 })
