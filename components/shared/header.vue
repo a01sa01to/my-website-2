@@ -76,6 +76,13 @@ import Vue from 'vue'
 import 'vue-i18n'
 
 export default Vue.extend({
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+    }
+  },
   components: {
     BIconSun,
     BIconMoon,
