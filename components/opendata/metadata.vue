@@ -84,6 +84,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import type { Dataset, WithContext } from 'schema-dts'
+import generateHash from '~/utils/hash'
+import JsonObject from '~~/types/json-object'
 
 export default Vue.extend({
   props: {
@@ -136,8 +138,8 @@ export default Vue.extend({
       default: '',
     },
   },
-  jsonld() {
-    if (this.disableJSON) return null
+  head() {
+    if (this.disableJSON) return {}
 
     const jsonld: WithContext<Dataset> = {
       '@context': 'https://schema.org',
@@ -170,7 +172,15 @@ export default Vue.extend({
     if (this.partof) {
       ;(jsonld as any).isPartOf = this.partof
     }
-    return jsonld
+    return {
+      script: [
+        {
+          hid: `jsonld-metadata-${generateHash(JSON.stringify(jsonld))}`,
+          type: 'application/ld+json',
+          json: jsonld as unknown as JsonObject,
+        },
+      ],
+    }
   },
 })
 </script>

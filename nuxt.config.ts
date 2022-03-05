@@ -67,7 +67,7 @@ export default defineNuxtConfig({
 
   modern: 'server',
 
-  plugins: ['~/plugins/vue-i18n.ts', '~/plugins/jsonld.ts'],
+  plugins: ['~/plugins/vue-i18n.ts'],
 
   privateRuntimeConfig: {
     GITHUB_CLI_ID: process.env.GITHUB_CLI_ID,

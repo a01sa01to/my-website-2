@@ -15,6 +15,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import type { BreadcrumbList, WithContext, ListItem } from 'schema-dts'
+import generateHash from '~/utils/hash'
+import type JsonObject from '~/types/json-object'
 
 type BreadcrumbData = {
   to: string
@@ -33,7 +35,7 @@ export default Vue.extend({
       default: false,
     },
   },
-  jsonld() {
+  head() {
     const jsonld: WithContext<BreadcrumbList> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -49,7 +51,15 @@ export default Vue.extend({
         })
         .splice(1),
     }
-    return jsonld
+    return {
+      script: [
+        {
+          hid: `jsonld-breadcrumb-${generateHash(JSON.stringify(jsonld))}`,
+          type: 'application/ld+json',
+          json: jsonld as unknown as JsonObject,
+        },
+      ],
+    }
   },
 })
 </script>
