@@ -87,4 +87,6 @@ export default defineNuxtConfig({
     '~/server/middleware/redirect.ts',
     '~/server/middleware/add-header.ts',
   ],
+
+  target: 'static',
 })
