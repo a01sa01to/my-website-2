@@ -1,4 +1,10 @@
 steps:
+  # 並列処理のためのダミーステップ
+  - id: dummy
+    name: ubuntu
+    entrypoint: bash
+    args: ['-c', "echo 'Hello World'"]
+
   # バージョンを10個までにする、古いのは消す
   - id: delete-old-versions
     name: 'gcr.io/cloud-builders/gcloud'
@@ -8,6 +14,7 @@ steps:
         '-c',
         "gcloud app versions list --service=default | grep 0.00 | sort -rk 4,4 | awk '{print $2}' | tail -n +11 | xargs -l gcloud app versions delete {}",
       ]
+    waitFor: ['dummy']
 
   # .envをつくる
   - id: create-env
@@ -17,6 +24,7 @@ steps:
     env:
       - 'GITHUB_CLI_ID=$_GITHUB_CLI_ID'
       - 'GITHUB_CLI_SEC=$_GITHUB_CLI_SEC'
+    waitFor: ['dummy']
 
   # Cacheを取得（node_modules）
   - id: get-cache-node
@@ -28,6 +36,7 @@ steps:
         'gs://cloudbuild-cache-node/node-modules.tar.gz',
         './node-modules.tar.gz',
       ]
+    waitFor: ['dummy']
 
   # Cacheを解凍（node_modules）
   - id: extract-cache-node
