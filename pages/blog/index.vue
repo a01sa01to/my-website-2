@@ -1,6 +1,6 @@
 <template>
   <div>
-    <breadcrumb :data="breadcrumb_data" jsononly />
+    <!-- <breadcrumb :data="breadcrumb_data" jsononly />
     <b-container>
       <b-jumbotron
         :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
@@ -36,24 +36,29 @@
         </li>
         <li><nuxt-link to="/blog/tags/">タグ一覧</nuxt-link></li>
       </ul>
+    </b-container> -->
+    <b-container>
+      <h1>Work in Progress</h1>
+      <p>{{ $t('このページは現在メンテナンス中です。') }}</p>
+      <nuxt-link to="/">{{ $t('トップページに戻る') }}</nuxt-link>
     </b-container>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import toDate from '~/utils/date-format'
+// import toDate from '~/utils/date-format'
 
 export default Vue.extend({
-  async asyncData({ $content }) {
-    const BlogList = await $content('articles', { deep: true })
-      .sortBy('createDate', 'desc')
-      .limit(3)
-      .fetch()
-    return {
-      BlogList,
-    }
-  },
+  // async asyncData({ $content }) {
+  //   const BlogList = await $content('articles', { deep: true })
+  //     .sortBy('createDate', 'desc')
+  //     .limit(3)
+  //     .fetch()
+  //   return {
+  //     BlogList,
+  //   }
+  // },
   head() {
     return {
       title: 'Blog',
@@ -67,8 +72,8 @@ export default Vue.extend({
   },
   data() {
     return {
-      thisYear: new Date().getFullYear(),
-      toDate,
+      // thisYear: new Date().getFullYear(),
+      // toDate,
       breadcrumb_data: [
         { name: 'Home', to: '/' },
         { name: 'Blog', to: '/blog/' },

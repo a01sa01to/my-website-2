@@ -5,12 +5,7 @@ export default (
   res: ServerResponse,
   next: () => void
 ): void => {
-  if (/^\/blog\/(.*)$/.test(req.url)) {
-    res.writeHead(302, {
-      Location: '/uconst/',
-    })
-    res.end()
-  } else if (/^\/opendata\/api\/$/.test(req.url)) {
+  if (/^\/opendata\/api\/$/.test(req.url)) {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
     res.setHeader(
