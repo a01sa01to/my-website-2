@@ -49,6 +49,7 @@ steps:
     name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: gsutil
     args: ['cp', 'gs://cloudbuild-cache-node/yarn.tar.gz', './yarn.tar.gz']
+    waitFor: ['dummy']
 
   # Cacheを解凍（yarn）
   - id: extract-cache-yarn
@@ -114,3 +115,16 @@ steps:
     entrypoint: gsutil
     args: ['cp', './yarn.tar.gz', 'gs://cloudbuild-cache-node/yarn.tar.gz']
     waitFor: ['compress-cache-yarn']
+
+  # Opendata Rawデータを保存しておく
+  - id: save-opendata-raw
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: gsutil
+    args:
+      [
+        'cp',
+        '-r',
+        './static/opendata/api/raw',
+        'gs://www-a01sa01to.appspot.com/opendata-raw',
+      ]
+    waitFor: ['dummy']
