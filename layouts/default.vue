@@ -26,6 +26,16 @@ export default Vue.extend({
       this.showing = false
     }, 3000)
   },
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: `https://a01sa01to.com${this.$route.path}`,
+        },
+      ],
+    }
+  },
 })
 </script>
 
