@@ -21,7 +21,7 @@ const api: ServerMiddleware = (req: IncomingMessage & { url: string }, res) => {
   )
 
   if (req.method === 'OPTIONS') {
-    res.statusCode = 200
+    res.statusCode = 204
     res.end()
     return
   }
