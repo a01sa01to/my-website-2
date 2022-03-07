@@ -5,7 +5,7 @@ export default (
   res: ServerResponse,
   next: () => void
 ): void => {
-  if (/^\/opendata\/api\/$/.test(req.url)) {
+  if (/^\/opendata\/api\/(\?.+)?$/.test(req.url)) {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
     res.setHeader(
