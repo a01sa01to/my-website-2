@@ -7,31 +7,29 @@
       :variant="navbarTheme"
       toggleable="lg"
     >
-      <b-navbar-brand to="/" style="color: var(--text-color)">
+      <b-navbar-brand :to="localePath('/')" style="color: var(--text-color)">
         Asa's Website
       </b-navbar-brand>
       <b-navbar-toggle target="header-nav-collapse" />
       <b-collapse id="header-nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/">Home</b-nav-item>
-          <b-nav-item to="/apps/">Apps</b-nav-item>
-          <b-nav-item to="/blog/">Blog</b-nav-item>
-          <b-nav-item to="/opendata/">Opendata</b-nav-item>
+          <b-nav-item :to="localePath('/')">Home</b-nav-item>
+          <b-nav-item :to="localePath('/apps/')">Apps</b-nav-item>
+          <b-nav-item :to="localePath('/blog/')">Blog</b-nav-item>
+          <b-nav-item :to="localePath('/opendata/')">Opendata</b-nav-item>
           <b-nav-item-dropdown
             text="Language"
             right
             v-if="!$route.path.includes('/blog/')"
           >
             <b-dropdown-item
-              @click="changeLocale('ja')"
-              href="#"
+              :to="switchLocalePath('ja')"
               :disabled="$i18n.locale === 'ja'"
             >
               Japanese
             </b-dropdown-item>
             <b-dropdown-item
-              @click="changeLocale('en')"
-              href="#"
+              :to="switchLocalePath('en')"
               :disabled="$i18n.locale === 'en'"
             >
               English
@@ -71,18 +69,9 @@
 
 <script lang="ts">
 import { BIconDisplay, BIconMoon, BIconSun } from 'bootstrap-vue'
-import 'cookie-universal-nuxt'
 import Vue from 'vue'
-import 'vue-i18n'
 
 export default Vue.extend({
-  head() {
-    return {
-      htmlAttrs: {
-        lang: this.$i18n.locale,
-      },
-    }
-  },
   components: {
     BIconSun,
     BIconMoon,
@@ -91,15 +80,6 @@ export default Vue.extend({
   computed: {
     navbarTheme() {
       return this.$colorMode.value === 'dark' ? 'dark' : 'light'
-    },
-  },
-  methods: {
-    changeLocale(lang: string) {
-      this.$cookies.set('locale', lang, {
-        path: '/',
-        maxAge: 60 * 60 * 24 * 365,
-      })
-      this.$i18n.locale = lang
     },
   },
 })

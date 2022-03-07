@@ -45,7 +45,7 @@
       <h2>Available Resources</h2>
       <ul>
         <li>
-          <nuxt-link to="./covid19-ibaraki/">
+          <nuxt-link :to="localePath('/opendata/covid19-ibaraki/')">
             {{ $t('茨城県新型コロナウイルス感染症') }}
           </nuxt-link>
         </li>
@@ -59,7 +59,7 @@
             'このサイトでは、GraphQLを用い、APIを提供しています。利用方法については、以下のページをご覧ください。'
           )
         }}<br />
-        <nuxt-link to="/opendata/api-usage">
+        <nuxt-link :to="localePath('/opendata/api-usage')">
           {{ $t('当サイトのOpendata APIの使い方') }}
         </nuxt-link>
       </p>

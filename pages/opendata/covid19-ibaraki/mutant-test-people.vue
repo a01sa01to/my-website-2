@@ -90,7 +90,7 @@
             '直接ダウンロードするほか、当サイトが提供するOpendata APIもご利用いただけます。'
           )
         }}
-        <nuxt-link to="/opendata/api-usage/">
+        <nuxt-link :to="localePath('/opendata/api-usage/')">
           {{ $t('Opendata APIの使い方についてはこちら') }}
         </nuxt-link>
       </p>

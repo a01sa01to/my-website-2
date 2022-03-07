@@ -4,7 +4,7 @@
       <b-breadcrumb-item
         v-for="d in data"
         :key="d.to"
-        :to="d.to"
+        :to="localePath(d.to)"
         :active="d.active"
       >
         {{ d.text }}

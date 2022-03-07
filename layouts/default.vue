@@ -27,13 +27,19 @@ export default Vue.extend({
     }, 3000)
   },
   head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
     return {
+      htmlAttrs: {
+        ...i18nHead.htmlAttrs,
+      },
       link: [
         {
           rel: 'canonical',
           href: `https://a01sa01to.com${this.$route.path}`,
         },
+        ...i18nHead.link,
       ],
+      meta: [...i18nHead.meta],
     }
   },
 })

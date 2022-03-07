@@ -25,7 +25,9 @@
         {{ $t('プログラミングする。たまに趣味で動画制作する。') }}<br />
       </p>
       <p class="text-right">
-        <nuxt-link to="/about/">{{ $t('詳しくはこちら') }} &gt;</nuxt-link>
+        <nuxt-link :to="localePath('/about/')">
+          {{ $t('詳しくはこちら') }} &gt;
+        </nuxt-link>
       </p>
     </b-container>
     <b-container>
@@ -146,14 +148,16 @@
         </b-col>
       </b-row>
       <p class="text-right">
-        <nuxt-link to="/apps/">{{ $t('もっと見る') }} &gt;</nuxt-link>
+        <nuxt-link :to="localePath('/apps/')">
+          {{ $t('もっと見る') }} &gt;
+        </nuxt-link>
       </p>
     </b-container>
     <b-container>
       <h2>Services</h2>
       <b-row>
         <b-col>
-          <nuxt-link to="/blog/">
+          <nuxt-link :to="localePath('/blog/')">
             <icon-with-text>
               <template #icon><b-icon-chat-dots /></template>
               <template #text>Blog</template>
@@ -161,7 +165,7 @@
           </nuxt-link>
         </b-col>
         <b-col>
-          <nuxt-link to="/opendata/">
+          <nuxt-link :to="localePath('/opendata/')">
             <icon-with-text>
               <template #icon><b-icon-server /></template>
               <template #text>Opendata</template>

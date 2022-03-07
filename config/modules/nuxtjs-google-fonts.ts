@@ -1,6 +1,6 @@
 export default {
   families: {
-    Muli: true,
+    Mulish: true,
     'Noto Sans JP': [300],
     'Open Sans': true,
     Quicksand: true,

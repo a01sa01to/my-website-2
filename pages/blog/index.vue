@@ -30,17 +30,19 @@
       <h2>Find more...</h2>
       <ul>
         <li>
-          <nuxt-link :to="`/blog/${thisYear}/`"
+          <nuxt-link :to="localePath(`/blog/${thisYear}/`)"
             >{{ thisYear }}年の記事一覧</nuxt-link
           >
         </li>
-        <li><nuxt-link to="/blog/tags/">タグ一覧</nuxt-link></li>
+        <li><nuxt-link :to="localePath('/blog/tags/')">タグ一覧</nuxt-link></li>
       </ul>
     </b-container> -->
     <b-container>
       <h1>Work in Progress</h1>
       <p>{{ $t('このページは現在メンテナンス中です。') }}</p>
-      <nuxt-link to="/">{{ $t('トップページに戻る') }}</nuxt-link>
+      <nuxt-link :to="localePath('/')">{{
+        $t('トップページに戻る')
+      }}</nuxt-link>
     </b-container>
   </div>
 </template>

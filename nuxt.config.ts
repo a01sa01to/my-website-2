@@ -54,7 +54,6 @@ export default defineNuxtConfig({
 
   modules: [
     ['bootstrap-vue/nuxt', MyConfig.modules['bootstrap-vue']],
-    ['cookie-universal-nuxt', MyConfig.modules['cookie-universal-nuxt']],
     // ['@nuxt/content', MyConfig.modules['@nuxt/content']],
     '@nuxtjs/axios',
     ['@nuxtjs/auth-next', MyConfig.modules['@nuxtjs/auth-next']],
@@ -62,12 +61,11 @@ export default defineNuxtConfig({
     ['@nuxtjs/google-gtag', MyConfig.modules['@nuxtjs/google-gtag']],
     '@nuxtjs/color-mode',
     // ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],
+    ['@nuxtjs/i18n', MyConfig.modules['@nuxtjs/i18n']],
     ['@nuxtjs/sitemap', MyConfig.modules['@nuxtjs/sitemap']], // Should be placed at the last
   ],
 
   modern: 'server',
-
-  plugins: ['~/plugins/vue-i18n.ts'],
 
   privateRuntimeConfig: {
     GITHUB_CLI_ID: process.env.GITHUB_CLI_ID,

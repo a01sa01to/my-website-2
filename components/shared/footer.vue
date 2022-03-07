@@ -5,19 +5,25 @@
         <b-col>
           <h5>Links</h5>
           <ul class="list-unstyled ml-3">
-            <li><nuxt-link to="/">Home</nuxt-link></li>
-            <li><nuxt-link to="/sitemap/">Sitemap</nuxt-link></li>
+            <li><nuxt-link :to="localePath('/')">Home</nuxt-link></li>
             <li>
-              <nuxt-link to="/disclaimer/">{{ $t('免責事項等') }}</nuxt-link>
+              <nuxt-link :to="localePath('/sitemap/')">Sitemap</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link :to="localePath('/disclaimer/')">{{
+                $t('免責事項等')
+              }}</nuxt-link>
             </li>
           </ul>
         </b-col>
         <b-col>
           <h5>Main</h5>
           <ul class="list-unstyled ml-3">
-            <li><nuxt-link to="/apps/">Apps</nuxt-link></li>
-            <li><nuxt-link to="/blog/">Blog</nuxt-link></li>
-            <li><nuxt-link to="/opendata/">Opendata</nuxt-link></li>
+            <li><nuxt-link :to="localePath('/apps/')">Apps</nuxt-link></li>
+            <li><nuxt-link :to="localePath('/blog/')">Blog</nuxt-link></li>
+            <li>
+              <nuxt-link :to="localePath('/opendata/')">Opendata</nuxt-link>
+            </li>
           </ul>
         </b-col>
         <b-col>

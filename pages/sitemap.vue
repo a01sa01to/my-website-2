@@ -7,24 +7,40 @@
       <b-container>
         <h3>Top</h3>
         <div class="Sitemap-links">
-          <b-button :variant="btn_variant" to="/">Home</b-button>
-          <b-button :variant="btn_variant" to="/apps/">Apps</b-button>
-          <b-button :variant="btn_variant" to="/blog/">Blog</b-button>
-          <b-button :variant="btn_variant" to="/opendata/">Opendata</b-button>
-          <b-button :variant="btn_variant" to="/about/">About Me</b-button>
-          <b-button :variant="btn_variant" to="/disclaimer/">
+          <b-button :variant="btn_variant" :to="localePath('/')">Home</b-button>
+          <b-button :variant="btn_variant" :to="localePath('/apps/')">
+            Apps
+          </b-button>
+          <b-button :variant="btn_variant" :to="localePath('/blog/')">
+            Blog
+          </b-button>
+          <b-button :variant="btn_variant" :to="localePath('/opendata/')">
+            Opendata
+          </b-button>
+          <b-button :variant="btn_variant" :to="localePath('/about/')">
+            About Me
+          </b-button>
+          <b-button :variant="btn_variant" :to="localePath('/disclaimer/')">
             {{ $t('免責事項') }}
           </b-button>
-          <b-button :variant="btn_variant" to="#">Sitemap</b-button>
+          <b-button :variant="btn_variant" :to="localePath('#')">
+            Sitemap
+          </b-button>
         </div>
       </b-container>
       <b-container>
         <h3>Apps</h3>
         <div class="Sitemap-link">
-          <b-button :variant="btn_variant" to="/apps/title-url-picker/">
+          <b-button
+            :variant="btn_variant"
+            :to="localePath('/apps/title-url-picker/')"
+          >
             Title & URL Picker
           </b-button>
-          <b-button :variant="btn_variant" to="/apps/webclass-prevent-dl/">
+          <b-button
+            :variant="btn_variant"
+            :to="localePath('/apps/webclass-prevent-dl/')"
+          >
             Show my report without downloading (WebClass)
           </b-button>
         </div>
@@ -32,21 +48,28 @@
       <b-container>
         <h3>Blog</h3>
         <div class="Sitemap-link">
-          <b-button :variant="btn_variant" to="/blog/tags/">
+          <p>{{ $t('このページは現在メンテナンス中です。') }}</p>
+          <!-- <b-button :variant="btn_variant" :to="localePath('/blog/tags/')">
             {{ $t('タグ一覧') }}
-          </b-button>
-          <b-button :variant="btn_variant" :to="`/blog/${yr}/`">
+          </b-button> -->
+          <!-- <b-button :variant="btn_variant" :to="localePath(`/blog/${yr}/`)">
             {{ $t('{year}年の記事一覧', { year: yr }) }}
-          </b-button>
+          </b-button> -->
         </div>
       </b-container>
       <b-container>
         <h3>Opendata</h3>
         <div class="Sitemap-link">
-          <b-button :variant="btn_variant" to="/opendata/api-usage/">
+          <b-button
+            :variant="btn_variant"
+            :to="localePath('/opendata/api-usage/')"
+          >
             {{ $t('当サイトのOpendata APIの使い方') }}
           </b-button>
-          <b-button :variant="btn_variant" :to="`/opendata/covid19-ibaraki/`">
+          <b-button
+            :variant="btn_variant"
+            :to="localePath(`/opendata/covid19-ibaraki/`)"
+          >
             {{
               $t('{opendata_name}のオープンデータ', {
                 opendata_name: $t('茨城県新型コロナウイルス感染症'),
@@ -153,7 +176,7 @@
       <p>
         <i18n path="その他アカウントなどについては、{aboutme}をご覧ください。">
           <template #aboutme>
-            <nuxt-link to="/about/#social">
+            <nuxt-link :to="localePath('/about/#social')">
               {{ $t('自己紹介ページの「利用しているサービス一覧」セクション') }}
             </nuxt-link>
           </template>
