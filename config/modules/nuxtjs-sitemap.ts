@@ -29,5 +29,5 @@ export default {
     return [...blog]
   },
   trailingSlash: true,
-  i18n: false,
+  i18n: true,
 }

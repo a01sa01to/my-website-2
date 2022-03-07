@@ -62,7 +62,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     // ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],
     ['@nuxtjs/i18n', MyConfig.modules['@nuxtjs/i18n']],
-    ['@nuxtjs/sitemap', MyConfig.modules['@nuxtjs/sitemap']], // Should be placed at the last
+    // ['@nuxtjs/sitemap', MyConfig.modules['@nuxtjs/sitemap']], // Should be placed at the last
   ],
 
   modern: 'server',
