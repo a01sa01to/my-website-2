@@ -78,7 +78,7 @@ export default defineNuxtConfig({
 
   router: {
     trailingSlash: true,
-    middleware: ['trailingslash-redirect'],
+    middleware: ['trailingslash-redirect', 'snakecase-redirect'],
   },
 
   serverMiddleware: [
