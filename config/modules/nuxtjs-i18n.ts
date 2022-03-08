@@ -13,6 +13,6 @@ export default {
   ],
   langDir: '~/locales/',
   defaultLocale: 'ja',
-  baseUrl: 'https://a01sa01to.com/',
+  baseUrl: 'https://a01sa01to.com',
   lazy: true,
 }
