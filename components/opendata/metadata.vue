@@ -85,7 +85,7 @@
 import Vue from 'vue'
 import type { Dataset, WithContext } from 'schema-dts'
 import generateHash from '~/utils/hash'
-import JsonObject from '~~/types/json-object'
+import JsonObject from '~/types/json-object'
 
 export default Vue.extend({
   props: {
