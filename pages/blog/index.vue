@@ -40,9 +40,9 @@
     <b-container>
       <h1>Work in Progress</h1>
       <p>{{ $t('このページは現在メンテナンス中です。') }}</p>
-      <nuxt-link :to="localePath('/')">{{
-        $t('トップページに戻る')
-      }}</nuxt-link>
+      <nuxt-link :to="localePath('/')">
+        {{ $t('トップページに戻る') }}
+      </nuxt-link>
     </b-container>
   </div>
 </template>
@@ -63,24 +63,25 @@ export default Vue.extend({
   // },
   head() {
     return {
-      title: 'Blog',
-      meta: [
-        {
-          name: 'description',
-          content: "Asa's Blogトップページ",
-        },
-      ],
+      // title: 'Blog',
+      // meta: [
+      //   {
+      //     name: 'description',
+      //     content: "Asa's Blogトップページ",
+      //   },
+      // ],
+      title: 'Work in Progress',
     }
   },
-  data() {
-    return {
-      // thisYear: new Date().getFullYear(),
-      // toDate,
-      breadcrumb_data: [
-        { name: 'Home', to: '/' },
-        { name: 'Blog', to: '/blog/' },
-      ],
-    }
-  },
+  // data() {
+  //   return {
+  //     // thisYear: new Date().getFullYear(),
+  //     // toDate,
+  //     breadcrumb_data: [
+  //       { name: 'Home', to: '/' },
+  //       { name: 'Blog', to: '/blog/' },
+  //     ],
+  //   }
+  // },
 })
 </script>
