@@ -85,12 +85,6 @@ export default Vue.extend({
   head() {
     return {
       // title: 'タグ一覧 - Blog',
-      // meta: [
-      //   {
-      //     name: 'description',
-      //     content: 'AsaのBlogについたタグ一覧です',
-      //   },
-      // ],
       title: 'Work in Progress',
     }
   },

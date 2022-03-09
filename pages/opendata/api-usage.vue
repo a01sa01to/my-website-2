@@ -389,14 +389,6 @@ export default Vue.extend({
   head() {
     return {
       title: `${this.$t('当サイトのOpendata APIの使い方')} - Opendata`,
-      meta: [
-        {
-          name: 'description',
-          content: this.$t(
-            '当サイトでは、GraphQLを用い、Opendata APIを提供しています。本ページではその使い方を紹介しています。'
-          ) as string,
-        },
-      ],
     }
   },
   data() {

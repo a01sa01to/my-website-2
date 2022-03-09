@@ -112,14 +112,6 @@ export default Vue.extend({
   head() {
     return {
       title: 'Title & URL Picker - Apps',
-      meta: [
-        {
-          name: 'description',
-          content: this.$t(
-            'Chrome拡張機能「Title & URL Picker」に関するページです'
-          ) as string,
-        },
-      ],
     }
   },
   data() {

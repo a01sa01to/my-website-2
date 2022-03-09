@@ -129,12 +129,6 @@ export default Vue.extend({
       title: `${this.$t(this.title)} - ${this.$t(
         '茨城県新型コロナウイルス感染症'
       )} - Opendata`,
-      meta: [
-        {
-          name: 'description',
-          content: this.$t(this.description) as string,
-        },
-      ],
     }
   },
   data() {

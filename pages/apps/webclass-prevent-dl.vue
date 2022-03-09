@@ -69,14 +69,6 @@ export default Vue.extend({
   head() {
     return {
       title: 'Show my report without downloading (WebClass) - Apps',
-      meta: [
-        {
-          name: 'description',
-          content: this.$t(
-            'Chrome拡張機能「Show my report without downloading (WebClass)」に関するページです'
-          ) as string,
-        },
-      ],
     }
   },
   data() {

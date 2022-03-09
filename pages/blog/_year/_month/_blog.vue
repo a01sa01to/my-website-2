@@ -71,12 +71,6 @@ export default Vue.extend({
   head() {
     return {
       // title: `${(this as any).mdContent.title} - Blog`,
-      // meta: [
-      //   {
-      //     name: 'description',
-      //     content: `${(this as any).mdContent.description}`,
-      //   },
-      // ],
       title: 'Work in Progress',
     }
   },

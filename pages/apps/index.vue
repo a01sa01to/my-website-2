@@ -57,12 +57,6 @@ export default Vue.extend({
   head() {
     return {
       title: 'Apps',
-      meta: [
-        {
-          name: 'description',
-          content: this.$t('私が作ったアプリ一覧です') as string,
-        },
-      ],
     }
   },
   components: {

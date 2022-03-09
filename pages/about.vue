@@ -241,12 +241,6 @@ export default Vue.extend({
   head() {
     return {
       title: 'About Me',
-      meta: [
-        {
-          name: 'description',
-          content: this.$t('Asaの自己紹介ページです。') as string,
-        },
-      ],
     }
   },
   components: {

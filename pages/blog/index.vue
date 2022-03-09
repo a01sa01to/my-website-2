@@ -64,12 +64,6 @@ export default Vue.extend({
   head() {
     return {
       // title: 'Blog',
-      // meta: [
-      //   {
-      //     name: 'description',
-      //     content: "Asa's Blogトップページ",
-      //   },
-      // ],
       title: 'Work in Progress',
     }
   },

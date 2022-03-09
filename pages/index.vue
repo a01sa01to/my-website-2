@@ -233,12 +233,6 @@ export default Vue.extend({
   head() {
     return {
       title: 'Home',
-      meta: [
-        {
-          name: 'description',
-          content: "Home page of a01sa01to.com - Asa's Website",
-        },
-      ],
     }
   },
   components: {
