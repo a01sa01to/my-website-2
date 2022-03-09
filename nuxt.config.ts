@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     link: [
       {
         rel: 'icon',
-        href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:60px;font-family:cursive;%22 fill=%22%230d47a1%22>Asa</text></svg>',
+        href: 'favicon.png',
+        type: 'image/png',
       },
       {
         rel: 'stylesheet',
