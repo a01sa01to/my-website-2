@@ -7,7 +7,7 @@ import type DataTypes from './types/cov19-ibaraki'
 import type Csv2jsonTypes from './types/csv2json'
 
 const __dirname = resolve(
-  ...(process.env.development ? ['static'] : ['server'])
+  ...(process.env.development ? ['static'] : ['public'])
 )
 
 const opendataBasepath = join(

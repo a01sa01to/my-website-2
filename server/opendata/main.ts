@@ -7,7 +7,7 @@ import { join, resolve } from 'path'
 import Covid19Ibaraki from './cov19-ibaraki'
 
 const __dirname = resolve(
-  ...(process.env.development ? ['static'] : ['server'])
+  ...(process.env.development ? ['static'] : ['public'])
 )
 
 const api: ServerMiddleware = (req: IncomingMessage & { url: string }, res) => {
