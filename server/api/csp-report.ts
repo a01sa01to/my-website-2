@@ -29,7 +29,7 @@ const csp_report_format = (report: CSP_Report['csp-report']) =>
 * Violated Directive: ${report['violated-directive'] ?? '(Not set)'}
 `
 
-export default (req: IncomingMessage, res: ServerResponse) => {
+export default (req: IncomingMessage, res: ServerResponse): void => {
   // https://developer.mozilla.org/ja/docs/Web/HTTP/CSP#enabling_reporting
   let buf = ''
   req.on('data', (chunk) => {
