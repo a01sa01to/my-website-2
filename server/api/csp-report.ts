@@ -36,9 +36,15 @@ export default (req: IncomingMessage, res: ServerResponse) => {
     buf += chunk
   })
   req.on('end', () => {
-    const report: CSP_Report = JSON.parse(buf)
-    console.warn(csp_report_format(report['csp-report']))
-    res.statusCode = 200
-    res.end()
+    try {
+      const report: CSP_Report = JSON.parse(buf)
+      console.warn(csp_report_format(report['csp-report']))
+      res.statusCode = 204
+      res.end()
+    } catch (e) {
+      console.error(e)
+      res.statusCode = 400
+      res.end('Bad Request')
+    }
   })
 }
