@@ -3,6 +3,11 @@ import type { IncomingMessage, ServerResponse } from 'http'
 const csp = {
   'default-src': ["'self'"],
   'child-src': ["'self'", 'https://platform.twitter.com'],
+  'connect-src': [
+    "'self'",
+    'https://www.google-analytics.com',
+    'https://www.googletagmanager.com',
+  ],
   'font-src': [
     "'self'",
     'https://fonts.gstatic.com',
@@ -21,6 +26,7 @@ const csp = {
     "'unsafe-inline'",
     "'unsafe-eval'",
     'https://platform.twitter.com',
+    'https://www.googletagmanager.com/gtag/js',
   ],
   'style-src': [
     "'self'",
