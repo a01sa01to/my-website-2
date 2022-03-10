@@ -32,7 +32,10 @@ jobs:
       - name: Build
         run: NITRO_PRESET=firebase yarn build
       - name: Copy Opendata Files
-        run: cp -r ./static/opendata ./.output/server/opendata
+        run: |
+          mkdir -p .output/server/opendata/api/raw
+          cp -r ./static/opendata/api/raw ./.output/server/opendata/api/raw
+          cp ./static/opendata/schema.graphql ./.output/server/opendata/schema.graphql
       - name: Deploy
         uses: w9jds/firebase-action@master
         with:
