@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from 'http'
 
-const csp = {
+const csp: { [key: string]: string[] } = {
   'default-src': ["'self'"],
   'child-src': ["'self'", 'https://platform.twitter.com'],
   'connect-src': [
