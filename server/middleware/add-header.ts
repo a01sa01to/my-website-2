@@ -22,7 +22,7 @@ const csp: { [key: string]: string[] } = {
     "'unsafe-inline'",
     "'unsafe-eval'",
     'https://platform.twitter.com',
-    'https://www.googletagmanager.com/gtag/js',
+    'https://www.googletagmanager.com',
   ],
   'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
   'report-uri': ['/api/csp-report/'],
