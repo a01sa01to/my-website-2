@@ -78,12 +78,19 @@ steps:
     args: ['build']
     waitFor: ['create-env', 'install-deps']
 
+  # Opendata 移動
+  - id: copy-opendata
+    name: ubuntu
+    entrypoint: bash
+    args: ['-c', 'cp -r ./static/opendata ./.output/server/opendata']
+    waitFor: ['build']
+
   # deploy
   - id: deploy
     name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy', 'app.yaml']
     timeout: '1600s'
-    waitFor: ['delete-old-versions', 'build']
+    waitFor: ['delete-old-versions', 'copy-opendata']
 
   # Cache圧縮（node_modules）
   - id: compress-cache-node
