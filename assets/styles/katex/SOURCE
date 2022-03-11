@@ -1,0 +1,6 @@
+Fonts:
+  https://www.jsdelivr.com/package/npm/katex
+
+Less files:
+  https://github.com/KaTeX/KaTeX/blob/main/src/katex.less
+  https://github.com/KaTeX/KaTeX/blob/main/src/fonts.less

@@ -45,6 +45,8 @@
     "firebase-functions-test": "^0.3.3",
     "hookable": "^5.1.1",
     "husky": "^7.0.4",
+    "less": "^4.1.2",
+    "less-loader": "7",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",

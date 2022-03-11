@@ -8,11 +8,7 @@ const csp: { [key: string]: string[] } = {
     'https://www.google-analytics.com',
     'https://www.googletagmanager.com',
   ],
-  'font-src': [
-    "'self'",
-    'https://fonts.gstatic.com',
-    'https://cdn.jsdelivr.net',
-  ],
+  'font-src': ["'self'", 'https://fonts.gstatic.com'],
   'frame-src': ["'self'", 'https://platform.twitter.com'],
   'img-src': [
     "'self'",
@@ -28,12 +24,7 @@ const csp: { [key: string]: string[] } = {
     'https://platform.twitter.com',
     'https://www.googletagmanager.com/gtag/js',
   ],
-  'style-src': [
-    "'self'",
-    "'unsafe-inline'",
-    'https://fonts.googleapis.com',
-    'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css',
-  ],
+  'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
   'report-uri': ['/api/csp-report/'],
 }
 

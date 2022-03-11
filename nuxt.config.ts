@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
   components: true,
 
-  css: ['@/assets/styles/global.scss'],
+  css: ['@/assets/styles/global.scss', '@/assets/styles/katex/katex.less'],
 
   head: {
     link: [
@@ -20,10 +20,6 @@ export default defineNuxtConfig({
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css',
       },
     ],
     meta: [
