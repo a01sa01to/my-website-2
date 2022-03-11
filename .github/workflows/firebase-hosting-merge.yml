@@ -29,6 +29,10 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn
+      - name: Generate .env file
+        run: |
+          touch ./.env
+          echo "{{ secrets.DOT_ENV }}" | base64 -d > ./.env
       - name: Build
         run: NITRO_PRESET=firebase yarn build
       - name: Copy Opendata Files
