@@ -6,9 +6,7 @@ import str2date from './functions/str2date'
 import type DataTypes from './types/cov19-ibaraki'
 import type Csv2jsonTypes from './types/csv2json'
 
-const __dirname = resolve(
-  ...(process.env.development ? ['static'] : ['public'])
-)
+const __dirname = resolve(...(process.env.development ? ['static'] : ['']))
 
 const opendataBasepath = join(
   __dirname,

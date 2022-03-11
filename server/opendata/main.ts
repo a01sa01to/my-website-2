@@ -6,9 +6,7 @@ import type { IncomingMessage } from 'http'
 import { join, resolve } from 'path'
 import Covid19Ibaraki from './cov19-ibaraki'
 
-const __dirname = resolve(
-  ...(process.env.development ? ['static'] : ['public'])
-)
+const __dirname = resolve(...(process.env.development ? ['static'] : ['']))
 
 const api: ServerMiddleware = (req: IncomingMessage & { url: string }, res) => {
   req.url = '/api/opendata' + String(req.url ?? '')
