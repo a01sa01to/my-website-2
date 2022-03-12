@@ -286,5 +286,7 @@
   "このページは現在メンテナンス中です。": "This page is currently under maintenance.",
   "「@deprecated」のついたデータは、現在は用いられていない指標であることを示しています。そのため、予期しないデータが返ってくる場合があります。": "Data with \"@deprecated\" indicates that it is not currently used. Therefore, unexpected data may be returned.",
   "2022年1月13日以前にこちらに記載されていたURLは、2022年3月1日をもって利用できなくなりました。以下のURLをご利用ください。": "The URL listed here prior to January 13, 2022 are no longer available as of March 1, 2022. Please use the following URL.",
-  "直前のページに戻る": "Back to previous page"
+  "直前のページに戻る": "Back to previous page",
+  "（2021年7月29日までのデータ）施設名の繰り返しを避けるために「○○例目の施設」と表記しています。決してその全員が「○○例目」の方から感染が広がったとは限りません。ご理解ください。": "(Data up to July 29, 2021) In order to avoid repetition of facility names , we use the term \"XXth facility\". This does not mean that all of them were infected by the \"XXth case\". Please understand.",
+  "（主に2022年1月19日以降のデータ）備考欄に「年代・性別・職業が異なっている可能性あり」と記載があるものについては、県の公表資料においては概要のみ発表されているため、該当者の詳細情報が正しいことを保証することはできないことを示しています。ただし、その公表日全体での居住地・年代・性別・職業・濃厚接触者それぞれの和は、県の公表資料と一致することが保証されています。": "(Mainly data after January 19, 2022.) For those with \"年代・性別・職業が異なっている可能性あり (Age, gender, and occupation may differ)\" in the \"備考 (note)\" column, I cannot guarantee that the detailed information of the corresponding person is correct, since only a summary is published in the prefecture's public documents. However, it is guaranteed that the sum of each of residence, age, gender, occupation, and close contacts for the entire date of its publication are consistent with those in the prefecture's published data."
 }
