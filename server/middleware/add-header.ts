@@ -16,6 +16,7 @@ const csp: { [key: string]: string[] } = {
     'https://i.creativecommons.org/l/by-sa/4.0/88x31.png',
     'https://licensebuttons.net/l/by-sa/4.0/88x31.png',
     'https://opengraph.githubassets.com',
+    'https://fonts.gstatic.com',
   ],
   'script-src': [
     "'self'",
@@ -24,7 +25,12 @@ const csp: { [key: string]: string[] } = {
     'https://platform.twitter.com',
     'https://www.googletagmanager.com',
   ],
-  'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+  'style-src': [
+    "'self'",
+    "'unsafe-inline'",
+    'https://fonts.googleapis.com',
+    'https://www.googletagmanager.com',
+  ],
   'report-uri': ['/api/csp-report/'],
 }
 
