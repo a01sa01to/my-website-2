@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Allow: /apps/
-Allow: /blog/
+Disallow: /blog/
 Allow: /opendata/
 Allow: /about/
 Allow: /disclaimer/
