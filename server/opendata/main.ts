@@ -32,8 +32,8 @@ const api: ServerMiddleware = (req: IncomingMessage & { url: string }, res) => {
   )
 
   const root = {
-    covid19_ibaraki: () => {
-      return Covid19Ibaraki.getData()
+    covid19_ibaraki: async () => {
+      return await Covid19Ibaraki.getData()
     },
   }
 
