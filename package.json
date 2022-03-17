@@ -2,6 +2,9 @@
   "name": "a01sa01to.com",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "16"
+  },
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
