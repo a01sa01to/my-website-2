@@ -30,20 +30,22 @@ export default Vue.extend({
   },
   methods: {
     async copy() {
-      try {
-        await (this as any).$copyText(this.url)
-        ;(this as any).$gtag('event', 'opendata_copy')
-        this.$bvToast.toast(this.$t('URLをコピーしました') as string, {
-          autoHideDelay: 5000,
-          variant: 'success',
+      navigator.clipboard
+        .writeText(this.url)
+        .then(() => {
+          ;(this as any).$gtag('event', 'opendata_copy')
+          this.$bvToast.toast(this.$t('URLをコピーしました') as string, {
+            autoHideDelay: 5000,
+            variant: 'success',
+          })
         })
-      } catch (e) {
-        console.error(e)
-        this.$bvToast.toast(this.$t('URLのコピーに失敗しました') as string, {
-          autoHideDelay: 5000,
-          variant: 'danger',
+        .catch((e) => {
+          console.error(e)
+          this.$bvToast.toast(this.$t('URLのコピーに失敗しました') as string, {
+            autoHideDelay: 5000,
+            variant: 'danger',
+          })
         })
-      }
     },
     dl() {
       ;(this as any).$gtag('event', 'opendata_dl')

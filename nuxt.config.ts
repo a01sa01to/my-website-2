@@ -54,7 +54,6 @@ export default defineNuxtConfig({
     // ['@nuxt/content', MyConfig.modules['@nuxt/content']],
     '@nuxtjs/axios',
     ['@nuxtjs/auth-next', MyConfig.modules['@nuxtjs/auth-next']],
-    'nuxt-clipboard2',
     ['@nuxtjs/google-gtag', MyConfig.modules['@nuxtjs/google-gtag']],
     '@nuxtjs/color-mode',
     // ['@nuxtjs/redirect-module', MyConfig.modules['@nuxtjs/redirect-module']],

@@ -547,19 +547,21 @@ export default Vue.extend({
         .join('\n')
     },
     async copy() {
-      try {
-        await (this as any).$copyText(this.outputData)
-        this.$bvToast.toast('URL Copied', {
-          autoHideDelay: 5000,
-          variant: 'success',
+      navigator.clipboard
+        .writeText(this.outputData)
+        .then(() => {
+          this.$bvToast.toast('Data Copied', {
+            autoHideDelay: 5000,
+            variant: 'success',
+          })
         })
-      } catch (e) {
-        console.error(e)
-        this.$bvToast.toast('Failed to copy' as string, {
-          autoHideDelay: 5000,
-          variant: 'danger',
+        .catch((e) => {
+          console.error(e)
+          this.$bvToast.toast('Failed to copy' as string, {
+            autoHideDelay: 5000,
+            variant: 'danger',
+          })
         })
-      }
     },
   },
 })

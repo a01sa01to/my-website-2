@@ -25,7 +25,6 @@
     "core-js": "^3.21.1",
     "express-graphql": "^0.12.0",
     "graphql": "^16.3.0",
-    "nuxt-clipboard2": "^0.2.1",
     "nuxt-edge": "latest",
     "rehype-katex": "5",
     "remark-math": "4",
