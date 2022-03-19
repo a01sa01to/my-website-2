@@ -49,7 +49,7 @@ export default (
   res.setHeader(
     'Content-Security-Policy',
     Object.entries(csp)
-      .map(([key, value]) => `${key} ${value.join(' ')}`)
+      .map(([key, value]: [string, string[]]) => `${key} ${value.join(' ')}`)
       .join('; ')
   )
   next()
