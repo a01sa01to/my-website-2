@@ -556,7 +556,6 @@ export default Vue.extend({
           })
         })
         .catch((e) => {
-          console.error(e)
           this.$bvToast.toast('Failed to copy' as string, {
             autoHideDelay: 5000,
             variant: 'danger',

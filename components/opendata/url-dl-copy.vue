@@ -40,7 +40,6 @@ export default Vue.extend({
           })
         })
         .catch((e) => {
-          console.error(e)
           this.$bvToast.toast(this.$t('URLのコピーに失敗しました') as string, {
             autoHideDelay: 5000,
             variant: 'danger',
