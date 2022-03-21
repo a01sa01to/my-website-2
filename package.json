@@ -41,7 +41,7 @@
     "less": "^4.1.2",
     "less-loader": "7",
     "lint-staged": "^12.3.5",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.0",
     "sass": "^1.49.9",
     "sass-loader": "10",
     "schema-dts": "^1.1.0"
