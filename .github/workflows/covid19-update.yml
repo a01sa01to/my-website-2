@@ -80,7 +80,7 @@ jobs:
         run: python ../../../../../workflow-tools/opendata/covid19-ibk.py
         working-directory: ./static/opendata/api/raw/covid19_ibaraki
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3.14.0
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update COVID-19 Data
