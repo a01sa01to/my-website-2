@@ -6,6 +6,13 @@ exclude_patterns = [
 ]
 
 [[analyzers]]
+name = "rust"
+enabled = true
+
+  [analyzers.meta]
+  msrv = "1.30.0"
+
+[[analyzers]]
 name = "secrets"
 enabled = true
 

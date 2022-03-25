@@ -1,0 +1,18 @@
+[package]
+name = "opendata"
+version = "0.1.0"
+edition = "2021"
+authors = ["Asa <github@a01sa01to.com>"]
+description = "Opendata API of a01sa01to.com"
+license = "MIT"
+repository = "https://github.com/a01sa01to/a01sa01to.com"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
+chrono = "0.4.19"
