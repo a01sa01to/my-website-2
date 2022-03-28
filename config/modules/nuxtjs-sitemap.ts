@@ -16,18 +16,22 @@ const allFiles = (path: string): string[] => {
     .flat()
 }
 
+const lang = ['', '/en']
+
 export default {
   hostname: 'https://a01sa01to.com',
   gzip: true,
-  exclude: ['/admin/**', '/uconst/'],
-  routes: () => {
-    const blog = allFiles('./content/articles/')
-      .map((file) => file.replace('.md', ''))
-      .map((file) => file.replace(/\\/g, '/'))
-      .map((file) => file.replace('content/articles/', 'blog/'))
-      .filter((file) => !/(.*)\/\d{4}\/\d{2}$/.test(file))
-    return [...blog]
-  },
+  exclude: ['/admin/**', '/blog/**'].flatMap((path) =>
+    lang.map((lang) => `${lang}${path}`)
+  ),
+  // routes: () => {
+  //   const blog = allFiles('./content/articles/')
+  //     .map((file) => file.replace('.md', ''))
+  //     .map((file) => file.replace(/\\/g, '/'))
+  //     .map((file) => file.replace('content/articles/', 'blog/'))
+  //     .filter((file) => !/(.*)\/\d{4}\/\d{2}$/.test(file))
+  //   return [...blog]
+  // },
   trailingSlash: true,
   i18n: true,
 }
