@@ -4,11 +4,12 @@ import MyConfig from './config/main'
 export default defineNuxtConfig({
   buildModules: [
     ['@nuxtjs/google-fonts', MyConfig.modules['@nuxtjs/google-fonts']],
+    // ["@nuxtjs/algolia", MyConfig.modules['@nuxtjs/algolia']]
   ],
 
   components: true,
 
-  css: ['@/assets/styles/global.scss', '@/assets/styles/katex/katex.less'],
+  css: ['@/assets/styles/global.scss'],
 
   head: {
     link: [
@@ -20,6 +21,13 @@ export default defineNuxtConfig({
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css',
+        integrity:
+          'sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB',
+        crossorigin: 'anonymous',
       },
     ],
     meta: [
