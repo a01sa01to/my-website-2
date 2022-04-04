@@ -15,7 +15,7 @@
     "*.**": "prettier --check --ignore-unknown --write"
   },
   "dependencies": {
-    "@nuxtjs/auth-next": "5.0.0-1647967358.de1bb0f",
+    "@nuxtjs/auth-next": "5.0.0-1648802546.c9880dc",
     "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/redirect-module": "^0.3.1",
