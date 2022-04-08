@@ -17,7 +17,7 @@
           $t('ただの{age}歳の埼玉大学{grade}年生。茨城県住み。', {
             age: new Date().getFullYear() - 2003,
             grade: Math.ceil(
-              (new Date() - new Date(2021, 3, 31)) /
+              (new Date() - new Date('2021-03-31')) /
                 (1000 * 60 * 60 * 24 * 365.25)
             ),
           })
