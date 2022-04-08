@@ -52,6 +52,12 @@ main {
   pre {
     color: var(--text-color);
   }
+
+  h1#jumbotitle {
+    font-size: 3.5rem;
+    margin: 8rem 0;
+    text-align: center;
+  }
 }
 
 .btn {

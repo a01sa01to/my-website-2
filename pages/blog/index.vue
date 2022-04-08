@@ -2,13 +2,7 @@
   <div>
     <!-- <breadcrumb :data="breadcrumb_data" jsononly />
     <b-container>
-      <b-jumbotron
-        :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
-        :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'light'"
-      >
-        <template #header>Asa's Blog</template>
-        <template #lead>Scroll down to explore this site</template>
-      </b-jumbotron>
+      <h1 id="jumbotitle">Asa's Blog</h1>
       <scroll-next-animation />
     </b-container>
     <b-container v-if="$i18n.locale !== 'ja'">

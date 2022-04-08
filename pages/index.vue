@@ -1,13 +1,7 @@
 <template>
   <div>
     <b-container>
-      <b-jumbotron
-        :text-variant="$colorMode.value === 'dark' ? 'light' : 'dark'"
-        :bg-variant="$colorMode.value === 'dark' ? 'dark' : 'light'"
-      >
-        <template #header>Asa's Website</template>
-        <template #lead>Scroll down to explore this site</template>
-      </b-jumbotron>
+      <h1 id="jumbotitle">Asa's Website</h1>
       <scroll-next-animation />
     </b-container>
     <b-container>
