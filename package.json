@@ -27,7 +27,7 @@
     "rehype-katex": "5",
     "remark-math": "4",
     "simple-icons": "^6.21.0",
-    "webpack": "^5.72.0"
+    "webpack": "^5.72.1"
   },
   "devDependencies": {
     "@nuxt/bridge": "npm:@nuxt/bridge-edge",
