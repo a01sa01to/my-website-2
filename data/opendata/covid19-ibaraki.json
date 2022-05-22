@@ -1,7 +1,7 @@
 {
   "patients": {
-    "lastUpdate": "2022/05/21 21:15",
-    "size": "20.98 MiB"
+    "lastUpdate": "2022/05/22 18:40",
+    "size": "21.06 MiB"
   },
   "test_people": {
     "lastUpdate": "2022/05/16 18:55",
@@ -16,23 +16,23 @@
     "size": "21.26 KiB"
   },
   "positive_number": {
-    "lastUpdate": "2022/05/21 21:15",
-    "size": "34.15 KiB"
+    "lastUpdate": "2022/05/22 18:40",
+    "size": "34.20 KiB"
   },
   "mutant_positive_number": {
     "lastUpdate": "2022/01/15 20:05",
     "size": "90.42 KiB"
   },
   "recovered_number": {
-    "lastUpdate": "2022/05/21 21:15",
-    "size": "31.32 KiB"
+    "lastUpdate": "2022/05/22 18:40",
+    "size": "31.36 KiB"
   },
   "death_number": {
-    "lastUpdate": "2022/05/21 21:15",
-    "size": "30.60 KiB"
+    "lastUpdate": "2022/05/22 18:40",
+    "size": "30.64 KiB"
   },
   "death_attr": {
-    "lastUpdate": "2022/05/21 21:15",
+    "lastUpdate": "2022/05/22 18:40",
     "size": "23.34 KiB"
   },
   "inspections_summary": {
@@ -40,15 +40,15 @@
     "size": "251 Byte"
   },
   "main_summary": {
-    "lastUpdate": "2022/05/21 21:15",
+    "lastUpdate": "2022/05/22 18:40",
     "size": "375 Byte"
   },
   "corona_next": {
-    "lastUpdate": "2022/05/21 21:15",
-    "size": "330 Byte"
+    "lastUpdate": "2022/05/22 18:40",
+    "size": "328 Byte"
   },
   "vaccination": {
-    "lastUpdate": "2022/05/21 21:15",
-    "size": "46.26 KiB"
+    "lastUpdate": "2022/05/22 18:40",
+    "size": "46.37 KiB"
   }
 }
