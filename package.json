@@ -37,7 +37,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.1",
     "prettier": "^2.6.2",
-    "sass": "^1.52.2",
+    "sass": "^1.52.3",
     "sass-loader": "10",
     "schema-dts": "^1.1.0"
   }
