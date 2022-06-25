@@ -1,26 +1,26 @@
 {
-	"breadcrumb": {
-		"scope": "vue",
-		"prefix": "breadcrumb",
-		"body": "<breadcrumb :data=\"breadcrumb_data\" />",
-		"description": "Breadcrumb"
-	},
-	"external-link": {
-		"scope": "vue, markdown",
-		"prefix": "external-link",
-		"body": "<external-link to=\"$1\">$2</external-link>",
-		"description": "External link"
-	},
-	"twitter-embed": {
-		"scope": "vue, markdown",
-		"prefix": "twitter-embed",
-		"body": "<twitter-embed tweetid=\"$1\"></twitter-embed>",
-		"description": "Twitter embed"
-	},
-	"shared-main-header": {
-		"scope": "vue",
-		"prefix": "shared-main-header",
-		"body": "<shared-main-header title=\"$1\" :b_data=\"breadcrumb_data\" description=\"\" descrion_right />",
-		"description": "shared-main-header"
-	},
+  "breadcrumb": {
+    "scope": "vue",
+    "prefix": "breadcrumb",
+    "body": "<breadcrumb :data=\"breadcrumb_data\" />",
+    "description": "Breadcrumb"
+  },
+  "external-link": {
+    "scope": "vue, markdown",
+    "prefix": "external-link",
+    "body": "<external-link to=\"$1\">$2</external-link>",
+    "description": "External link"
+  },
+  "twitter-embed": {
+    "scope": "vue, markdown",
+    "prefix": "twitter-embed",
+    "body": "<twitter-embed tweetid=\"$1\"></twitter-embed>",
+    "description": "Twitter embed"
+  },
+  "shared-main-header": {
+    "scope": "vue",
+    "prefix": "shared-main-header",
+    "body": "<shared-main-header title=\"$1\" :b_data=\"breadcrumb_data\" description=\"\" descrion_right />",
+    "description": "shared-main-header"
+  }
 }
