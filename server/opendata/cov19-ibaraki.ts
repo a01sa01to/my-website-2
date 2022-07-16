@@ -542,6 +542,7 @@ const getData = (): Promise<DataTypes.all_data> => {
           first: item.status_1,
           second: item.status_2,
           third: item.status_3,
+          fourth: item.status_4,
         }))
 
         ret.vaccination = ({ before, after, first, last }) =>

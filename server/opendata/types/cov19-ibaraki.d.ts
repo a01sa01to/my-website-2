@@ -241,6 +241,7 @@ export type vaccination_raw = {
   status_1: number
   status_2: number
   status_3: number
+  status_4: number
 }
 
 export type vaccination = {
@@ -252,6 +253,7 @@ export type vaccination = {
   first: number
   second: number
   third: number
+  fourth: number
 }
 
 export type all_data = {

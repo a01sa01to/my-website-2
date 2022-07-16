@@ -100,6 +100,7 @@
         first            <span class="token comment"># {{$t('1回目接種者数')}}: Int!</span>
         second           <span class="token comment"># {{$t('2回目接種者数')}}: Int!</span>
         third            <span class="token comment"># {{$t('3回目接種者数')}}: Int!</span>
+        fourth           <span class="token comment"># {{$t('4回目接種者数')}}: Int!</span>
       }
       pageinfo {
         hasPreviousPage  <span class="token comment"># {{$t('前のページがあるかどうか')}}: Boolean!</span>
