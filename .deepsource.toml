@@ -6,11 +6,11 @@ exclude_patterns = [
 ]
 
 [[analyzers]]
-name = "go"
+name = "rust"
 enabled = true
 
   [analyzers.meta]
-  import_root = "github.com/a01sa01to/a01sa01to.com/server/opendata"
+  msrv = "1.30.0"
 
 [[analyzers]]
 name = "secrets"
@@ -40,8 +40,4 @@ enabled = true
 
 [[transformers]]
 name = "prettier"
-enabled = true
-
-[[transformers]]
-name = "gofmt"
 enabled = true

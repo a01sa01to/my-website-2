@@ -32,9 +32,9 @@ updates:
       prefix-development: chore
       include: scope
 
-  # Fetch and update latest `golang` packages
-  - package-ecosystem: gomod
-    directory: '/server/opendata'
+  # Fetch and update latest `rust` packages
+  - package-ecosystem: cargo
+    directory: '/server/opendata_wasm'
     schedule:
       interval: weekly
       time: '00:00'
