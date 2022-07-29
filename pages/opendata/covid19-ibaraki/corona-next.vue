@@ -91,7 +91,7 @@
       sickbed                    <span class="token comment"># {{$t('病床稼働数')}}: Int!</span>
       care_rate                  <span class="token comment"># {{$t('入院率')}}: Float!</span> <span class="token keyword">@deprecated</span>
       new_patients               <span class="token comment"># {{$t('陽性者数の直近1週間での平均')}}: Float!</span>
-      non_closecontact           <span class="token comment"># {{$t('陽性者のうち、濃厚接触者ではない人の数の直近1週間での平均')}}: Float!</span>
+      non_closecontact           <span class="token comment"># {{$t('陽性者のうち、濃厚接触者ではない人の数の直近1週間での平均')}}: Float!</span> <span class="token keyword">@deprecated</span>
       care                       <span class="token comment"># {{$t('療養者数')}}: Int!</span> <span class="token keyword">@deprecated</span>
       positive_rate              <span class="token comment"># {{$t('陽性率の直近1週間での平均')}}: Float!</span> <span class="token keyword">@deprecated</span>
 
@@ -99,7 +99,7 @@
       sickbed_lastweek           <span class="token comment"># {{$t('1週間前時点での、病床稼働数')}}: Int!</span>
       care_rate_lastweek         <span class="token comment"># {{$t('1週間前時点での入院率')}}: Float!</span> <span class="token keyword">@deprecated</span>
       new_patients_lastweek      <span class="token comment"># {{$t('1週間前時点での、陽性者数の1週間での平均')}}: Float!</span>
-      non_closecontact_lastweek  <span class="token comment"># {{$t('1週間前時点での、陽性者のうち、濃厚接触者ではない人の数の1週間での平均')}}: Float!</span>
+      non_closecontact_lastweek  <span class="token comment"># {{$t('1週間前時点での、陽性者のうち、濃厚接触者ではない人の数の1週間での平均')}}: Float!</span> <span class="token keyword">@deprecated</span>
       care_lastweek              <span class="token comment"># {{$t('1週間前時点での療養者数')}}: Int!</span> <span class="token keyword">@deprecated</span>
       positive_rate_lastweek     <span class="token comment"># {{$t('1週間前時点での、陽性率の1週間での平均')}}: Float!</span> <span class="token keyword">@deprecated</span>
     }

@@ -366,6 +366,9 @@ type Cov19Ibk_CoronaNext {
   直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 1日当たりの平均
   """
   non_closecontact: Float!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが返される可能性があります。"
+    )
   """
   療養者数
   """
@@ -403,6 +406,9 @@ type Cov19Ibk_CoronaNext {
   1週間前時点の、直近1週間の新規陽性者数のうち、濃厚接触者ではない人数 1日当たりの平均
   """
   non_closecontact_lastweek: Float!
+    @deprecated(
+      reason: "この指標は現在用いられていません。予期しないデータが返される可能性があります。"
+    )
   """
   1週間前時点の、療養者数
   """
@@ -812,7 +818,7 @@ type Cov19Ibk_Patients_dataset {
   """
   濃厚接触者かどうか
   """
-  close_contact: Boolean!
+  close_contact: Boolean
   """
   検査方法
   """

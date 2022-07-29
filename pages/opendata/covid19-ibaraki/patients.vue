@@ -131,7 +131,7 @@
         status                 <span class="token comment"># {{$t('公表時の患者の状態')}}: String</span>
         symptoms               <span class="token comment"># {{$t('公表時に発症していた症状')}}: String</span>
         travel_abroad_history  <span class="token comment"># {{$t('海外渡航歴があるかどうか')}}: Boolean!</span>
-        close_contact          <span class="token comment"># {{$t('濃厚接触者かどうか')}}: Boolean!</span>
+        close_contact          <span class="token comment"># {{$t('濃厚接触者かどうか')}}: Boolean</span>
         test_method            <span class="token comment"># {{$t('検査実施方法')}}: String</span>
         note                   <span class="token comment"># {{$t('備考')}}: String</span>
       }

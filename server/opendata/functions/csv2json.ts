@@ -27,8 +27,10 @@ const csv2json = (
         } else if (overrideMap.type === 'date') {
           jsonLine[overrideMap.header] = str2date(data)
         } else if (overrideMap.type === 'boolean') {
-          const falsy = ['false', '0', 'null', 'undefined', '', 'NaN', '-0']
-          if (falsy.includes(data.toLowerCase())) {
+          const falsy = ['false', '0', 'undefined', 'NaN', '-0']
+          if (data.toLowerCase() === 'null' || data === '') {
+            jsonLine[overrideMap.header] = null
+          } else if (falsy.includes(data.toLowerCase())) {
             jsonLine[overrideMap.header] = false
           } else {
             jsonLine[overrideMap.header] = true
