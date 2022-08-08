@@ -880,6 +880,9 @@ type Cov19Ibk_PositiveNumber_dataset {
   陽性者数のうち、濃厚接触者数
   """
   close_contact: Int!
+    @deprecated(
+      reason: "公表資料の様式変更のため、このフィールドは廃止されました。"
+    )
 }
 
 """
