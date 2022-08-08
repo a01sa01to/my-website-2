@@ -40,7 +40,7 @@ main {
   @include defaultsettings;
 }
 
-::v-deep .nuxt-content {
+:deep(.nuxt-content) {
   @include defaultsettings;
   h2 {
     margin: 2.5em 0 1em 0;
