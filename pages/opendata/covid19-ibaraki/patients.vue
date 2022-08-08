@@ -70,7 +70,7 @@
         <li>
           {{
             $t(
-              ' 公表されていない部分は空欄になっています。記入漏れというわけではありません。'
+              '公表されていない部分は空欄になっています。記入漏れというわけではありません。'
             )
           }}
         </li>
@@ -99,7 +99,19 @@
           )
         }}
       </b-alert>
-      <opendata-url-dl-copy :url="dl_url" />
+      <b-alert show variant="warning">
+        {{ $t('容量削減を目的として、月ごとにファイルの分割を行っています。') }}
+      </b-alert>
+      <opendata-url-dl-copy :url="dl_url" :txt="$t('最新版（当月分）')" />
+      <details>
+        <summary>{{ $t('年月ごと') }}</summary>
+        <opendata-url-dl-copy
+          v-for="data in datas"
+          :key="data.year + '-' + data.month"
+          :url="`https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/archive/080004_ibaraki_covid19_patients_${data.year}${data.month}.csv`"
+          :txt="$t('{year}年{month}月（～{e}例目）', data)"
+        />
+      </details>
     </b-container>
     <b-container>
       <h2>{{ $t('Opendata APIについて') }}</h2>
@@ -113,6 +125,9 @@
           {{ $t('Opendata APIの使い方についてはこちら') }}
         </nuxt-link>
       </p>
+      <b-alert show variant="warning">
+        {{ $t('高速化を目的として、当月分のデータのみを提供しています。') }}
+      </b-alert>
       <div class="nuxt-content-highlight">
         <pre class="language-text"><code>query {
   covid19_ibaraki {
@@ -164,6 +179,37 @@ export default Vue.extend({
   },
   data() {
     const title = '陽性患者属性'
+    const datas = [
+      { year: '2020', month: '03', e: '24' },
+      { year: '2020', month: '04', e: '163' },
+      { year: '2020', month: '05', e: '168' },
+      { year: '2020', month: '06', e: '174' },
+      { year: '2020', month: '07', e: '294' },
+      { year: '2020', month: '08', e: '545' },
+      { year: '2020', month: '09', e: '657' },
+      { year: '2020', month: '10', e: '768' },
+      { year: '2020', month: '11', e: '1,561' },
+      { year: '2020', month: '12', e: '2,446' },
+      { year: '2021', month: '01', e: '4,818' },
+      { year: '2021', month: '02', e: '5,755' },
+      { year: '2021', month: '03', e: '6,740' },
+      { year: '2021', month: '04', e: '8,143' },
+      { year: '2021', month: '05', e: '9,734' },
+      { year: '2021', month: '06', e: '10,544' },
+      { year: '2021', month: '07', e: '12,460' },
+      { year: '2021', month: '08', e: '20,627' },
+      { year: '2021', month: '09', e: '24,140' },
+      { year: '2021', month: '10', e: '24,403' },
+      { year: '2021', month: '11', e: '24,449' },
+      { year: '2021', month: '12', e: '24,489' },
+      { year: '2022', month: '01', e: '36,193' },
+      { year: '2022', month: '02', e: '73,241' },
+      { year: '2022', month: '03', e: '113,668' },
+      { year: '2022', month: '04', e: '143,863' },
+      { year: '2022', month: '05', e: '158,770' },
+      { year: '2022', month: '06', e: '165,080' },
+      { year: '2022', month: '07', e: '208,508' },
+    ]
     return {
       breadcrumb_data: [
         { to: '/', text: 'Home' },
@@ -188,6 +234,7 @@ export default Vue.extend({
       dl_url:
         'https://a01sa01to.com/opendata/api/raw/covid19_ibaraki/080004_ibaraki_covid19_patients.csv',
       keywords: ['COVID-19 > JAPAN > IBARAKI > ATTRIBUTES OF PATIENTS'],
+      datas,
     }
   },
 })
@@ -196,4 +243,10 @@ export default Vue.extend({
 <style lang="scss" scoped>
 // Nuxt-contentが復活するまでの暫定処置
 @import '~/assets/styles/markdown-code-highlight.scss';
+
+details {
+  margin: 1rem;
+  padding: 1rem;
+  border-left: 3px solid #ccc;
+}
 </style>

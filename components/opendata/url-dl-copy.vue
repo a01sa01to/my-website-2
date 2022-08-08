@@ -1,5 +1,5 @@
 <template>
-  <b-input-group>
+  <b-input-group :prepend="txt" class="group">
     <b-form-input type="url" class="url" readonly :value="url" />
     <b-input-group-append>
       <b-button class="btn" @click="copy">
@@ -22,6 +22,10 @@ export default Vue.extend({
     url: {
       type: String,
       required: true,
+    },
+    txt: {
+      type: String,
+      default: '',
     },
   },
   components: {
@@ -62,5 +66,8 @@ export default Vue.extend({
 }
 .btn {
   margin: 0;
+}
+.group {
+  margin: 0.5rem auto;
 }
 </style>
