@@ -814,7 +814,7 @@ type Cov19Ibk_Patients_dataset {
   """
   海外渡航歴があるかどうか
   """
-  travel_abroad_history: Boolean!
+  travel_abroad_history: Boolean
   """
   濃厚接触者かどうか
   """
