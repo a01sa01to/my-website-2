@@ -1,18 +1,18 @@
 {
   "stage": 3,
   "moveDate": "2022/07/22",
-  "severe": 6,
-  "sickbed": 462,
+  "severe": 4,
+  "sickbed": 483,
   "care_rate": 0,
-  "new_patients": 2828.6,
+  "new_patients": 3038.3,
   "non_closecontact": 0,
-  "care": 19520,
-  "positive_rate": 83.4,
+  "care": 20857,
+  "positive_rate": 74.4,
   "severe_lastweek": 8,
-  "sickbed_lastweek": 512,
+  "sickbed_lastweek": 499,
   "care_rate_lastweek": 0,
-  "new_patients_lastweek": 3870,
+  "new_patients_lastweek": 3656.1,
   "non_closecontact_lastweek": 0,
-  "care_lastweek": 25071,
-  "positive_rate_lastweek": 83.4
+  "care_lastweek": 24058,
+  "positive_rate_lastweek": 96.3
 }
