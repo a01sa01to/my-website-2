@@ -13,7 +13,7 @@
             <tr>
               <th>Name</th>
               <th>New</th>
-              <th>Close</th>
+              <!-- <th>Close</th> -->
             </tr>
             <tr v-for="(val, key) in Data_Pref.municipality" :key="key">
               <td>{{ key }}</td>
@@ -26,7 +26,7 @@
                   @change="counter"
                 />
               </td>
-              <td>
+              <!-- <td>
                 <b-form-input
                   type="number"
                   size="sm"
@@ -34,12 +34,12 @@
                   v-model="Data_Pref.municipality[key][1]"
                   @change="counter"
                 />
-              </td>
+              </td> -->
             </tr>
             <tr>
               <td>Total</td>
               <td>{{ PrefTotal.municipality[0] }}</td>
-              <td>{{ PrefTotal.municipality[1] }}</td>
+              <!-- <td>{{ PrefTotal.municipality[1] }}</td> -->
             </tr>
           </table>
         </b-col>
@@ -92,7 +92,7 @@
             </tr>
           </table>
           <br />
-          <h3>職業別</h3>
+          <!-- <h3>職業別</h3>
           <table>
             <tr>
               <th>Occupation</th>
@@ -114,7 +114,7 @@
               <td>Total</td>
               <td>{{ PrefTotal.occupation }}</td>
             </tr>
-          </table>
+          </table> -->
         </b-col>
       </b-row>
     </b-container>
@@ -128,7 +128,7 @@
             <tr>
               <th>Name</th>
               <th>New</th>
-              <th>Close</th>
+              <!-- <th>Close</th> -->
             </tr>
             <tr v-for="(val, key) in Data_Mito.municipality" :key="key">
               <td>{{ key }}</td>
@@ -141,7 +141,7 @@
                   @change="counter"
                 />
               </td>
-              <td>
+              <!-- <td>
                 <b-form-input
                   type="number"
                   size="sm"
@@ -149,12 +149,12 @@
                   v-model="Data_Mito.municipality[key][1]"
                   @change="counter"
                 />
-              </td>
+              </td> -->
             </tr>
             <tr>
               <td>Total</td>
               <td>{{ MitoTotal.municipality[0] }}</td>
-              <td>{{ MitoTotal.municipality[1] }}</td>
+              <!-- <td>{{ MitoTotal.municipality[1] }}</td> -->
             </tr>
           </table>
         </b-col>
@@ -207,7 +207,7 @@
             </tr>
           </table>
           <br />
-          <h3>職業別</h3>
+          <!-- <h3>職業別</h3>
           <table>
             <tr>
               <th>Occupation</th>
@@ -224,7 +224,7 @@
                   @change="counter"
                 />
               </td>
-            </tr>
+            </tr> -->
             <tr>
               <td>Total</td>
               <td>{{ MitoTotal.occupation }}</td>
@@ -259,7 +259,7 @@ export default Vue.extend({
   head: {
     title: 'Covid19 Ibaraki Updater - Admin',
   },
-  middleware: 'auth',
+  // middleware: 'auth',
   data() {
     const gender = ['男性', '女性']
     const age = [
@@ -419,9 +419,11 @@ export default Vue.extend({
               '',
               '',
               '',
-              '0',
+              // '0',
               '',
-              '年代・性別・職業が異なっている可能性あり',
+              '',
+              // '年代・性別・職業が異なっている可能性あり',
+              '年代・性別が異なっている可能性あり',
             ])
           }
           for (let i = 0; i < val[1]; ++i) {
@@ -487,9 +489,11 @@ export default Vue.extend({
               '',
               '',
               '',
-              '0',
+              // '0',
               '',
-              '年代・性別・職業が異なっている可能性あり',
+              '',
+              // '年代・性別・職業が異なっている可能性あり',
+              '年代・性別が異なっている可能性あり',
             ])
           }
           for (let i = 0; i < val[1]; ++i) {
