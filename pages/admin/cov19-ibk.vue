@@ -224,12 +224,12 @@
                   @change="counter"
                 />
               </td>
-            </tr> -->
+            </tr>
             <tr>
               <td>Total</td>
               <td>{{ MitoTotal.occupation }}</td>
             </tr>
-          </table>
+          </table> -->
         </b-col>
       </b-row>
     </b-container>
