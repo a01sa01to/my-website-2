@@ -399,9 +399,9 @@ export default Vue.extend({
         occupation_pref['生徒'] +
         occupation_pref['児童']
       occupation_mito['学生'] =
-      occupation_mito['学生'] +
-      occupation_mito['生徒'] +
-      occupation_mito['児童']
+        occupation_mito['学生'] +
+        occupation_mito['生徒'] +
+        occupation_mito['児童']
       delete occupation_pref['生徒']
       delete occupation_pref['児童']
       delete occupation_mito['生徒']
@@ -449,12 +449,12 @@ export default Vue.extend({
           const val = this.Data_Pref.age[key]
           for (let i = 0; i < val; ++i) {
             let k2out = key
-            if(key === '0歳') k2out = "10歳未満"
-            if(key === '1-4') k2out = "10歳未満"
-            if(key === '5-9') k2out = "10歳未満"
-            if(key === '60-64') k2out = "60代"
-            if(key === '65-69') k2out = "60代"
-            if(key === '90代-') k2out = "90歳以上"
+            if (key === '0歳') k2out = '10歳未満'
+            if (key === '1-4') k2out = '10歳未満'
+            if (key === '5-9') k2out = '10歳未満'
+            if (key === '60-64') k2out = '60代'
+            if (key === '65-69') k2out = '60代'
+            if (key === '90代-') k2out = '90歳以上'
 
             data.push(['', '', k2out, '', '', '', '', '', '', '', ''])
             // data[idx][2] = key

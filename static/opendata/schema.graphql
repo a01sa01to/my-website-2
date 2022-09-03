@@ -969,7 +969,10 @@ type Cov19Ibk_Summary {
   """
   現在療養中の人数
   """
-  care: Int!  @deprecated('発生届限定化により、データを提供できない可能性があります。')
+  care: Int!
+    @deprecated(
+      reason: "発生届限定化により、データを提供できない可能性があります。"
+    )
   """
   現在療養中で、入院中の人数
   """
@@ -989,7 +992,10 @@ type Cov19Ibk_Summary {
   """
   現在療養中で、自宅療養の人数
   """
-  home: Int! @deprecated('発生届限定化により、データを提供できない可能性があります。')
+  home: Int!
+    @deprecated(
+      reason: "発生届限定化により、データを提供できない可能性があります。"
+    )
   """
   現在療養中で、宿泊療養の人数
   """
@@ -997,7 +1003,10 @@ type Cov19Ibk_Summary {
   """
   回復者数
   """
-  recovered: Int! @deprecated('発生届限定化により、データを提供できない可能性があります。')
+  recovered: Int!
+    @deprecated(
+      reason: "発生届限定化により、データを提供できない可能性があります。"
+    )
   """
   死亡者数
   """
@@ -1005,7 +1014,10 @@ type Cov19Ibk_Summary {
   """
   その他の人数（県外で療養中・回復の方など）
   """
-  other: Int! @deprecated('発生届限定化により、データを提供できない可能性があります。')
+  other: Int!
+    @deprecated(
+      reason: "発生届限定化により、データを提供できない可能性があります。"
+    )
 }
 
 """
