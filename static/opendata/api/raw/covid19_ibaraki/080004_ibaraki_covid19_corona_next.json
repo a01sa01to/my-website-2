@@ -3,16 +3,8 @@
   "moveDate": "2022/07/22",
   "severe": 4,
   "sickbed": 450,
-  "care_rate": 0,
   "new_patients": 2653.3,
-  "non_closecontact": 0,
-  "care": 0,
-  "positive_rate": 0,
   "severe_lastweek": 5,
   "sickbed_lastweek": 534,
-  "care_rate_lastweek": 0,
-  "new_patients_lastweek": 3813.4,
-  "non_closecontact_lastweek": 0,
-  "care_lastweek": 26349,
-  "positive_rate_lastweek": 0
+  "new_patients_lastweek": 3813.4
 }
