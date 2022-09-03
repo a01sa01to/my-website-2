@@ -494,7 +494,7 @@ const getData = (): Promise<DataTypes.all_data> => {
           hotel: jsonData.children[0].children[0].children[3].value,
           // recovered: jsonData.children[0].children[1].value,
           recovered: 0,
-          death: jsonData.children[0].children[2].value,
+          death: jsonData.children[0].children[1].value,
           // other: jsonData.children[0].children[3].value,
           other: 0,
         }
