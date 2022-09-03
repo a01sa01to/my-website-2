@@ -7,13 +7,13 @@
     <b-container>
       <h2>Pref</h2>
       <b-row>
-        <b-col>
+        <!-- <b-col>
           <h3>市町村別</h3>
           <table>
             <tr>
               <th>Name</th>
               <th>New</th>
-              <!-- <th>Close</th> -->
+              <th>Close</th>
             </tr>
             <tr v-for="(val, key) in Data_Pref.municipality" :key="key">
               <td>{{ key }}</td>
@@ -26,7 +26,7 @@
                   @change="counter"
                 />
               </td>
-              <!-- <td>
+              <td>
                 <b-form-input
                   type="number"
                   size="sm"
@@ -34,17 +34,17 @@
                   v-model="Data_Pref.municipality[key][1]"
                   @change="counter"
                 />
-              </td> -->
+              </td>
             </tr>
             <tr>
               <td>Total</td>
               <td>{{ PrefTotal.municipality[0] }}</td>
-              <!-- <td>{{ PrefTotal.municipality[1] }}</td> -->
+              <td>{{ PrefTotal.municipality[1] }}</td>
             </tr>
           </table>
-        </b-col>
+        </b-col> -->
         <b-col>
-          <h3>男女別</h3>
+          <!-- <h3>男女別</h3>
           <table>
             <tr>
               <th>Gender</th>
@@ -67,7 +67,7 @@
               <td>{{ PrefTotal.gender }}</td>
             </tr>
           </table>
-          <br />
+          <br /> -->
           <h3>年齢別</h3>
           <table>
             <tr>
@@ -118,7 +118,7 @@
         </b-col>
       </b-row>
     </b-container>
-    <hr />
+    <!-- <hr />
     <b-container>
       <h2>Mito</h2>
       <b-row>
@@ -128,7 +128,7 @@
             <tr>
               <th>Name</th>
               <th>New</th>
-              <!-- <th>Close</th> -->
+              <th>Close</th>
             </tr>
             <tr v-for="(val, key) in Data_Mito.municipality" :key="key">
               <td>{{ key }}</td>
@@ -141,7 +141,7 @@
                   @change="counter"
                 />
               </td>
-              <!-- <td>
+              <td>
                 <b-form-input
                   type="number"
                   size="sm"
@@ -149,12 +149,12 @@
                   v-model="Data_Mito.municipality[key][1]"
                   @change="counter"
                 />
-              </td> -->
+              </td>
             </tr>
             <tr>
               <td>Total</td>
               <td>{{ MitoTotal.municipality[0] }}</td>
-              <!-- <td>{{ MitoTotal.municipality[1] }}</td> -->
+              <td>{{ MitoTotal.municipality[1] }}</td>
             </tr>
           </table>
         </b-col>
@@ -207,7 +207,7 @@
             </tr>
           </table>
           <br />
-          <!-- <h3>職業別</h3>
+          <h3>職業別</h3>
           <table>
             <tr>
               <th>Occupation</th>
@@ -229,10 +229,10 @@
               <td>Total</td>
               <td>{{ MitoTotal.occupation }}</td>
             </tr>
-          </table> -->
+          </table>
         </b-col>
       </b-row>
-    </b-container>
+    </b-container> -->
     <hr />
     <b-container>
       <h2>Output</h2>
@@ -263,17 +263,19 @@ export default Vue.extend({
   data() {
     const gender = ['男性', '女性']
     const age = [
-      '10歳未満',
+      '0歳',
+      '1-4',
+      '5-9',
       '10代',
       '20代',
       '30代',
       '40代',
       '50代',
-      '60代',
+      '60-64',
+      '65-69',
       '70代',
       '80代',
-      '90代',
-      '100歳以上',
+      '90代-',
     ]
     const occupation = [
       '会社員',
@@ -397,9 +399,9 @@ export default Vue.extend({
         occupation_pref['生徒'] +
         occupation_pref['児童']
       occupation_mito['学生'] =
-        occupation_mito['学生'] +
-        occupation_mito['生徒'] +
-        occupation_mito['児童']
+      occupation_mito['学生'] +
+      occupation_mito['生徒'] +
+      occupation_mito['児童']
       delete occupation_pref['生徒']
       delete occupation_pref['児童']
       delete occupation_mito['生徒']
@@ -407,65 +409,74 @@ export default Vue.extend({
 
       // Pref
       try {
-        Object.keys(this.Data_Pref.municipality).forEach((key) => {
-          const val = this.Data_Pref.municipality[key]
-          for (let i = 0; i < val[0]; ++i) {
-            data.push([
-              '',
-              key,
-              '',
-              '',
-              '',
-              '',
-              '',
-              '',
-              // '0',
-              '',
-              '',
-              // '年代・性別・職業が異なっている可能性あり',
-              '年代・性別が異なっている可能性あり',
-            ])
-          }
-          for (let i = 0; i < val[1]; ++i) {
-            data.push([
-              '',
-              key,
-              '',
-              '',
-              '',
-              '',
-              '',
-              '',
-              '1',
-              '',
-              '年代・性別・職業が異なっている可能性あり',
-            ])
-          }
-        })
-        let idx = 0
+        // Object.keys(this.Data_Pref.municipality).forEach((key) => {
+        //   const val = this.Data_Pref.municipality[key]
+        //   for (let i = 0; i < val[0]; ++i) {
+        //     data.push([
+        //       '',
+        //       key,
+        //       '',
+        //       '',
+        //       '',
+        //       '',
+        //       '',
+        //       '',
+        //       // '0',
+        //       '',
+        //       '',
+        //       // '年代・性別・職業が異なっている可能性あり',
+        //       '年代・性別が異なっている可能性あり',
+        //     ])
+        //   }
+        //   for (let i = 0; i < val[1]; ++i) {
+        //     data.push([
+        //       '',
+        //       key,
+        //       '',
+        //       '',
+        //       '',
+        //       '',
+        //       '',
+        //       '',
+        //       '1',
+        //       '',
+        //       '年代・性別・職業が異なっている可能性あり',
+        //     ])
+        //   }
+        // })
+        // let idx = 0
         Object.keys(this.Data_Pref.age).forEach((key) => {
           const val = this.Data_Pref.age[key]
           for (let i = 0; i < val; ++i) {
-            data[idx][2] = key
-            ++idx
+            let k2out = key
+            if(key === '0歳') k2out = "10歳未満"
+            if(key === '1-4') k2out = "10歳未満"
+            if(key === '5-9') k2out = "10歳未満"
+            if(key === '60-64') k2out = "60代"
+            if(key === '65-69') k2out = "60代"
+            if(key === '90代-') k2out = "90歳以上"
+
+            data.push(['', '', k2out, '', '', '', '', '', '', '', ''])
+            // data[idx][2] = key
+            // ++idx
           }
         })
-        idx = 0
-        Object.keys(this.Data_Pref.gender).forEach((key) => {
-          const val = this.Data_Pref.gender[key]
-          for (let i = 0; i < val; ++i) {
-            data[idx][3] = key
-            ++idx
-          }
-        })
-        idx = 0
-        Object.keys(occupation_pref).forEach((key) => {
-          const val = occupation_pref[key]
-          for (let i = 0; i < val; ++i) {
-            data[idx][4] = key === '確認中' ? '' : key
-            ++idx
-          }
-        })
+        // idx = 0
+        // Object.keys(this.Data_Pref.gender).forEach((key) => {
+        //   const val = this.Data_Pref.gender[key]
+        //   for (let i = 0; i < val; ++i) {
+        //     data[idx][3] = key
+        //     ++idx
+        //   }
+        // })
+        // idx = 0
+        // Object.keys(occupation_pref).forEach((key) => {
+        //   const val = occupation_pref[key]
+        //   for (let i = 0; i < val; ++i) {
+        //     data[idx][4] = key === '確認中' ? '' : key
+        //     ++idx
+        //   }
+        // })
       } catch (e) {
         console.error(e)
         this.$bvToast.toast('Pref Data Error', {
@@ -476,75 +487,75 @@ export default Vue.extend({
         })
       }
       // Mito
-      try {
-        Object.keys(this.Data_Mito.municipality).forEach((key) => {
-          const val = this.Data_Mito.municipality[key]
-          for (let i = 0; i < val[0]; ++i) {
-            data_mito.push([
-              '',
-              key,
-              '',
-              '',
-              '',
-              '',
-              '',
-              '',
-              // '0',
-              '',
-              '',
-              // '年代・性別・職業が異なっている可能性あり',
-              '年代・性別が異なっている可能性あり',
-            ])
-          }
-          for (let i = 0; i < val[1]; ++i) {
-            data_mito.push([
-              '',
-              key,
-              '',
-              '',
-              '',
-              '',
-              '',
-              '',
-              '1',
-              '',
-              '年代・性別・職業が異なっている可能性あり',
-            ])
-          }
-        })
-        let idx = 0
-        Object.keys(this.Data_Mito.age).forEach((key) => {
-          const val = this.Data_Mito.age[key]
-          for (let i = 0; i < val; ++i) {
-            data_mito[idx][2] = key
-            ++idx
-          }
-        })
-        idx = 0
-        Object.keys(this.Data_Mito.gender).forEach((key) => {
-          const val = this.Data_Mito.gender[key]
-          for (let i = 0; i < val; ++i) {
-            data_mito[idx][3] = key
-            ++idx
-          }
-        })
-        idx = 0
-        Object.keys(occupation_mito).forEach((key) => {
-          const val = occupation_mito[key]
-          for (let i = 0; i < val; ++i) {
-            data_mito[idx][4] = key === '確認中' ? '' : key
-            ++idx
-          }
-        })
-      } catch (e) {
-        console.error(e)
-        this.$bvToast.toast('Mito Data Error', {
-          title: 'Error',
-          variant: 'danger',
-          solid: true,
-          autoHideDelay: 5000,
-        })
-      }
+      // try {
+      //   Object.keys(this.Data_Mito.municipality).forEach((key) => {
+      //     const val = this.Data_Mito.municipality[key]
+      //     for (let i = 0; i < val[0]; ++i) {
+      //       data_mito.push([
+      //         '',
+      //         key,
+      //         '',
+      //         '',
+      //         '',
+      //         '',
+      //         '',
+      //         '',
+      //         // '0',
+      //         '',
+      //         '',
+      //         // '年代・性別・職業が異なっている可能性あり',
+      //         '年代・性別が異なっている可能性あり',
+      //       ])
+      //     }
+      //     for (let i = 0; i < val[1]; ++i) {
+      //       data_mito.push([
+      //         '',
+      //         key,
+      //         '',
+      //         '',
+      //         '',
+      //         '',
+      //         '',
+      //         '',
+      //         '1',
+      //         '',
+      //         '年代・性別・職業が異なっている可能性あり',
+      //       ])
+      //     }
+      //   })
+      //   let idx = 0
+      //   Object.keys(this.Data_Mito.age).forEach((key) => {
+      //     const val = this.Data_Mito.age[key]
+      //     for (let i = 0; i < val; ++i) {
+      //       data_mito[idx][2] = key
+      //       ++idx
+      //     }
+      //   })
+      //   idx = 0
+      //   Object.keys(this.Data_Mito.gender).forEach((key) => {
+      //     const val = this.Data_Mito.gender[key]
+      //     for (let i = 0; i < val; ++i) {
+      //       data_mito[idx][3] = key
+      //       ++idx
+      //     }
+      //   })
+      //   idx = 0
+      //   Object.keys(occupation_mito).forEach((key) => {
+      //     const val = occupation_mito[key]
+      //     for (let i = 0; i < val; ++i) {
+      //       data_mito[idx][4] = key === '確認中' ? '' : key
+      //       ++idx
+      //     }
+      //   })
+      // } catch (e) {
+      //   console.error(e)
+      //   this.$bvToast.toast('Mito Data Error', {
+      //     title: 'Error',
+      //     variant: 'danger',
+      //     solid: true,
+      //     autoHideDelay: 5000,
+      //   })
+      // }
       this.outputData = data
         .concat(data_mito)
         .map((_) => _.join('\t'))

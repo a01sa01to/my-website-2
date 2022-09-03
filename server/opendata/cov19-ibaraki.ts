@@ -31,15 +31,16 @@ const getData = (): Promise<DataTypes.all_data> => {
       move_date: '',
       severe: 0,
       sickbed: 0,
-      care_rate: 0,
       new_patients: 0,
+      severe_lastweek: 0,
+      sickbed_lastweek: 0,
+      new_patients_lastweek: 0,
+
+      care_rate: 0,
       non_closecontact: 0,
       care: 0,
       positive_rate: 0,
-      severe_lastweek: 0,
-      sickbed_lastweek: 0,
       care_rate_lastweek: 0,
-      new_patients_lastweek: 0,
       non_closecontact_lastweek: 0,
       care_lastweek: 0,
       positive_rate_lastweek: 0,
@@ -141,6 +142,15 @@ const getData = (): Promise<DataTypes.all_data> => {
           last_update: str2date(LastUpdate.corona_next),
           move_date,
           ...jsonData,
+
+          care_rate: 0,
+          non_closecontact: 0,
+          care: 0,
+          positive_rate: 0,
+          care_rate_lastweek: 0,
+          non_closecontact_lastweek: 0,
+          care_lastweek: 0,
+          positive_rate_lastweek: 0,
         }
 
         return res('corona_next')
@@ -470,7 +480,8 @@ const getData = (): Promise<DataTypes.all_data> => {
         ret.summary = {
           last_update: str2date(LastUpdate.lastUpdate),
           total: jsonData.children[0].value,
-          care: jsonData.children[0].children[0].value,
+          // care: jsonData.children[0].children[0].value,
+          care: 0,
           hospitalized:
             jsonData.children[0].children[0].children[0].value +
             jsonData.children[0].children[0].children[1].value +
@@ -478,11 +489,14 @@ const getData = (): Promise<DataTypes.all_data> => {
           severe: jsonData.children[0].children[0].children[0].value,
           moderate: jsonData.children[0].children[0].children[1].value,
           light: jsonData.children[0].children[0].children[2].value,
-          home: jsonData.children[0].children[0].children[3].value,
+          // home: jsonData.children[0].children[0].children[3].value,
+          home: 0,
           hotel: jsonData.children[0].children[0].children[4].value,
-          recovered: jsonData.children[0].children[1].value,
+          // recovered: jsonData.children[0].children[1].value,
+          recovered: 0,
           death: jsonData.children[0].children[2].value,
-          other: jsonData.children[0].children[3].value,
+          // other: jsonData.children[0].children[3].value,
+          other: 0,
         }
 
         return res('summary')

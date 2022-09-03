@@ -790,7 +790,7 @@ type Cov19Ibk_Patients_dataset {
   """
   居住地
   """
-  address: String!
+  address: String
   """
   年代
   """
@@ -798,7 +798,7 @@ type Cov19Ibk_Patients_dataset {
   """
   性別
   """
-  gender: String!
+  gender: String
   """
   職業
   """
@@ -969,7 +969,7 @@ type Cov19Ibk_Summary {
   """
   現在療養中の人数
   """
-  care: Int!
+  care: Int!  @deprecated('発生届限定化により、データを提供できない可能性があります。')
   """
   現在療養中で、入院中の人数
   """
@@ -989,7 +989,7 @@ type Cov19Ibk_Summary {
   """
   現在療養中で、自宅療養の人数
   """
-  home: Int!
+  home: Int! @deprecated('発生届限定化により、データを提供できない可能性があります。')
   """
   現在療養中で、宿泊療養の人数
   """
@@ -997,7 +997,7 @@ type Cov19Ibk_Summary {
   """
   回復者数
   """
-  recovered: Int!
+  recovered: Int! @deprecated('発生届限定化により、データを提供できない可能性があります。')
   """
   死亡者数
   """
@@ -1005,7 +1005,7 @@ type Cov19Ibk_Summary {
   """
   その他の人数（県外で療養中・回復の方など）
   """
-  other: Int!
+  other: Int! @deprecated('発生届限定化により、データを提供できない可能性があります。')
 }
 
 """

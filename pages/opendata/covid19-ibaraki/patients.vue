@@ -139,13 +139,13 @@
         city                   <span class="token comment"># {{$t('市区町村名')}}: String</span>
         publish_date           <span class="token comment"># {{$t('公表日')}}: String!</span>
         onset_date             <span class="token comment"># {{$t('発症日')}}: String</span>
-        address                <span class="token comment"># {{$t('居住地')}}: String!</span>
+        address                <span class="token comment"># {{$t('居住地')}}: String</span>
         age                    <span class="token comment"># {{$t('年代')}}: String!</span>
-        gender                 <span class="token comment"># {{$t('性別')}}: String!</span>
+        gender                 <span class="token comment"># {{$t('性別')}}: String</span>
         occupation             <span class="token comment"># {{$t('職業')}}: String</span>
         status                 <span class="token comment"># {{$t('公表時の患者の状態')}}: String</span>
         symptoms               <span class="token comment"># {{$t('公表時に発症していた症状')}}: String</span>
-        travel_abroad_history  <span class="token comment"># {{$t('海外渡航歴があるかどうか')}}: Boolean!</span>
+        travel_abroad_history  <span class="token comment"># {{$t('海外渡航歴があるかどうか')}}: Boolean</span>
         close_contact          <span class="token comment"># {{$t('濃厚接触者かどうか')}}: Boolean</span>
         test_method            <span class="token comment"># {{$t('検査実施方法')}}: String</span>
         note                   <span class="token comment"># {{$t('備考')}}: String</span>

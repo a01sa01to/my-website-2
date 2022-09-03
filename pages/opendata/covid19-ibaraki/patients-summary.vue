@@ -84,16 +84,16 @@
     summary {
       last_update   <span class="token comment"># {{$t('最終更新日時')}}: String!</span>
       total         <span class="token comment"># {{$t('累計陽性者数')}}: Int!</span>
-      care          <span class="token comment"># {{$t('療養中の陽性者数')}}: Int!</span>
+      care          <span class="token comment"># {{$t('療養中の陽性者数')}}: Int!</span> <span class="token keyword">@deprecated</span>
       hospitalized  <span class="token comment"># {{$t('療養中のうち、入院中の陽性者数')}}: Int!</span>
       severe        <span class="token comment"># {{$t('入院中のうち、重症者数')}}: Int!</span>
       moderate      <span class="token comment"># {{$t('入院中のうち、中等症者数')}}: Int!</span>
       light         <span class="token comment"># {{$t('入院中のうち、軽症者数')}}: Int!</span>
-      home          <span class="token comment"># {{$t('療養中のうち、自宅療養者数')}}: Int!</span>
+      home          <span class="token comment"># {{$t('療養中のうち、自宅療養者数')}}: Int!</span> <span class="token keyword">@deprecated</span>
       hotel         <span class="token comment"># {{$t('療養中のうち、宿泊療養者数')}}: Int!</span>
-      recovered     <span class="token comment"># {{$t('回復者数')}}: Int!</span>
+      recovered     <span class="token comment"># {{$t('回復者数')}}: Int!</span> <span class="token keyword">@deprecated</span>
       death         <span class="token comment"># {{$t('死亡者数')}}: Int!</span>
-      other         <span class="token comment"># {{$t('その他')}}: Int!</span>
+      other         <span class="token comment"># {{$t('その他')}}: Int!</span> <span class="token keyword">@deprecated</span>
     }
   }
 }</code></pre>
