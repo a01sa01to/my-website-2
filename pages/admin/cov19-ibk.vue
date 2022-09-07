@@ -72,7 +72,8 @@
           <table>
             <tr>
               <th>Age</th>
-              <th>Value</th>
+              <th>Hospital</th>
+              <th>Self</th>
             </tr>
             <tr v-for="(val, key) in Data_Pref.age" :key="key">
               <td>{{ key }}</td>
@@ -85,10 +86,20 @@
                   @change="counter"
                 />
               </td>
+              <td>
+                <b-form-input
+                  type="number"
+                  size="sm"
+                  number
+                  v-model="Data_Mito.age[key]"
+                  @change="counter"
+                />
+              </td>
             </tr>
             <tr>
               <td>Total</td>
               <td>{{ PrefTotal.age }}</td>
+              <td>{{ MitoTotal.age }}</td>
             </tr>
           </table>
           <br />
@@ -456,7 +467,45 @@ export default Vue.extend({
             if (key === '65-69') k2out = '60代'
             if (key === '90代-') k2out = '90歳以上'
 
-            data.push(['', '', k2out, '', '', '', '', '', '', '', ''])
+            data.push([
+              '',
+              '',
+              k2out,
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '医療機関等にて報告',
+            ])
+            // data[idx][2] = key
+            // ++idx
+          }
+          const val2 = this.Data_Mito.age[key]
+          for (let i = 0; i < val2; ++i) {
+            let k2out = key
+            if (key === '0歳') k2out = '10歳未満'
+            if (key === '1-4') k2out = '10歳未満'
+            if (key === '5-9') k2out = '10歳未満'
+            if (key === '60-64') k2out = '60代'
+            if (key === '65-69') k2out = '60代'
+            if (key === '90代-') k2out = '90歳以上'
+
+            data.push([
+              '',
+              '',
+              k2out,
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '陽性者情報登録センターにて報告',
+            ])
             // data[idx][2] = key
             // ++idx
           }
