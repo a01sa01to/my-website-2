@@ -210,6 +210,7 @@ export default Vue.extend({
       { year: '2022', month: '06', e: '165,080' },
       { year: '2022', month: '07', e: '208,508' },
       { year: '2022', month: '08', e: '317,489' },
+      { year: '2022', month: '09', e: '363,827' },
     ]
     return {
       breadcrumb_data: [
