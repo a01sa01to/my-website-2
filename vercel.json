@@ -1,0 +1,10 @@
+{
+  "buildCommand": "yarn build && cp -r ./static/opendata ./.vercel_build_output/functions/node/server/opendata",
+  "cleanUrls": true,
+  "devCommand": "yarn dev",
+  "framework": "nuxtjs",
+  "installCommand": "yarn install",
+  "outputDirectory": ".output",
+  "regions": "hnd1",
+  "trailingSlash": true
+}
