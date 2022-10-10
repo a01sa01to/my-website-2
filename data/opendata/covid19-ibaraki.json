@@ -1,7 +1,7 @@
 {
   "patients": {
-    "lastUpdate": "2022/10/09 18:25",
-    "size": "555.34 KiB"
+    "lastUpdate": "2022/10/10 18:00",
+    "size": "602.03 KiB"
   },
   "test_people": {
     "lastUpdate": "2022/08/29 20:55",
@@ -16,8 +16,8 @@
     "size": "21.26 KiB"
   },
   "positive_number": {
-    "lastUpdate": "2022/10/09 18:25",
-    "size": "40.42 KiB"
+    "lastUpdate": "2022/10/10 18:00",
+    "size": "40.47 KiB"
   },
   "mutant_positive_number": {
     "lastUpdate": "2022/01/15 20:05",
@@ -28,8 +28,8 @@
     "size": "35.63 KiB"
   },
   "death_number": {
-    "lastUpdate": "2022/10/09 18:25",
-    "size": "36.11 KiB"
+    "lastUpdate": "2022/10/10 18:00",
+    "size": "36.15 KiB"
   },
   "death_attr": {
     "lastUpdate": "2022/09/02 19:30",
@@ -40,15 +40,15 @@
     "size": "251 Byte"
   },
   "main_summary": {
-    "lastUpdate": "2022/10/09 18:25",
+    "lastUpdate": "2022/10/10 18:00",
     "size": "237 Byte"
   },
   "corona_next": {
-    "lastUpdate": "2022/10/09 18:25",
-    "size": "155 Byte"
+    "lastUpdate": "2022/10/10 18:00",
+    "size": "154 Byte"
   },
   "vaccination": {
-    "lastUpdate": "2022/10/09 18:25",
-    "size": "72.77 KiB"
+    "lastUpdate": "2022/10/10 18:00",
+    "size": "72.90 KiB"
   }
 }
