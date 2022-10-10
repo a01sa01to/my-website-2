@@ -5,6 +5,6 @@
   "framework": "nuxtjs",
   "installCommand": "yarn install",
   "outputDirectory": ".output",
-  "regions": "hnd1",
+  "regions": ["hnd1"],
   "trailingSlash": true
 }
