@@ -465,8 +465,8 @@
   },
   {
     "date": "2021-06-09",
-    "count": 21215,
-    "status_1": 16211,
+    "count": 21216,
+    "status_1": 16212,
     "status_2": 5004,
     "status_3": 0,
     "status_4": 0
@@ -633,9 +633,9 @@
   },
   {
     "date": "2021-06-30",
-    "count": 30504,
+    "count": 30505,
     "status_1": 14953,
-    "status_2": 15551,
+    "status_2": 15552,
     "status_3": 0,
     "status_4": 0
   },
@@ -697,16 +697,16 @@
   },
   {
     "date": "2021-07-08",
-    "count": 35524,
-    "status_1": 22802,
+    "count": 35526,
+    "status_1": 22804,
     "status_2": 12722,
     "status_3": 0,
     "status_4": 0
   },
   {
     "date": "2021-07-09",
-    "count": 34742,
-    "status_1": 22205,
+    "count": 34740,
+    "status_1": 22203,
     "status_2": 12537,
     "status_3": 0,
     "status_4": 0
@@ -1161,8 +1161,8 @@
   },
   {
     "date": "2021-09-04",
-    "count": 30533,
-    "status_1": 21399,
+    "count": 30532,
+    "status_1": 21398,
     "status_2": 9134,
     "status_3": 0,
     "status_4": 0
@@ -1185,8 +1185,8 @@
   },
   {
     "date": "2021-09-07",
-    "count": 31770,
-    "status_1": 19802,
+    "count": 31769,
+    "status_1": 19801,
     "status_2": 11968,
     "status_3": 0,
     "status_4": 0
@@ -1233,9 +1233,9 @@
   },
   {
     "date": "2021-09-13",
-    "count": 32863,
+    "count": 32862,
     "status_1": 18015,
-    "status_2": 14848,
+    "status_2": 14847,
     "status_3": 0,
     "status_4": 0
   },
@@ -1257,8 +1257,8 @@
   },
   {
     "date": "2021-09-16",
-    "count": 27024,
-    "status_1": 12821,
+    "count": 27025,
+    "status_1": 12822,
     "status_2": 14203,
     "status_3": 0,
     "status_4": 0
@@ -1489,9 +1489,9 @@
   },
   {
     "date": "2021-10-15",
-    "count": 21929,
+    "count": 21930,
     "status_1": 8076,
-    "status_2": 13853,
+    "status_2": 13854,
     "status_3": 0,
     "status_4": 0
   },
@@ -2505,10 +2505,10 @@
   },
   {
     "date": "2022-02-19",
-    "count": 24812,
+    "count": 24814,
     "status_1": 357,
     "status_2": 662,
-    "status_3": 23793,
+    "status_3": 23795,
     "status_4": 0
   },
   {
@@ -2601,34 +2601,34 @@
   },
   {
     "date": "2022-03-03",
-    "count": 20273,
+    "count": 20274,
     "status_1": 263,
     "status_2": 143,
-    "status_3": 19867,
+    "status_3": 19868,
     "status_4": 0
   },
   {
     "date": "2022-03-04",
-    "count": 26240,
+    "count": 26241,
     "status_1": 414,
     "status_2": 121,
-    "status_3": 25705,
+    "status_3": 25706,
     "status_4": 0
   },
   {
     "date": "2022-03-05",
-    "count": 27125,
+    "count": 27128,
     "status_1": 614,
     "status_2": 421,
-    "status_3": 26090,
+    "status_3": 26093,
     "status_4": 0
   },
   {
     "date": "2022-03-06",
-    "count": 23543,
+    "count": 23544,
     "status_1": 871,
     "status_2": 155,
-    "status_3": 22517,
+    "status_3": 22518,
     "status_4": 0
   },
   {
@@ -2697,10 +2697,10 @@
   },
   {
     "date": "2022-03-15",
-    "count": 19503,
+    "count": 19502,
     "status_1": 644,
     "status_2": 233,
-    "status_3": 18626,
+    "status_3": 18625,
     "status_4": 0
   },
   {
@@ -2921,10 +2921,10 @@
   },
   {
     "date": "2022-04-12",
-    "count": 10261,
+    "count": 10262,
     "status_1": 241,
     "status_2": 485,
-    "status_3": 9535,
+    "status_3": 9536,
     "status_4": 0
   },
   {
@@ -2945,10 +2945,10 @@
   },
   {
     "date": "2022-04-15",
-    "count": 19939,
+    "count": 19940,
     "status_1": 869,
     "status_2": 928,
-    "status_3": 18142,
+    "status_3": 18143,
     "status_4": 0
   },
   {
@@ -2969,10 +2969,10 @@
   },
   {
     "date": "2022-04-18",
-    "count": 12212,
+    "count": 12213,
     "status_1": 770,
     "status_2": 760,
-    "status_3": 10682,
+    "status_3": 10683,
     "status_4": 0
   },
   {
@@ -3217,10 +3217,10 @@
   },
   {
     "date": "2022-05-19",
-    "count": 6124,
+    "count": 6125,
     "status_1": 233,
     "status_2": 371,
-    "status_3": 5520,
+    "status_3": 5521,
     "status_4": 0
   },
   {
@@ -3481,11 +3481,11 @@
   },
   {
     "date": "2022-06-21",
-    "count": 3351,
+    "count": 3353,
     "status_1": 105,
     "status_2": 255,
     "status_3": 1425,
-    "status_4": 1566
+    "status_4": 1568
   },
   {
     "date": "2022-06-22",
@@ -3497,10 +3497,10 @@
   },
   {
     "date": "2022-06-23",
-    "count": 2650,
+    "count": 2651,
     "status_1": 77,
     "status_2": 190,
-    "status_3": 1263,
+    "status_3": 1264,
     "status_4": 1120
   },
   {
@@ -3513,11 +3513,11 @@
   },
   {
     "date": "2022-06-25",
-    "count": 8744,
+    "count": 8745,
     "status_1": 227,
     "status_2": 1017,
     "status_3": 5562,
-    "status_4": 1938
+    "status_4": 1939
   },
   {
     "date": "2022-06-26",
@@ -3561,11 +3561,11 @@
   },
   {
     "date": "2022-07-01",
-    "count": 8910,
+    "count": 8911,
     "status_1": 213,
     "status_2": 438,
     "status_3": 1925,
-    "status_4": 6334
+    "status_4": 6335
   },
   {
     "date": "2022-07-02",
@@ -3681,11 +3681,11 @@
   },
   {
     "date": "2022-07-16",
-    "count": 16211,
+    "count": 16212,
     "status_1": 306,
     "status_2": 234,
     "status_3": 2499,
-    "status_4": 13172
+    "status_4": 13173
   },
   {
     "date": "2022-07-17",
@@ -3737,11 +3737,11 @@
   },
   {
     "date": "2022-07-23",
-    "count": 19149,
+    "count": 19150,
     "status_1": 238,
     "status_2": 504,
     "status_3": 2883,
-    "status_4": 15524
+    "status_4": 15525
   },
   {
     "date": "2022-07-24",
@@ -3753,19 +3753,19 @@
   },
   {
     "date": "2022-07-25",
-    "count": 17431,
+    "count": 17430,
     "status_1": 166,
     "status_2": 244,
-    "status_3": 1034,
+    "status_3": 1033,
     "status_4": 15987
   },
   {
     "date": "2022-07-26",
-    "count": 17006,
+    "count": 17008,
     "status_1": 147,
     "status_2": 105,
     "status_3": 1119,
-    "status_4": 15635
+    "status_4": 15637
   },
   {
     "date": "2022-07-27",
@@ -3777,11 +3777,11 @@
   },
   {
     "date": "2022-07-28",
-    "count": 16284,
+    "count": 16286,
     "status_1": 169,
     "status_2": 96,
-    "status_3": 1436,
-    "status_4": 14583
+    "status_3": 1437,
+    "status_4": 14584
   },
   {
     "date": "2022-07-29",
@@ -3793,11 +3793,11 @@
   },
   {
     "date": "2022-07-30",
-    "count": 18711,
+    "count": 18712,
     "status_1": 362,
     "status_2": 359,
     "status_3": 2687,
-    "status_4": 15303
+    "status_4": 15304
   },
   {
     "date": "2022-07-31",
@@ -3825,35 +3825,35 @@
   },
   {
     "date": "2022-08-03",
-    "count": 16969,
+    "count": 16971,
     "status_1": 214,
     "status_2": 72,
     "status_3": 1291,
-    "status_4": 15392
+    "status_4": 15394
   },
   {
     "date": "2022-08-04",
-    "count": 15096,
+    "count": 15099,
     "status_1": 315,
     "status_2": 85,
     "status_3": 1351,
-    "status_4": 13345
+    "status_4": 13348
   },
   {
     "date": "2022-08-05",
-    "count": 21220,
+    "count": 21227,
     "status_1": 409,
     "status_2": 249,
-    "status_3": 2235,
-    "status_4": 18327
+    "status_3": 2236,
+    "status_4": 18333
   },
   {
     "date": "2022-08-06",
-    "count": 22433,
+    "count": 22441,
     "status_1": 536,
     "status_2": 288,
     "status_3": 2749,
-    "status_4": 18860
+    "status_4": 18868
   },
   {
     "date": "2022-08-07",
@@ -3865,35 +3865,35 @@
   },
   {
     "date": "2022-08-08",
-    "count": 17196,
+    "count": 17210,
     "status_1": 284,
     "status_2": 40,
-    "status_3": 1394,
-    "status_4": 15478
+    "status_3": 1396,
+    "status_4": 15490
   },
   {
     "date": "2022-08-09",
-    "count": 18240,
+    "count": 18242,
     "status_1": 210,
     "status_2": 145,
     "status_3": 1549,
-    "status_4": 16336
+    "status_4": 16338
   },
   {
     "date": "2022-08-10",
-    "count": 16173,
+    "count": 16183,
     "status_1": 119,
     "status_2": 161,
     "status_3": 1517,
-    "status_4": 14376
+    "status_4": 14386
   },
   {
     "date": "2022-08-11",
-    "count": 5915,
+    "count": 5930,
     "status_1": 3,
     "status_2": 10,
     "status_3": 863,
-    "status_4": 5039
+    "status_4": 5054
   },
   {
     "date": "2022-08-12",
@@ -3953,11 +3953,11 @@
   },
   {
     "date": "2022-08-19",
-    "count": 17677,
+    "count": 17679,
     "status_1": 277,
     "status_2": 399,
     "status_3": 1488,
-    "status_4": 15513
+    "status_4": 15515
   },
   {
     "date": "2022-08-20",
@@ -3985,35 +3985,35 @@
   },
   {
     "date": "2022-08-23",
-    "count": 15323,
+    "count": 15327,
     "status_1": 162,
     "status_2": 226,
     "status_3": 1254,
-    "status_4": 13681
+    "status_4": 13685
   },
   {
     "date": "2022-08-24",
-    "count": 11767,
+    "count": 11769,
     "status_1": 97,
     "status_2": 215,
     "status_3": 981,
-    "status_4": 10474
+    "status_4": 10476
   },
   {
     "date": "2022-08-25",
-    "count": 12116,
+    "count": 12117,
     "status_1": 109,
     "status_2": 320,
     "status_3": 1078,
-    "status_4": 10609
+    "status_4": 10610
   },
   {
     "date": "2022-08-26",
-    "count": 17993,
+    "count": 17995,
     "status_1": 283,
     "status_2": 432,
     "status_3": 1535,
-    "status_4": 15743
+    "status_4": 15745
   },
   {
     "date": "2022-08-27",
@@ -4049,27 +4049,27 @@
   },
   {
     "date": "2022-08-31",
-    "count": 11550,
+    "count": 11565,
     "status_1": 100,
     "status_2": 136,
     "status_3": 657,
-    "status_4": 10657
+    "status_4": 10672
   },
   {
     "date": "2022-09-01",
-    "count": 8788,
+    "count": 8789,
     "status_1": 142,
     "status_2": 25,
     "status_3": 456,
-    "status_4": 8165
+    "status_4": 8166
   },
   {
     "date": "2022-09-02",
-    "count": 12900,
+    "count": 12901,
     "status_1": 137,
     "status_2": 188,
     "status_3": 1112,
-    "status_4": 11463
+    "status_4": 11464
   },
   {
     "date": "2022-09-03",
@@ -4097,19 +4097,19 @@
   },
   {
     "date": "2022-09-06",
-    "count": 9014,
+    "count": 9016,
     "status_1": 153,
     "status_2": 73,
     "status_3": 622,
-    "status_4": 8166
+    "status_4": 8168
   },
   {
     "date": "2022-09-07",
-    "count": 7848,
+    "count": 7852,
     "status_1": 116,
     "status_2": 70,
-    "status_3": 498,
-    "status_4": 7164
+    "status_3": 499,
+    "status_4": 7167
   },
   {
     "date": "2022-09-08",
@@ -4121,17 +4121,17 @@
   },
   {
     "date": "2022-09-09",
-    "count": 11209,
+    "count": 11221,
     "status_1": 397,
     "status_2": 291,
-    "status_3": 1119,
-    "status_4": 9402
+    "status_3": 1122,
+    "status_4": 9411
   },
   {
     "date": "2022-09-10",
-    "count": 9206,
-    "status_1": 136,
-    "status_2": 334,
+    "count": 9214,
+    "status_1": 142,
+    "status_2": 336,
     "status_3": 1249,
     "status_4": 7487
   },
@@ -4145,11 +4145,11 @@
   },
   {
     "date": "2022-09-12",
-    "count": 6630,
+    "count": 6631,
     "status_1": 36,
     "status_2": 158,
     "status_3": 504,
-    "status_4": 5932
+    "status_4": 5933
   },
   {
     "date": "2022-09-13",
@@ -4217,19 +4217,19 @@
   },
   {
     "date": "2022-09-21",
-    "count": 3594,
+    "count": 3596,
     "status_1": 24,
     "status_2": 96,
-    "status_3": 450,
-    "status_4": 3024
+    "status_3": 451,
+    "status_4": 3025
   },
   {
     "date": "2022-09-22",
-    "count": 4555,
+    "count": 4556,
     "status_1": 47,
     "status_2": 161,
     "status_3": 485,
-    "status_4": 3862
+    "status_4": 3863
   },
   {
     "date": "2022-09-23",
@@ -4257,11 +4257,11 @@
   },
   {
     "date": "2022-09-26",
-    "count": 4533,
+    "count": 4534,
     "status_1": 30,
     "status_2": 268,
     "status_3": 544,
-    "status_4": 3691
+    "status_4": 3692
   },
   {
     "date": "2022-09-27",
@@ -4273,11 +4273,11 @@
   },
   {
     "date": "2022-09-28",
-    "count": 4273,
+    "count": 4274,
     "status_1": 26,
     "status_2": 120,
     "status_3": 496,
-    "status_4": 3631
+    "status_4": 3632
   },
   {
     "date": "2022-09-29",
@@ -4289,18 +4289,18 @@
   },
   {
     "date": "2022-09-30",
-    "count": 7421,
+    "count": 7423,
     "status_1": 77,
     "status_2": 498,
-    "status_3": 1242,
-    "status_4": 5604
+    "status_3": 1243,
+    "status_4": 5605
   },
   {
     "date": "2022-10-01",
-    "count": 3236,
+    "count": 3246,
     "status_1": 75,
-    "status_2": 103,
-    "status_3": 735,
+    "status_2": 110,
+    "status_3": 738,
     "status_4": 2323
   },
   {
@@ -4313,11 +4313,11 @@
   },
   {
     "date": "2022-10-03",
-    "count": 2863,
+    "count": 2871,
     "status_1": 46,
     "status_2": 29,
     "status_3": 428,
-    "status_4": 2360
+    "status_4": 2368
   },
   {
     "date": "2022-10-04",
@@ -4329,35 +4329,35 @@
   },
   {
     "date": "2022-10-05",
-    "count": 2456,
-    "status_1": 34,
+    "count": 2462,
+    "status_1": 35,
     "status_2": 19,
     "status_3": 285,
-    "status_4": 2118
+    "status_4": 2123
   },
   {
     "date": "2022-10-06",
-    "count": 2435,
+    "count": 2439,
     "status_1": 63,
     "status_2": 40,
     "status_3": 423,
-    "status_4": 1909
+    "status_4": 1913
   },
   {
     "date": "2022-10-07",
-    "count": 5651,
+    "count": 5657,
     "status_1": 90,
     "status_2": 86,
     "status_3": 839,
-    "status_4": 4636
+    "status_4": 4642
   },
   {
     "date": "2022-10-08",
-    "count": 6096,
+    "count": 6097,
     "status_1": 74,
     "status_2": 124,
     "status_3": 1085,
-    "status_4": 4813
+    "status_4": 4814
   },
   {
     "date": "2022-10-09",
@@ -4377,74 +4377,82 @@
   },
   {
     "date": "2022-10-11",
-    "count": 4975,
+    "count": 4982,
     "status_1": 18,
     "status_2": 21,
-    "status_3": 512,
-    "status_4": 4424
+    "status_3": 513,
+    "status_4": 4430
   },
   {
     "date": "2022-10-12",
-    "count": 4500,
+    "count": 4508,
     "status_1": 45,
     "status_2": 25,
-    "status_3": 422,
-    "status_4": 4008
+    "status_3": 423,
+    "status_4": 4015
   },
   {
     "date": "2022-10-13",
-    "count": 3999,
+    "count": 4023,
     "status_1": 6,
     "status_2": 40,
-    "status_3": 544,
-    "status_4": 3409
+    "status_3": 545,
+    "status_4": 3432
   },
   {
     "date": "2022-10-14",
-    "count": 7627,
+    "count": 7656,
     "status_1": 37,
     "status_2": 36,
     "status_3": 985,
-    "status_4": 6569
+    "status_4": 6598
   },
   {
     "date": "2022-10-15",
-    "count": 8905,
+    "count": 8986,
     "status_1": 93,
     "status_2": 75,
-    "status_3": 1286,
-    "status_4": 7451
+    "status_3": 1299,
+    "status_4": 7519
   },
   {
     "date": "2022-10-16",
-    "count": 2885,
+    "count": 2890,
     "status_1": 8,
     "status_2": 7,
-    "status_3": 292,
-    "status_4": 2578
+    "status_3": 295,
+    "status_4": 2580
   },
   {
     "date": "2022-10-17",
-    "count": 6925,
+    "count": 7029,
     "status_1": 6,
     "status_2": 20,
-    "status_3": 747,
-    "status_4": 6152
+    "status_3": 761,
+    "status_4": 6242
   },
   {
     "date": "2022-10-18",
-    "count": 6073,
-    "status_1": 11,
+    "count": 6244,
+    "status_1": 13,
     "status_2": 12,
-    "status_3": 617,
-    "status_4": 5433
+    "status_3": 639,
+    "status_4": 5580
   },
   {
     "date": "2022-10-19",
-    "count": 4368,
+    "count": 4761,
     "status_1": 13,
-    "status_2": 6,
-    "status_3": 435,
-    "status_4": 3914
+    "status_2": 7,
+    "status_3": 467,
+    "status_4": 4274
+  },
+  {
+    "date": "2022-10-20",
+    "count": 4977,
+    "status_1": 56,
+    "status_2": 18,
+    "status_3": 506,
+    "status_4": 4397
   }
 ]
