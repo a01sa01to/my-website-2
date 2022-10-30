@@ -2,7 +2,7 @@
   "children": [
     {
       "attr": "陽性者数",
-      "value": 383712,
+      "value": 384638,
       "children": [
         {
           "children": [
@@ -12,15 +12,15 @@
             },
             {
               "attr": "中等症",
-              "value": 107
+              "value": 116
             },
             {
               "attr": "軽症",
-              "value": 97
+              "value": 102
             },
             {
               "attr": "宿泊療養",
-              "value": 304
+              "value": 324
             }
           ]
         },
