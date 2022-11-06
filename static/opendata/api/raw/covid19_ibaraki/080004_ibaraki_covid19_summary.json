@@ -2,31 +2,31 @@
   "children": [
     {
       "attr": "陽性者数",
-      "value": 390435,
+      "value": 392248,
       "children": [
         {
           "children": [
             {
               "attr": "重症",
-              "value": 4
+              "value": 6
             },
             {
               "attr": "中等症",
-              "value": 152
+              "value": 161
             },
             {
               "attr": "軽症",
-              "value": 86
+              "value": 85
             },
             {
               "attr": "宿泊療養",
-              "value": 350
+              "value": 375
             }
           ]
         },
         {
           "attr": "死亡",
-          "value": 728
+          "value": 729
         }
       ]
     }
