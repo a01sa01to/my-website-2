@@ -8,25 +8,25 @@
           "children": [
             {
               "attr": "重症",
-              "value": 5
+              "value": 8
             },
             {
               "attr": "中等症",
-              "value": 193
+              "value": 203
             },
             {
               "attr": "軽症",
-              "value": 131
+              "value": 141
             },
             {
               "attr": "宿泊療養",
-              "value": 518
+              "value": 563
             }
           ]
         },
         {
           "attr": "死亡",
-          "value": 737
+          "value": 738
         }
       ]
     }
