@@ -1,10 +1,10 @@
 {
   "stage": 2,
   "moveDate": "2022/09/29",
-  "severe": 7,
-  "sickbed": 352,
-  "new_patients": 1805.7,
-  "severe_lastweek": 1,
-  "sickbed_lastweek": 286,
-  "new_patients_lastweek": 1390.6
+  "severe": 5,
+  "sickbed": 360,
+  "new_patients": 1823.1,
+  "severe_lastweek": 3,
+  "sickbed_lastweek": 306,
+  "new_patients_lastweek": 1546.9
 }
