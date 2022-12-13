@@ -26,7 +26,7 @@
     "nuxt-edge": "2.16.0-27606262.123206cb",
     "rehype-katex": "5",
     "remark-math": "4",
-    "simple-icons": "^7.14.0",
+    "simple-icons": "^8.1.0",
     "webpack": "^5.73.0"
   },
   "devDependencies": {
